@@ -21,7 +21,7 @@ import com.fita.fita.repository.FitaRepository;
 @RequestMapping("/categoria")
 @CrossOrigin("*")
 public class FitaController {
-	
+	//teste do git
 	@Autowired
 	private FitaRepository repository;
 	
