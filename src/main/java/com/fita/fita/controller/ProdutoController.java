@@ -20,7 +20,8 @@ import com.fita.fita.repository.ProdutoRepository;
 
 @RequestMapping("/produto")
 @RestController
-@CrossOrigin(origins = "*", allowedHeaders = "*")
+//A classe permite o navegador manipular com segurança as solicitações
+@CrossOrigin(origins = "*", allowedHeaders = "*") 
 public class ProdutoController {
 
 	@Autowired
