@@ -19,7 +19,7 @@ import com.fita.fita.model.UsuarioModel;
 import com.fita.fita.repository.UsuarioRepository;
 
 
-// biri biri xd xd
+
 @RequestMapping("/usuario")
 @RestController
 @CrossOrigin("*")
