@@ -16,10 +16,9 @@ Method DELETE 	| FindById -> /categoria/{id}
 
 Json
 {
-	“id”: numero, //Apenas para put
-	“nome”:
-  "produto":{}
-  
+“id”: numero, //Apenas para put
+“nome”:
+"produto":{} 
 }
 
 Model ProdutoModel
@@ -76,7 +75,7 @@ Method DELETE 	| FindById -> /usuario/{id}
 
 Json
 {
-	“id”: numero, //Apenas para put
+“id”: numero, //Apenas para put e delete
 "nome":, 
 "email": ,
 "senha": ,
