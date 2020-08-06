@@ -37,6 +37,14 @@ public class CategoriaModel {
 		return id;
 	}
 
+	public List<ProdutoModel> getProduto() {
+		return produto;
+	}
+
+	public void setProduto(List<ProdutoModel> produto) {
+		this.produto = produto;
+	}
+
 	public void setId(long id) {
 		this.id = id;
 	}

@@ -10,6 +10,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.Size;
 
+import com.sun.istack.NotNull;
+
 
 
 
@@ -19,35 +21,43 @@ public class UsuarioModel {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
-
+	
+	@NotNull
 	@Size(min = 3, max = 50)
 	@Column(nullable = false)
 	private String nome;
-
+	
+	@NotNull
 	@Size(min = 9, max = 50)
 	@Column(nullable = false)
 	private String email;
-
+	
+	@NotNull
 	@Size(min = 6, max = 20)
 	@Column(nullable = false)
 	private String senha;
-
+	
+	@NotNull
 	@Size(min = 8, max = 8)
 	@Column(nullable = false)
 	private String cep;
-
+	
+	@NotNull
 	@Size(min = 3, max = 20)
 	@Column(nullable = true)
 	private String bairro;
 
+	@NotNull
 	@Size(min = 3, max = 20)
 	@Column(nullable = false)
 	private String complemento;
-
+	
+	@NotNull
 	@Size(min = 1, max = 11)
 	@Column(nullable = false)
 	private String cpf;
-
+	
+	@NotNull
 	@Size(min = 9, max = 12)
 	@Column(nullable = false)
 	private String telefone;
