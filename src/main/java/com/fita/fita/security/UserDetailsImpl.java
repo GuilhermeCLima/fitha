@@ -4,7 +4,6 @@ import java.util.Collection;
 import java.util.List;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-import com.fita.fita.model.UsuarioLogin;
 import com.fita.fita.model.UsuarioModel;
 
 public class UserDetailsImpl implements UserDetails{
@@ -15,10 +14,11 @@ public class UserDetailsImpl implements UserDetails{
 		private String password;
 		private List<GrantedAuthority> authorities;
 
-		public UserDetailsImpl(UsuarioLogin user) {
+		public UserDetailsImpl(UsuarioModel user) {
 			this.userName = user.getUsuario();
 			this.password = user.getSenha();		
 		}
+		
 		public UserDetailsImpl() {}
 		
 		@Override

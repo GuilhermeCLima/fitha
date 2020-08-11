@@ -18,9 +18,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.fita.fita.model.ProdutoModel;
 import com.fita.fita.repository.ProdutoRepository;
 
-@RequestMapping("/produto")
+@RequestMapping("/produtos")
 @RestController
-//A classe permite o navegador manipular com segurança as solicitações
 @CrossOrigin(origins = "*", allowedHeaders = "*") 
 public class ProdutoController {
 

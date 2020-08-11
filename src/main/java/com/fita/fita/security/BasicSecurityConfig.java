@@ -12,8 +12,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
-@EnableWebSecurity
-public class BasicSecurityConfig extends WebSecurityConfigurerAdapter {
+	@EnableWebSecurity
+	public class BasicSecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Autowired
 	private UserDetailsService userDetailsService;
@@ -22,7 +22,6 @@ public class BasicSecurityConfig extends WebSecurityConfigurerAdapter {
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 		auth.userDetailsService(userDetailsService);
 	}
-
 	@Bean
 	public PasswordEncoder passwordEncoder() {
 		return new BCryptPasswordEncoder();
@@ -35,7 +34,7 @@ public class BasicSecurityConfig extends WebSecurityConfigurerAdapter {
 		.antMatchers("/usuarios/cadastrar").permitAll()
 		.antMatchers(HttpMethod.GET, "/produtos").permitAll()
 		.antMatchers("/produtos/porId/{id}").permitAll()
-		.antMatchers(HttpMethod.GET, "/categorias").permitAll()
+		.antMatchers(HttpMethod.GET, "/categoria").permitAll()
 		.anyRequest().authenticated()
 		.and().httpBasic()
 		.and().sessionManagement()

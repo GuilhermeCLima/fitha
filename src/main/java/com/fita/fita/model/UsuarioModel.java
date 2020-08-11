@@ -1,7 +1,5 @@
 package com.fita.fita.model;
 
-import java.math.BigInteger;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -13,14 +11,19 @@ import javax.validation.constraints.Size;
 import com.sun.istack.NotNull;
 
 
-
-
 @Entity
 @Table(name = "usuario")
+
 public class UsuarioModel {
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
+	
+	@NotNull
+	@Size(min = 3, max = 50)
+	@Column(nullable = false)
+	private String usuario;
 	
 	@NotNull
 	@Size(min = 3, max = 50)
@@ -33,8 +36,6 @@ public class UsuarioModel {
 	private String email;
 	
 	@NotNull
-	@Size(min = 6, max = 20)
-	@Column(nullable = false)
 	private String senha;
 	
 	@NotNull
@@ -142,6 +143,14 @@ public class UsuarioModel {
 
 	public void setAdmin(boolean admin) {
 		this.admin = admin;
+	}
+
+	public String getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(String usuario) {
+		this.usuario = usuario;
 	}
 
 }

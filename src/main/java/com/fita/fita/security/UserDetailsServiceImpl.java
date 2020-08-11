@@ -11,20 +11,20 @@ import com.fita.fita.repository.UsuarioRepository;
 
 
 @Service
-	public class UserDetailsServiceImpl implements UserDetailsService 
+public class UserDetailsServiceImpl implements UserDetailsService 
+{
+
+	@Autowired
+	private UsuarioRepository userRepository;
+
+	@Override
+	public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException 
 		{
+		Optional<UsuarioModel> user = userRepository.findByUsuario(userName);
+		user.orElseThrow(() -> new UsernameNotFoundException(userName + " not found."));
 
-		@Autowired
-		private UsuarioRepository userRepository;
-
-		@Override
-		public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException {
-
-			Optional<UsuarioModel>user = userRepository.findByUsuario(userName);
-			user.orElseThrow(() -> new UsernameNotFoundException(userName + "Not Found")); 
-			
-			return user.map(UserDetailsImpl::new).get();
+		return user.map(UserDetailsImpl::new).get();
 		}
-	}
+}
 
 

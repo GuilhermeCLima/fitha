@@ -19,15 +19,15 @@ import com.fita.fita.model.UsuarioModel;
 import com.fita.fita.repository.UsuarioRepository;
 import com.fita.fita.service.UsuarioService;
 
-@RequestMapping("/usuario")
+@RequestMapping("/usuarios")
 @RestController
 @CrossOrigin("*")
 public class UsuarioController {
 	
-	@Autowired
+	@Autowired 
 	public UsuarioRepository repository;
 	
-	@Autowired
+	@Autowired 
 	private UsuarioService usuarioService;
 	
 	@GetMapping
@@ -64,13 +64,6 @@ public class UsuarioController {
 		return usuarioService.Logar(user).map(resp ->ResponseEntity.ok(resp))
 				.orElse(ResponseEntity.status(HttpStatus.UNAUTHORIZED).build());
 	}
-	
-
-	@GetMapping("/{id}")
-	public ResponseEntity<UsuarioModel> GetById(@PathVariable long id) {
-		return repository.findById(id).map(resp -> ResponseEntity.ok(resp)).orElse(ResponseEntity.notFound().build());
-	}
-
 
 	@PostMapping("/cadastrar")
 	public ResponseEntity<UsuarioModel> Post(@RequestBody UsuarioModel usuario) {
@@ -78,9 +71,6 @@ public class UsuarioController {
 				.body(usuarioService.CadastrarUsuario(usuario));
 	}
 
-	@PutMapping
-	public ResponseEntity<UsuarioModel> Put(@RequestBody UsuarioModel usuario) {
-		return ResponseEntity.ok(repository.save(usuario));
-	}
+	
 
 }
