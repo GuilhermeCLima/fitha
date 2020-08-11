@@ -2,6 +2,9 @@ package com.fita.fita.controller;
 
 import java.util.List;
 import java.util.Optional;
+
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -23,54 +26,56 @@ import com.fita.fita.service.UsuarioService;
 @RestController
 @CrossOrigin("*")
 public class UsuarioController {
-	
-	@Autowired 
+
+	@Autowired
 	public UsuarioRepository repository;
-	
-	@Autowired 
+
+	@Autowired
 	private UsuarioService usuarioService;
-	
+
 	@GetMapping
-	public ResponseEntity<List<UsuarioModel>> GetAll (){
+	public ResponseEntity<List<UsuarioModel>> GetAll() {
 		return ResponseEntity.ok(repository.findAll());
 	}
-	
+
 	@GetMapping("/{id}")
-	public ResponseEntity<UsuarioModel> findByIDUsuario (@PathVariable long id){
+	public ResponseEntity<UsuarioModel> findByIDUsuario(@PathVariable long id) {
 		return repository.findById(id).map(resp -> ResponseEntity.ok(resp)).orElse(ResponseEntity.notFound().build());
 	}
+
 	@GetMapping("/nome/{nome}")
-	public ResponseEntity<List<UsuarioModel>> getByNome(@PathVariable String nome){
+	public ResponseEntity<List<UsuarioModel>> getByNome(@PathVariable String nome) {
 		return ResponseEntity.ok(repository.findAllByNomeContainingIgnoreCase(nome));
 	}
+
 	@PostMapping
-	public ResponseEntity<UsuarioModel> postUsuario (@RequestBody UsuarioModel usuario){
-		
+	public ResponseEntity<UsuarioModel> postUsuario(@RequestBody UsuarioModel usuario) {
+
 		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(usuario));
 	}
+
 	@PutMapping
-	public ResponseEntity<UsuarioModel> putUsuario  (@RequestBody UsuarioModel usuario){
+	public ResponseEntity<UsuarioModel> putUsuario(@RequestBody UsuarioModel usuario) {
 		return ResponseEntity.status(HttpStatus.OK).body(repository.save(usuario));
 	}
+
 	@DeleteMapping("/{id}")
-	public void deleteUsuario (@PathVariable long id) {
+	public void deleteUsuario(@PathVariable long id) {
 		repository.deleteById(id);
 	}
-	//-------------------------------------NOVOS ENDPOINTS------------------------------------------------------------//
-	
+	// -------------------------------------NOVOS
+	// ENDPOINTS------------------------------------------------------------//
+
 	@PostMapping("/logar")
-	public ResponseEntity<UsuarioLogin>Autentication(@RequestBody Optional<UsuarioLogin>user)
-	{
-		return usuarioService.Logar(user).map(resp ->ResponseEntity.ok(resp))
+	public ResponseEntity<UsuarioLogin> Autentication(@RequestBody Optional<UsuarioLogin> user) {
+		return usuarioService.Logar(user).map(resp -> ResponseEntity.ok(resp))
 				.orElse(ResponseEntity.status(HttpStatus.UNAUTHORIZED).build());
 	}
 
 	@PostMapping("/cadastrar")
 	public ResponseEntity<UsuarioModel> Post(@RequestBody UsuarioModel usuario) {
-		return ResponseEntity.status(HttpStatus.CREATED)
-				.body(usuarioService.CadastrarUsuario(usuario));
+		return usuarioService.CadastrarUsuario(usuario).map(resp -> ResponseEntity.status(HttpStatus.CREATED).body(resp))
+				.orElse(ResponseEntity.status(HttpStatus.BAD_REQUEST).build());
 	}
-
-	
 
 }
