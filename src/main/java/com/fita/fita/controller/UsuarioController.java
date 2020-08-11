@@ -1,6 +1,7 @@
 package com.fita.fita.controller;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -15,10 +16,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.fita.fita.model.UsuarioLogin;
 import com.fita.fita.model.UsuarioModel;
 import com.fita.fita.repository.UsuarioRepository;
-
-
+import com.fita.fita.repository.service.UsuarioService;
 
 @RequestMapping("/usuario")
 @RestController
@@ -28,8 +29,11 @@ public class UsuarioController {
 	@Autowired
 	public UsuarioRepository repository;
 	
+	@Autowired
+	private UsuarioService usuarioService;
+	
 	@GetMapping
-	public ResponseEntity<List<UsuarioModel>> findAllUsuario (){
+	public ResponseEntity<List<UsuarioModel>> GetAll (){
 		return ResponseEntity.ok(repository.findAll());
 	}
 	
@@ -54,4 +58,31 @@ public class UsuarioController {
 	public void deleteUsuario (@PathVariable long id) {
 		repository.deleteById(id);
 	}
+	//-------------------------------------NOVOS ENDPOINTS------------------------------------------------------------//
+	
+	@PostMapping("/logar")
+	public ResponseEntity<UsuarioLogin>Autentication(@RequestBody Optional<UsuarioLogin>user)
+	{
+		return usuarioService.Logar(user).map(resp ->ResponseEntity.ok(resp))
+				.orElse(ResponseEntity.status(HttpStatus.UNAUTHORIZED).build());
+	}
+	
+
+	@GetMapping("/{id}")
+	public ResponseEntity<UsuarioModel> GetById(@PathVariable long id) {
+		return repository.findById(id).map(resp -> ResponseEntity.ok(resp)).orElse(ResponseEntity.notFound().build());
+	}
+
+
+	@PostMapping("/cadastrar")
+	public ResponseEntity<UsuarioModel> Post(@RequestBody UsuarioModel usuario) {
+		return ResponseEntity.status(HttpStatus.CREATED)
+				.body(usuarioService.CadastrarUsuario(usuario));
+	}
+
+	@PutMapping
+	public ResponseEntity<UsuarioModel> Put(@RequestBody UsuarioModel usuario) {
+		return ResponseEntity.ok(repository.save(usuario));
+	}
+
 }
