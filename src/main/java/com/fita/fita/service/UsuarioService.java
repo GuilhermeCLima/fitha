@@ -1,4 +1,4 @@
-package com.fita.fita.repository.service;
+package com.fita.fita.service;
 
 import java.nio.charset.Charset;
 import java.util.Optional;

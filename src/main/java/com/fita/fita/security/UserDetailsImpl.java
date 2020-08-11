@@ -1,4 +1,4 @@
-package com.fita.fita.repository.security;
+package com.fita.fita.security;
 
 import java.util.Collection;
 import java.util.List;

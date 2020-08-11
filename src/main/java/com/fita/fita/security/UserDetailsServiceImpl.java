@@ -1,4 +1,4 @@
-package com.fita.fita.repository.security;
+package com.fita.fita.security;
 
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
