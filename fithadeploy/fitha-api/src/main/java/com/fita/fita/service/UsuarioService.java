@@ -24,8 +24,9 @@ public class UsuarioService {
 	public Optional<UsuarioModel> CadastrarUsuario(UsuarioModel usuario) {
 		
 		Optional<UsuarioModel> userIsPresent = repository.findByEmail(usuario.getEmail());
+		Optional<UsuarioModel> userIsPresent1 = repository.findByCpf(usuario.getCpf());
 		
-		if(!userIsPresent.isPresent()) {		
+		if(!userIsPresent.isPresent()&& !userIsPresent1.isPresent()) {		
 			BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 	
 			String senhaEncoder = encoder.encode(usuario.getSenha());
