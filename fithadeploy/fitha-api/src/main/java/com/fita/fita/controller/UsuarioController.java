@@ -3,8 +3,6 @@ package com.fita.fita.controller;
 import java.util.List;
 import java.util.Optional;
 
-import javax.validation.Valid;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -47,13 +45,6 @@ public class UsuarioController {
 	public ResponseEntity<List<UsuarioModel>> getByNome(@PathVariable String nome) {
 		return ResponseEntity.ok(repository.findAllByNomeContainingIgnoreCase(nome));
 	}
-
-	@PostMapping
-	public ResponseEntity<UsuarioModel> postUsuario(@RequestBody UsuarioModel usuario) {
-
-		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(usuario));
-	}
-
 	@PutMapping
 	public ResponseEntity<UsuarioModel> putUsuario(@RequestBody UsuarioModel usuario) {
 		return ResponseEntity.status(HttpStatus.OK).body(repository.save(usuario));
