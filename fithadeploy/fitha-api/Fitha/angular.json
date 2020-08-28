@@ -24,10 +24,8 @@
               "src/assets"
             ],
             "styles": [
-              
               "src/styles.css",
               "./node_modules/bootstrap/dist/css/bootstrap.min.css"
-             
             ],
             "scripts": [
               "./node_modules/jquery/dist/jquery.js",
@@ -126,6 +124,14 @@
           }
         }
       }
-    }},
-  "defaultProject": "Fitha"
+    }
+  },
+  "defaultProject": "Fitha",
+  "cli": {
+<<<<<<< HEAD
+    "analytics": "1860da7f-a5fd-499c-ac45-46f0bddf1336"
+=======
+    "analytics": "28a0c401-4a1c-48a4-8375-3d5fd9e65865"
+>>>>>>> claudia
+  }
 }
