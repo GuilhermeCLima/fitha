@@ -38,7 +38,7 @@ p{
  
 #primeiraLinha a {
 	position: relative;
-	color: #fff;
+	color: black;
 	text-decoration: none;  
 }
  
@@ -49,7 +49,7 @@ p{
 	height: 1px;
 	bottom: -5px;
 	left: 0;
-	background-color: #fff;
+	background-color:black;
 	visibility: hidden;
 	transform: scaleX(0);
 	transition: all 0.3s ease-in-out 0s;
@@ -64,7 +64,7 @@ p{
  
 /* animações redes sociais */
  
-.instagram, .facebook, .whatsapp{
+.instagram, .facebook, {
 	transition: .4s;
 	width: 49px;
 	height: 50px;
@@ -79,10 +79,6 @@ p{
 }
 .facebook{
 	background: linear-gradient(45deg, rgb(224,224,240),rgb(244,243,242)49%,rgb(25,175,255) 50%, rgba(0, 7, 224, 0.8) 100%);
-	background-size:250%;
-}
-.whatsapp{
-	background: linear-gradient(45deg, rgb(224,224,240),rgb(244,243,242)49%,rgb(97,253,125) 50%, rgba(37, 207, 67, 0.8) 100%);
 	background-size:250%;
 }
 .margin_facebook{
