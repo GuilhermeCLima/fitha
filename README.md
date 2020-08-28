@@ -1,3 +1,3 @@
-# fitha
+# Fitha
 Projeto Integrador
 
