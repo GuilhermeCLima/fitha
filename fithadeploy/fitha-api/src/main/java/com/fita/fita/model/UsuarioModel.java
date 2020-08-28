@@ -62,8 +62,8 @@ public class UsuarioModel {
 	@Size(min = 9, max = 12)
 	@Column(nullable = false)
 	private String telefone;
-
-	private boolean admin;
+	
+	private boolean admin ;
 
 	public String getBairro() {
 		return bairro;

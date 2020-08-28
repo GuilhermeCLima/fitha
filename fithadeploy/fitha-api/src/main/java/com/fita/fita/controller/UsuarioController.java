@@ -45,13 +45,6 @@ public class UsuarioController {
 	public ResponseEntity<List<UsuarioModel>> getByNome(@PathVariable String nome) {
 		return ResponseEntity.ok(repository.findAllByNomeContainingIgnoreCase(nome));
 	}
-
-	@PostMapping
-	public ResponseEntity<UsuarioModel> postUsuario(@RequestBody UsuarioModel usuario) {
-
-		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(usuario));
-	}
-
 	@PutMapping
 	public ResponseEntity<UsuarioModel> putUsuario(@RequestBody UsuarioModel usuario) {
 		return ResponseEntity.status(HttpStatus.OK).body(repository.save(usuario));
