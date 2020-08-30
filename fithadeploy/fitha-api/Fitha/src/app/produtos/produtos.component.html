@@ -1,195 +1,638 @@
-<div class="d-flex" id="wrapper">
 
-    <!-- Sidebar -->
 
-    <div class="bg-light border-right" id="sidebar-wrapper">
-      
-      <div class="list-group list-group-flush">
-        <a href="#" class="list-group-item list-group-item-action bg-light">Itens</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Shortcuts</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Overview</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Events</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Profile</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Status</a>
-      </div>
+<div class="d-flex w-100" id="wrapper">
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <!-- inicio do sidebar-filtro-->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+
+    <aside class="row-col-2 ">
+
+        <!--filtro categoria-->
+       
+        <div class="card ">
+            <article class="card-group-item">
+                <header class="card-header">
+                    <h6 class="title">Categoria </h6>
+                </header>
+                <div class="filter-content">
+                    <div class="card-body">
+
+                        <form>
+                            <label class="form-check">
+                                <input class="form-check-input" type="checkbox" value="">
+                                <span class="form-check-label">
+                                    Tricot
+                                </span>
+                            </label>
+
+                            <label class="form-check">
+                                <input class="form-check-input" type="checkbox" value="">
+                                <span class="form-check-label">
+                                    Crochet
+                                </span>
+                            </label>
+
+                            <label class="form-check">
+                                <input class="form-check-input" type="checkbox" value="">
+                                <span class="form-check-label">
+                                    Reciclagem
+                                </span>
+                            </label>
+
+                        </form>
+                    </div>
+                </div>
+            </article>
+
+            <!--filtro material-->
+            <article class="card-group-item">
+
+                <header class="card-header">
+                    <h6 class="title">Material </h6>
+                </header>
+
+                <div class="filter-content">
+                    <div class="card-body">
+                        <label class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadio" value="">
+                            <span class="form-check-label">
+                                Plástico
+                            </span>
+                        </label>
+
+                        <label class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadio" value="">
+                            <span class="form-check-label">
+                                Metal
+                            </span>
+                        </label>
+
+                        <label class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadio" value="">
+                            <span class="form-check-label">
+                                Tecido
+                            </span>
+                        </label>
+
+                    </div>
+                </div>
+            </article>
+
+            <!--filtro similzr category-->
+            <article class="card-group-item">
+
+                <header class="card-header">
+                    <h6 class="title">Similar category </h6>
+                </header>
+
+                <div class="filter-content">
+                    <div class="list-group list-group-flush">
+                        <a href="#" class="list-group-item">Cras justo odio <span
+                                class="float-right badge badge-light round">142</span> </a>
+                        <a href="#" class="list-group-item">Dapibus ac facilisis <span
+                                class="float-right badge badge-light round">3</span> </a>
+                        <a href="#" class="list-group-item">Morbi leo risus <span
+                                class="float-right badge badge-light round">32</span> </a>
+                        <a href="#" class="list-group-item">Another item <span
+                                class="float-right badge badge-light round">12</span> </a>
+                    </div> <!-- list-group .// -->
+                </div>
+
+            </article>
+
+            <!--filtro cor-->
+            <article class="card-group-item">
+
+                <header class="card-header">
+                    <h6 class="title">Cor</h6>
+                </header>
+
+                <div class="filter-content">
+                    <div class="card-body">
+
+                        <label class="btn btn-danger">
+                            <input class="" type="hidden" name="myradio" value="">
+                            <span class="form-check-label">Vermelho</span>
+                        </label>
+
+                        <label class="btn btn-success">
+                            <input class="" type="hidden" name="myradio" value="">
+                            <span class="form-check-label">Verde</span>
+                        </label>
+
+                        <label class="btn btn-primary ml-1">
+                            <input class="" type="hidden" name="myradio" value="">
+                            <span class="form-check-label">Azul</span>
+                        </label>
+
+                        <label class="btn btn-warning">
+                            <input class="" type="hidden" name="myradio" value="">
+                            <span class="form-check-label">Amarelo</span>
+                        </label>
+
+                    </div>
+                </div>
+            </article>
+
+            <!--filtro faixa de preço-->
+            <article class="card-group-item">
+
+                <header class="card-header">
+                    <h6 class="title">Faixa de preço </h6>
+                </header>
+
+                <div class="filter-content">
+                    <div class="card-body">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label>Min</label>
+                                <input type="number" class="form-control" id="inputEmail4" placeholder="R$0">
+                            </div>
+                            <div class="form-group col-md-6 text-right">
+                                <label>Max</label>
+                                <input type="number" class="form-control" placeholder="R$">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!--filtro seleção-->
+            <article class="card-group-item">
+
+                <header class="card-header">
+                    <h6 class="title">Seleção </h6>
+                </header>
+
+                <div class="filter-content">
+                    <div class="card-body">
+                        <div class="custom-control custom-checkbox pl-0">
+                            <span class="float-right badge badge-light round">52</span>
+                            <input type="checkbox" class="custom-control-input" id="Check1">
+                            <label class="custom-control-label pl-4" for="Check1">Samsung</label>
+                        </div>
+
+                        <div class="custom-control custom-checkbox pl-0">
+                            <span class="float-right badge badge-light round">132</span>
+                            <input type="checkbox" class="custom-control-input" id="Check2">
+                            <label class="custom-control-label pl-4" for="Check2">Black berry</label>
+                        </div>
+
+                        <div class="custom-control custom-checkbox pl-0">
+                            <span class="float-right badge badge-light round">17</span>
+                            <input type="checkbox" class="custom-control-input" id="Check3">
+                            <label class="custom-control-label pl-4" for="Check3">Samsung</label>
+                        </div>
+
+                        <div class="custom-control custom-checkbox pl-0">
+                            <span class="float-right badge badge-light round pl-1">7</span>
+                            <input type="checkbox" class="custom-control-input pl-1" id="Check4">
+                            <label class="custom-control-label pl-4" for="Check4">Other Brand</label>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
+    </aside>
+
+    <!--fim do sidebar-filtro-->
+
+
+
+    <!--inicio grupo de cards fileira 1-->
+
+    <div class="container d-flex justify-content-center mr-0">
+        <div class="row row-cols-md-6 w-75 mt-5">
+
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <a href="#" class="stretched-link">
+                            <h5 class="card-title">Produto</h5>
+                        </a>
+                        <p class="card-text ">Breve descrição.</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <a href="#" class="stretched-link">
+                            <h5 class="card-title">Produto</h5>
+                        </a>
+                        <p class="card-text">Breve descrição.</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <a href="#" class="stretched-link">
+                            <h5 class="card-title">Produto</h5>
+                        </a>
+                        <p class="card-text">Breve descrição.</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <a href="#" class="stretched-link">
+                            <h5 class="card-title">Produto</h5>
+                        </a>
+                        <p class="card-text">Breve descrição.</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <a href="#" class="stretched-link">
+                            <h5 class="card-title">Produto</h5>
+                        </a>
+                        <p class="card-text">Breve descrição.</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <a href="#" class="stretched-link">
+                            <h5 class="card-title">Produto</h5>
+                        </a>
+                        <p class="card-text">Breve descrição.</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <a href="#" class="stretched-link">
+                            <h5 class="card-title">Produto</h5>
+                        </a>
+                        <p class="card-text">Breve descrição.</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <a href="#" class="stretched-link">
+                            <h5 class="card-title">Produto</h5>
+                        </a>
+                        <p class="card-text">Breve descrição.</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <a href="#" class="stretched-link">
+                            <h5 class="card-title">Produto</h5>
+                        </a>
+                        <p class="card-text">Breve descrição.</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <a href="#" class="stretched-link">
+                            <h5 class="card-title">Produto</h5>
+                        </a>
+                        <p class="card-text">Breve descrição.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <a href="#" class="stretched-link">
+                            <h5 class="card-title">Produto</h5>
+                        </a>
+                        <p class="card-text">Breve descrição.</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <a href="#" class="stretched-link">
+                            <h5 class="card-title">Produto</h5>
+                        </a>
+                        <p class="card-text">Breve descrição.</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <a href="#" class="stretched-link">
+                            <h5 class="card-title">Produto</h5>
+                        </a>
+                        <p class="card-text">Breve descrição.</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <a href="#" class="stretched-link">
+                            <h5 class="card-title">Produto</h5>
+                        </a>
+                        <p class="card-text">Breve descrição.</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <a href="#" class="stretched-link">
+                            <h5 class="card-title">Produto</h5>
+                        </a>
+                        <p class="card-text">Breve descrição.</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <a href="#" class="stretched-link">
+                            <h5 class="card-title">Produto</h5>
+                        </a>
+                        <p class="card-text">Breve descrição.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <a href="#" class="stretched-link">
+                            <h5 class="card-title">Produto</h5>
+                        </a>
+                        <p class="card-text">Breve descrição.</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <a href="#" class="stretched-link">
+                            <h5 class="card-title">Produto</h5>
+                        </a>
+                        <p class="card-text">Breve descrição.</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <a href="#" class="stretched-link">
+                            <h5 class="card-title">Produto</h5>
+                        </a>
+                        <p class="card-text">Breve descrição.</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <a href="#" class="stretched-link">
+                            <h5 class="card-title">Produto</h5>
+                        </a>
+                        <p class="card-text">Breve descrição.</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <a href="#" class="stretched-link">
+                            <h5 class="card-title">Produto</h5>
+                        </a>
+                        <p class="card-text ">Breve descrição.</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <a href="#" class="stretched-link">
+                            <h5 class="card-title">Produto</h5>
+                        </a>
+                        <p class="card-text ">Breve descrição.</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <a href="#" class="stretched-link">
+                            <h5 class="card-title">Produto</h5>
+                        </a>
+                        <p class="card-text ">Breve descrição.</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <a href="#" class="stretched-link">
+                            <h5 class="card-title">Produto</h5>
+                        </a>
+                        <p class="card-text ">Breve descrição.</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <a href="#" class="stretched-link">
+                            <h5 class="card-title">Produto</h5>
+                        </a>
+                        <p class="card-text ">Breve descrição.</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <a href="#" class="stretched-link">
+                            <h5 class="card-title">Produto</h5>
+                        </a>
+                        <p class="card-text ">Breve descrição.</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <a href="#" class="stretched-link">
+                            <h5 class="card-title">Produto</h5>
+                        </a>
+                        <p class="card-text">Breve descrição.</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <a href="#" class="stretched-link">
+                            <h5 class="card-title">Produto</h5>
+                        </a>
+                        <p class="card-text">Breve descrição.</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <a href="#" class="stretched-link">
+                            <h5 class="card-title">Produto</h5>
+                        </a>
+                        <p class="card-text">Breve descrição.</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <a href="#" class="stretched-link">
+                            <h5 class="card-title">Produto</h5>
+                        </a>
+                        <p class="card-text">Breve descrição.</p>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
     </div>
-    
+    <!--fim grupo de cards fileira 1-->
 
-
-<!--inicio grupo de cards fileira 1-->
-
-<div class="container d-flex justify-content-center mr-0 mt-5 ">
-    <div class="row row-cols-md-6 w-100 ">
-
-        <div class="col mb-4 ">
-            <div class="card ">
-                <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
-                    class="card-img-top" alt="...">
-                <div class="card-body">
-                    <a href="#" class="stretched-link">
-                        <h5 class="card-title">Produto</h5>
-                    </a>
-                    <p class="card-text ">Breve descrição.</p>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="col mb-4">
-            <div class="card">
-                <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
-                    class="card-img-top" alt="...">
-                <div class="card-body">
-                    <a href="#" class="stretched-link">
-                        <h5 class="card-title">Produto</h5>
-                    </a>
-                    <p class="card-text">Breve descrição.</p>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="col mb-4">
-            <div class="card">
-                <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
-                    class="card-img-top" alt="...">
-                <div class="card-body">
-                    <a href="#" class="stretched-link">
-                        <h5 class="card-title">Produto</h5>
-                    </a>
-                    <p class="card-text">Breve descrição.</p>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="col mb-4">
-            <div class="card">
-                <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
-                    class="card-img-top" alt="...">
-                <div class="card-body">
-                    <a href="#" class="stretched-link">
-                        <h5 class="card-title">Produto</h5>
-                    </a>
-                    <p class="card-text">Breve descrição.</p>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="col mb-4">
-            <div class="card">
-                <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
-                    class="card-img-top" alt="...">
-                <div class="card-body">
-                    <a href="#" class="stretched-link">
-                        <h5 class="card-title">Produto</h5>
-                    </a>
-                    <p class="card-text">Breve descrição.</p>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="col mb-4">
-            <div class="card">
-                <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
-                    class="card-img-top" alt="...">
-                <div class="card-body">
-                    <a href="#" class="stretched-link">
-                        <h5 class="card-title">Produto</h5>
-                    </a>
-                    <p class="card-text">Breve descrição.</p>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="col mb-4">
-            <div class="card">
-                <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
-                    class="card-img-top" alt="...">
-                <div class="card-body">
-                    <a href="#" class="stretched-link">
-                        <h5 class="card-title">Produto</h5>
-                    </a>
-                    <p class="card-text">Breve descrição.</p>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="col mb-4">
-            <div class="card">
-                <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
-                    class="card-img-top" alt="...">
-                <div class="card-body">
-                    <a href="#" class="stretched-link">
-                        <h5 class="card-title">Produto</h5>
-                    </a>
-                    <p class="card-text">Breve descrição.</p>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="col mb-4">
-            <div class="card">
-                <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
-                    class="card-img-top" alt="...">
-                <div class="card-body">
-                    <a href="#" class="stretched-link">
-                        <h5 class="card-title">Produto</h5>
-                    </a>
-                    <p class="card-text">Breve descrição.</p>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="col mb-4">
-            <div class="card">
-                <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
-                    class="card-img-top" alt="...">
-                <div class="card-body">
-                    <a href="#" class="stretched-link">
-                        <h5 class="card-title">Produto</h5>
-                    </a>
-                    <p class="card-text">Breve descrição.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col mb-4">
-            <div class="card">
-                <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
-                    class="card-img-top" alt="...">
-                <div class="card-body">
-                    <a href="#" class="stretched-link">
-                        <h5 class="card-title">Produto</h5>
-                    </a>
-                    <p class="card-text">Breve descrição.</p>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="col mb-4">
-            <div class="card">
-                <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
-                    class="card-img-top" alt="...">
-                <div class="card-body">
-                    <a href="#" class="stretched-link">
-                        <h5 class="card-title">Produto</h5>
-                    </a>
-                    <p class="card-text">Breve descrição.</p>
-
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-<!--fim grupo de cards fileira 1-->
+  
