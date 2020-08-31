@@ -129,3 +129,9 @@
 #modal{
   margin-top: 250px;
 }
+svg{
+  margin-bottom: 3px;
+}
+.barra-width{
+width: 400px;
+}

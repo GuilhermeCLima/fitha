@@ -22,10 +22,9 @@
 
   <a class="navbar-brand  mr-auto margi" href="#">Fitha</a>
 
-
-  <div class="container text-center">
-    <form class="form-inline">
-      <input class="form-control  search-box" type="search" placeholder="busque aqui seu produto" aria-label="Search">
+ 
+    <form class="form-inline mr-auto ">
+      <input class="form-control  search-box barra-width" type="search" placeholder="busque aqui seu produto" aria-label="Search">
       <button class="btn btn-outline-info my-2 my-sm-0 button-box" type="submit">
         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor"
           xmlns="http://www.w3.org/2000/svg">
@@ -36,7 +35,7 @@
         </svg>
       </button>
     </form>
-  </div>
+ 
   <div *ngIf='auth.btnLogin()'>
     <button type="button" class="btn btn-outline-info mr-2" routerLink = "/login">
       <svg width=" 20px" height="20px" viewBox="0 0 16 16" class="bi bi-person-circle" fill="currentColor"
