@@ -28,9 +28,19 @@ export class CadastroComponent implements OnInit {
   }
 
   cadastro() {
-    this.authService.cadastro(this.user).subscribe((resp: UsuarioModel) => {
-      this.user = resp
-    })
+
+    this.user.admin = false
+    if (this.senha === this.user.senha) {
+      this.authService.cadastro(this.user).subscribe((resp: UsuarioModel) => {
+        this.user = resp
+        this.router.navigate(['/home'])
+        alert('usuário cadastrado com sucesso!')
+      })
+    }
+    else {
+      alert('suas senhas não conferem')
+    }
+
 
   }
 }
