@@ -52,7 +52,7 @@
    margin-bottom: 5px;
    position: relative;
    
-   background: #cdcdcd;
+   background: #0e5006;
    border-radius: 3px;
    
    z-index: 1;
@@ -78,7 +78,7 @@
  {
    opacity: 1;
    transform: rotate(45deg) translate(-2px, -1px);
-   background: #232323;
+   background: #13ff5a;
  }
  
 
@@ -101,9 +101,9 @@
    width: 300px;
    margin: 0 0 0 -50px; /*mexe na distancia embaixo do menu */
    padding: 50px;
-   border-radius: 20px 20px 20px 20px;
+
    
-   background: #68c4d4;
+   background: rgb(220, 234, 238);
    list-style-type: none;
    -webkit-font-smoothing: antialiased;
    
