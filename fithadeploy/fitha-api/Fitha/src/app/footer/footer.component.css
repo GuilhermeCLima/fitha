@@ -24,6 +24,7 @@ i{
 	font-size:30px;
 	color: black !important;
 	margin-top: 10px;
+	width: 40px;
 }
 section {
 	background: rgb(255, 255, 255) !important;
@@ -71,17 +72,21 @@ p{
 	height: 50px;
 	border-radius: 30px;
 }
-.instagram{
+/* animação */
+.instagram{  
 	background: linear-gradient(45deg,rgb(224,224,240),rgb(244,243,242)49%,#f09433 50%, #e6683c 62.5%, #dc2743 75%, #cc2366 87.5%, #bc1888 100%);
 	background-size:250%;
 }
+/* passar o mouse */
 .instagram:hover , .facebook:hover, .whatsapp:hover{
 	background-position: right;
 }
+/* animação */
 .facebook{
 	background: linear-gradient(45deg, rgb(224,224,240),rgb(244,243,242)49%,rgb(25,175,255) 50%, rgba(0, 7, 224, 0.8) 100%);
 	background-size:250%;
 }
+/* passar o mouse */
 .margin_facebook{
 	margin-top: 12px !important;
 	margin-right: 1px;
