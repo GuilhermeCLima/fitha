@@ -14,7 +14,7 @@ export class AuthService {
     return this.http.post("http://localhost:9000/usuarios/logar", userLogin)
   }
 
-  cadastrar(user: UsuarioModel) {
-    return this.http.post("http://localhost:9000/usuarios/cadastrar", user)
+  cadastro(user: UsuarioModel) {
+    return this.http.post("http://localhost:9000/usuarios/cadastro", user)
   }
 }

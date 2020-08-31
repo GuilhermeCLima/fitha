@@ -27,8 +27,8 @@ export class CadastroComponent implements OnInit {
     this.senha = event.target.value
   }
 
-  cadastrar() {
-    this.authService.cadastrar(this.user).subscribe((resp: UsuarioModel) => {
+  cadastro() {
+    this.authService.cadastro(this.user).subscribe((resp: UsuarioModel) => {
       this.user = resp
     })
 
