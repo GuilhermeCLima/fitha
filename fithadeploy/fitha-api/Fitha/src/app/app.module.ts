@@ -23,7 +23,7 @@ import { ContatoComponent } from './contato/contato.component';
     FooterComponent,
     QuemsomosComponent,
     ProdutosComponent,
-    ProdutoDetalheComponent
+    ProdutoDetalheComponent,
     ContatoComponent
   ],
   imports: [
