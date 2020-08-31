@@ -23,7 +23,7 @@ public class ProdutoModel {
 	private long id;
 
 	@NotNull
-	@Size(min = 3, max = 20)
+	@Size(min = 3, max = 40)
 	@Column(nullable = false)
 	private String nome;
 
