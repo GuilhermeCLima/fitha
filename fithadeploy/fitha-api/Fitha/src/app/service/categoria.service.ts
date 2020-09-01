@@ -7,14 +7,18 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class CategoriaService {
 
   constructor(
-    private http:HttpClient
+    private http: HttpClient
   ) { }
-    token = {
-      headers: new HttpHeaders().set('Authorization',localStorage.getItem('token'))
-    }
-    getAllCategoria(){
-      return this.http.get("http://localhost:8080/categoria",this.token)
-    }
+  token = {
+    headers: new HttpHeaders().set('Authorization', localStorage.getItem('token'))
+  }
+  getAllCategoria() {
+    return this.http.get("http://localhost:8080/categoria")
+  }
+
+  getByIdCategoria(id: number) {
+    return this.http.get(`http://localhost:9000/produtos/${id}`, this.token)
+  }
 
 }
 

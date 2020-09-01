@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import{CategoriaModel} from '../model/Categoria'
 import{CategoriaService} from '../service/categoria.service'
+import { ProdutoModel } from '../model/Produto';
+import{ProdutoService} from '../service/produto.service'
 
 @Component({
   selector: 'app-produtos',
@@ -9,22 +11,39 @@ import{CategoriaService} from '../service/categoria.service'
 })
 export class ProdutosComponent implements OnInit {
 
-  categoria:CategoriaModel = new CategoriaModel
+  categoria:CategoriaModel = new CategoriaModel()
   listCategoria: CategoriaModel[]
 
+  produto: ProdutoModel = new ProdutoModel()
+  listProduto:ProdutoModel[]
+  idCategoria:number
+  idProduto:number
 
   constructor(
-    private categoriaService: CategoriaService
+    private categoriaService: CategoriaService,
+    private produtoService : ProdutoService
   ) { }
 
   ngOnInit()
    {  
-     this.getAllCategorias()
+     window.scroll(0,0)
+     this.findAllCategorias()
+     this.findAllProduto()
   }
  
-  getAllCategorias(){
+  findAllCategorias(){
     this.categoriaService.getAllCategoria().subscribe((resp:CategoriaModel[]) => {
       this.listCategoria = resp
+    })
+  }
+  findAllProduto(){
+    this.produtoService.getAllProduto().subscribe((resp:ProdutoModel[]) => {
+      this.listProduto = resp
+    })
+  }
+    findByIdCategoria() {
+    this.categoriaService.getByIdCategoria(this.idCategoria).subscribe((resp: CategoriaModel) => {
+      this.categoria = resp
     })
   }
 
