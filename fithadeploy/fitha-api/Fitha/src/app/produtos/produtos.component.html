@@ -25,29 +25,12 @@
                 <div class="filter-content">
                     <div class="card-body">
 
-                        <form>
-                            <label class="form-check">
-                                <input class="form-check-input" type="checkbox" value="">
-                                <span class="form-check-label">
-                                    Tricot
-                                </span>
-                            </label>
+                        <div *ngFor = "let item of listCategoria">
+                            
+                                    {{item.nome}}
+                          
 
-                            <label class="form-check">
-                                <input class="form-check-input" type="checkbox" value="">
-                                <span class="form-check-label">
-                                    Crochet
-                                </span>
-                            </label>
-
-                            <label class="form-check">
-                                <input class="form-check-input" type="checkbox" value="">
-                                <span class="form-check-label">
-                                    Reciclagem
-                                </span>
-                            </label>
-
-                        </form>
+                        </div>
                     </div>
                 </div>
             </article>
