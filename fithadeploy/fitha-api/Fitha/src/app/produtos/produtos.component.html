@@ -13,7 +13,7 @@
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
 
-    <aside class="row-col-2 hidden-sm">
+    <aside class="col-md-2 hidden-sm">
 
         <!--filtro categoria-->
        
@@ -22,32 +22,12 @@
                 <header class="card-header">
                     <h6 class="title">Categoria </h6>
                 </header>
-                <div class="filter-content">
+                <div class="filter-content" >
                     <div class="card-body">
 
-                        <form>
-                            <label class="form-check">
-                                <input class="form-check-input" type="checkbox" value="">
-                                <span class="form-check-label">
-                                    Tricot
-                                </span>
-                            </label>
-
-                            <label class="form-check">
-                                <input class="form-check-input" type="checkbox" value="">
-                                <span class="form-check-label">
-                                    Crochet
-                                </span>
-                            </label>
-
-                            <label class="form-check">
-                                <input class="form-check-input" type="checkbox" value="">
-                                <span class="form-check-label">
-                                    Reciclagem
-                                </span>
-                            </label>
-
-                        </form>
+                            <div *ngFor="let item of listCategoria" >
+                                <a href=""> {{item.nome}} </a>
+                            </div> 
                     </div>
                 </div>
             </article>
@@ -55,8 +35,8 @@
             <!--filtro material-->
             <article class="card-group-item">
 
-                <header class="card-header">
-                    <h6 class="title">Material </h6>
+                <header class="card-header" >
+                    <h6 class="title"></h6>
                 </header>
 
                 <div class="filter-content">
@@ -211,423 +191,27 @@
 
     <!--inicio grupo de cards fileira 1-->
 
-    <div class="container d-flex justify-content-center mr-0">
-        <div class="row row-cols-md-12 w-75 mt-5">
+    <div class="container ">
+        <div class="row row-cols-md-12 w-100 mt-5">
 
-            <div class="col mb-4">
-                <div class="card">
-                    <img src="https://img.elo7.com.br/product/zoom/2F0668E/boneca-amigurumi-maria-flor-boneca-amigurumi.jpg"alt="boneca" class="card-img-top" >
-                    <div class="card-body">
-                        <a href="#" class="stretched-link">
-                            <h5 class="card-title">Boneca</h5>
-                        </a>
-                        <p class="card-text ">Feita em amigumi</p>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="col mb-4">
-                <div class="card">
+            <div class="col"  *ngFor="let item of listProduto">
+                <div class="card" >
                     <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
                         class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <a href="#" class="stretched-link">
-                            <h5 class="card-title">Produto</h5>
-                        </a>
-                        <p class="card-text">Breve descrição.</p>
+                    <div class="card-body " >
+                        
+                        <button class="btn btn-outline-info ">comprar</button>
+                            <h5 class="card-title" >{{item.nome}}</h5>
+                     
+                        
 
                     </div>
                 </div>
             </div>
 
-            <div class="col mb-4">
-                <div class="card">
-                    <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <a href="#" class="stretched-link">
-                            <h5 class="card-title">Produto</h5>
-                        </a>
-                        <p class="card-text">Breve descrição.</p>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="col mb-4">
-                <div class="card">
-                    <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <a href="#" class="stretched-link">
-                            <h5 class="card-title">Produto</h5>
-                        </a>
-                        <p class="card-text">Breve descrição.</p>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="col mb-4">
-                <div class="card">
-                    <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <a href="#" class="stretched-link">
-                            <h5 class="card-title">Produto</h5>
-                        </a>
-                        <p class="card-text">Breve descrição.</p>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="col mb-4">
-                <div class="card">
-                    <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <a href="#" class="stretched-link">
-                            <h5 class="card-title">Produto</h5>
-                        </a>
-                        <p class="card-text">Breve descrição.</p>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="col mb-4">
-                <div class="card">
-                    <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <a href="#" class="stretched-link">
-                            <h5 class="card-title">Produto</h5>
-                        </a>
-                        <p class="card-text">Breve descrição.</p>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="col mb-4">
-                <div class="card">
-                    <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <a href="#" class="stretched-link">
-                            <h5 class="card-title">Produto</h5>
-                        </a>
-                        <p class="card-text">Breve descrição.</p>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="col mb-4">
-                <div class="card">
-                    <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <a href="#" class="stretched-link">
-                            <h5 class="card-title">Produto</h5>
-                        </a>
-                        <p class="card-text">Breve descrição.</p>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="col mb-4">
-                <div class="card">
-                    <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <a href="#" class="stretched-link">
-                            <h5 class="card-title">Produto</h5>
-                        </a>
-                        <p class="card-text">Breve descrição.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col mb-4">
-                <div class="card">
-                    <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <a href="#" class="stretched-link">
-                            <h5 class="card-title">Produto</h5>
-                        </a>
-                        <p class="card-text">Breve descrição.</p>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="col mb-4">
-                <div class="card">
-                    <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <a href="#" class="stretched-link">
-                            <h5 class="card-title">Produto</h5>
-                        </a>
-                        <p class="card-text">Breve descrição.</p>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col mb-4">
-                <div class="card">
-                    <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <a href="#" class="stretched-link">
-                            <h5 class="card-title">Produto</h5>
-                        </a>
-                        <p class="card-text">Breve descrição.</p>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="col mb-4">
-                <div class="card">
-                    <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <a href="#" class="stretched-link">
-                            <h5 class="card-title">Produto</h5>
-                        </a>
-                        <p class="card-text">Breve descrição.</p>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="col mb-4">
-                <div class="card">
-                    <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <a href="#" class="stretched-link">
-                            <h5 class="card-title">Produto</h5>
-                        </a>
-                        <p class="card-text">Breve descrição.</p>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="col mb-4">
-                <div class="card">
-                    <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <a href="#" class="stretched-link">
-                            <h5 class="card-title">Produto</h5>
-                        </a>
-                        <p class="card-text">Breve descrição.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col mb-4">
-                <div class="card">
-                    <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <a href="#" class="stretched-link">
-                            <h5 class="card-title">Produto</h5>
-                        </a>
-                        <p class="card-text">Breve descrição.</p>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="col mb-4">
-                <div class="card">
-                    <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <a href="#" class="stretched-link">
-                            <h5 class="card-title">Produto</h5>
-                        </a>
-                        <p class="card-text">Breve descrição.</p>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col mb-4">
-                <div class="card">
-                    <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <a href="#" class="stretched-link">
-                            <h5 class="card-title">Produto</h5>
-                        </a>
-                        <p class="card-text">Breve descrição.</p>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="col mb-4">
-                <div class="card">
-                    <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <a href="#" class="stretched-link">
-                            <h5 class="card-title">Produto</h5>
-                        </a>
-                        <p class="card-text">Breve descrição.</p>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="col mb-4">
-                <div class="card">
-                    <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <a href="#" class="stretched-link">
-                            <h5 class="card-title">Produto</h5>
-                        </a>
-                        <p class="card-text ">Breve descrição.</p>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="col mb-4">
-                <div class="card">
-                    <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <a href="#" class="stretched-link">
-                            <h5 class="card-title">Produto</h5>
-                        </a>
-                        <p class="card-text ">Breve descrição.</p>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="col mb-4">
-                <div class="card">
-                    <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <a href="#" class="stretched-link">
-                            <h5 class="card-title">Produto</h5>
-                        </a>
-                        <p class="card-text ">Breve descrição.</p>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="col mb-4">
-                <div class="card">
-                    <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <a href="#" class="stretched-link">
-                            <h5 class="card-title">Produto</h5>
-                        </a>
-                        <p class="card-text ">Breve descrição.</p>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="col mb-4">
-                <div class="card">
-                    <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <a href="#" class="stretched-link">
-                            <h5 class="card-title">Produto</h5>
-                        </a>
-                        <p class="card-text ">Breve descrição.</p>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="col mb-4">
-                <div class="card">
-                    <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <a href="#" class="stretched-link">
-                            <h5 class="card-title">Produto</h5>
-                        </a>
-                        <p class="card-text ">Breve descrição.</p>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="col mb-4">
-                <div class="card">
-                    <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <a href="#" class="stretched-link">
-                            <h5 class="card-title">Produto</h5>
-                        </a>
-                        <p class="card-text">Breve descrição.</p>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="col mb-4">
-                <div class="card">
-                    <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <a href="#" class="stretched-link">
-                            <h5 class="card-title">Produto</h5>
-                        </a>
-                        <p class="card-text">Breve descrição.</p>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="col mb-4">
-                <div class="card">
-                    <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <a href="#" class="stretched-link">
-                            <h5 class="card-title">Produto</h5>
-                        </a>
-                        <p class="card-text">Breve descrição.</p>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="col mb-4">
-                <div class="card">
-                    <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <a href="#" class="stretched-link">
-                            <h5 class="card-title">Produto</h5>
-                        </a>
-                        <p class="card-text">Breve descrição.</p>
-
-                    </div>
-                </div>
-            </div>
+            
+           
+            
 
           <div class="container">
             <ul class="pagination d-flex justify-content-center align-items-center">
