@@ -95,9 +95,9 @@ section .section-title {
     -o-transform: rotateY(-180deg);
     -ms-transform: rotateY(-180deg);
     transform: rotateY(-180deg);
-    -webkit-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
-    -moz-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
-    box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+    -webkit-box-shadow: 5px 7px 9px -4px rgb(24, 22, 170);
+    -moz-box-shadow: 5px 7px 9px -4px rgb(146, 126, 235);
+    box-shadow: 5px 7px 9px -4px rgb(12, 4, 114);
 }
 
 .frontside,
@@ -137,4 +137,8 @@ section .section-title {
     width: 120px;
     height: 120px;
     border-radius: 50%;
+}
+
+.mat {
+    font-size: 23px;
 }
