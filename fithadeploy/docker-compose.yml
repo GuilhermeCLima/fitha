@@ -8,9 +8,9 @@ services:
       dockerfile: Dockerfile
     environment:
       TZ: America/Sao_Paulo
-      MYSQL_ROOT_PASSWORD: 30seconds
+      MYSQL_ROOT_PASSWORD: root
       MYSQL_USER: root
-      MYSQL_PASSWORD: 30seconds
+      MYSQL_PASSWORD: root
       MYSQL_DATABASE: fitha
     ports: 
       - "3308:3306"  
@@ -24,10 +24,10 @@ services:
       TZ: America/Sao_Paulo
       SPRING_BOOT_ENVIRONMENT: Production    
     volumes: 
-        - ./fitha-api:/fitha-api  
-        - ~/.m2:/root/.m2
+      - ./fitha-api:/fitha-api  
+      - ~/.m2:/root/.m2
     ports: 
-        - "9000:8080"
+      - "9000:8080"
     command: mvn clean spring-boot:run
     links: 
       - db

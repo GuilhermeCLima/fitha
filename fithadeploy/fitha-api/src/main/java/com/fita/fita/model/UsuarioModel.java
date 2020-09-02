@@ -21,49 +21,43 @@ public class UsuarioModel {
 	private long id;
 	
 	@NotNull
-	@Size(min = 3, max = 50)
-	@Column(nullable = false)
+	@Size(min = 3, max = 20)
 	private String usuario;
 	
 	@NotNull
 	@Size(min = 3, max = 50)
-	@Column(nullable = false)
 	private String nome;
 	
 	@NotNull
-	@Size(min = 9, max = 50)
-	@Column(nullable = false)
+	@Size(min = 9, max = 40)
 	private String email;
 	
 	@NotNull
 	private String senha;
 	
 	@NotNull
-	@Size(min = 8, max = 8)
-	@Column(nullable = false)
+	@Size(min = 8, max = 9)
 	private String cep;
 	
 	@NotNull
 	@Size(min = 3, max = 20)
-	@Column(nullable = true)
 	private String bairro;
 
 	@NotNull
-	@Size(min = 3, max = 20)
-	@Column(nullable = false)
+	@Size(min = 3, max = 30)
 	private String complemento;
 	
 	@NotNull
-	@Size(min = 1, max = 11)
-	@Column(nullable = false)
+	@Size(min = 1, max = 14)
 	private String cpf;
 	
 	@NotNull
 	@Size(min = 9, max = 12)
-	@Column(nullable = false)
 	private String telefone;
 	
-	private boolean admin ;
+	@NotNull
+	@Column( columnDefinition = "boolean default false")
+	private boolean admin  ;
 
 	public String getBairro() {
 		return bairro;
