@@ -31,14 +31,13 @@
                         </div>
                 </div>
                
-                
-                
-                
                 <div class="filter-content" >
                     <div class="card-body">
 
                             <div *ngFor="let item of listCategoria" >
                                 <a href=""> {{item.nome}} </a>
+                                <a class="btn btn-outline-info mr-3" [routerLink]="['/editar-tema', item.id]" >Editar</a>
+                                <a class="btn btn-outline-danger" [routerLink]="['/delete-tema', item.id]" >Apagar</a>
                             </div> 
                     </div>
                 </div>
