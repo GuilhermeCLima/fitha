@@ -17,18 +17,32 @@
 
         <!--filtro categoria-->
        
-        <div class="card ">
-            <article class="card-group-item">
+        <div class="card d-flex justify-content-center">
+            <article class="card-group-item d-flex justify-content-center">
                 <header class="card-header">
-                    <h6 class="title">Categoria </h6>
+                    <h6 class="title d-flex justify-content-center ">Categoria </h6>
+                    
+                    <div class="container ">
+                        <div class="row d-flex justify-content-around">
+
+                            <div class="col-md-3 p-0 mr-4">
+                            <button class="btn btn-outline-light bg-info">cadastrar</button>
+                            </div>
+            
+                            <div class="col-md-3 p-0 mr-3">
+                            <button class="btn btn-outline-light bg-danger ">deletar</button>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 mr-0 ">
+                        <input class="form-control search-box text-input" type="text" placeholder="nome da categoria" aria-label="Search">
+                    </div>
                 </header>
                 <div class="row">
-                    <div class="col-md-6 mr-0">
-                        <input class="form-control  search-box barra-width " type="text" placeholder="cadastrar categoria" aria-label="Search">
-                    </div>
-                        <div class="col-md-6 ml-0">
-                            <button class="btn btn-outline-info ">cadastrar</button>
-                        </div>
+                    
+                        
                 </div>
                
                 
@@ -76,28 +90,6 @@
 
                     </div>
                 </div>
-            </article>
-
-            <!--filtro similzr category-->
-            <article class="card-group-item">
-
-                <header class="card-header">
-                    <h6 class="title">Similar category </h6>
-                </header>
-
-                <div class="filter-content">
-                    <div class="list-group list-group-flush">
-                        <a href="#" class="list-group-item">Cras justo odio <span
-                                class="float-right badge badge-light round">142</span> </a>
-                        <a href="#" class="list-group-item">Dapibus ac facilisis <span
-                                class="float-right badge badge-light round">3</span> </a>
-                        <a href="#" class="list-group-item">Morbi leo risus <span
-                                class="float-right badge badge-light round">32</span> </a>
-                        <a href="#" class="list-group-item">Another item <span
-                                class="float-right badge badge-light round">12</span> </a>
-                    </div> <!-- list-group .// -->
-                </div>
-
             </article>
 
             <!--filtro cor-->
@@ -157,41 +149,7 @@
                 </div>
             </article>
 
-            <!--filtro seleção-->
-            <article class="card-group-item">
-
-                <header class="card-header">
-                    <h6 class="title">Seleção </h6>
-                </header>
-
-                <div class="filter-content">
-                    <div class="card-body">
-                        <div class="custom-control custom-checkbox pl-0">
-                            <span class="float-right badge badge-light round">52</span>
-                            <input type="checkbox" class="custom-control-input" id="Check1">
-                            <label class="custom-control-label pl-4" for="Check1">Samsung</label>
-                        </div>
-
-                        <div class="custom-control custom-checkbox pl-0">
-                            <span class="float-right badge badge-light round">132</span>
-                            <input type="checkbox" class="custom-control-input" id="Check2">
-                            <label class="custom-control-label pl-4" for="Check2">Black berry</label>
-                        </div>
-
-                        <div class="custom-control custom-checkbox pl-0">
-                            <span class="float-right badge badge-light round">17</span>
-                            <input type="checkbox" class="custom-control-input" id="Check3">
-                            <label class="custom-control-label pl-4" for="Check3">Samsung</label>
-                        </div>
-
-                        <div class="custom-control custom-checkbox pl-0">
-                            <span class="float-right badge badge-light round pl-1">7</span>
-                            <input type="checkbox" class="custom-control-input pl-1" id="Check4">
-                            <label class="custom-control-label pl-4" for="Check4">Other Brand</label>
-                        </div>
-                    </div>
-                </div>
-            </article>
+            
 
         </div>
 

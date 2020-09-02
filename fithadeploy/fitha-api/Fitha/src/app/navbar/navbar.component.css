@@ -6,7 +6,7 @@
   align-items: center;
   margin-left:20px;
 
- z-index: 1;
+ z-index: 100;
   
   -webkit-user-select: none;
   user-select: none;
@@ -54,7 +54,7 @@
   background: #232323;
   border-radius: 3px;
   
-  z-index: 1;
+  z-index: 100;
   
   transform-origin: 4px 0px;
   
