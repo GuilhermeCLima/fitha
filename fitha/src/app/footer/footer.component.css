@@ -1,0 +1,118 @@
+/* Footer */
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+*{
+	color: rgb(0, 0, 0)!important;
+	font-size: 18px
+}
+h5{
+	padding-left: 0px;
+    margin-bottom: 0px;
+    color:#fff;
+}
+h3 {
+	font-size:22px;
+	color:#fff;
+}
+a{
+    color: #fff;
+    text-decoration: none !important;
+}
+ul{
+	padding-top: 15px;
+}
+i{
+	font-size:30px;
+	color: black !important;
+	margin-top: 10px;
+	width: 40px;
+}
+section {
+	background: rgb(255, 255, 255) !important;
+	padding-bottom: 10px;
+	padding-top: 20px;
+	text-align: center;
+}
+p{
+	font-size:14px
+}
+/* Sublinhando primeira linha do footer */
+ 
+#primeiraLinha a {
+	position: relative;
+	color: black;
+	text-decoration: none;  
+}
+ 
+#primeiraLinha a:before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 1px;
+	bottom: -5px;
+	left: 0;
+	background-color:black;
+	visibility: hidden;
+	transform: scaleX(0);
+	transition: all 0.3s ease-in-out 0s;
+}
+ 
+#primeiraLinha a:hover:before {
+	visibility: visible;
+	transform: scaleX(1);
+}
+ 
+/* Sublinhando primeira linha do footer fim*/
+ 
+/* animações redes sociais */
+ 
+
+.instagram, .facebook {
+	transition: .4s;
+	width: 49px;
+	height: 50px;
+	border-radius: 30px;
+}
+/* animação */
+.instagram{  
+	background: linear-gradient(45deg,rgb(224,224,240),rgb(244,243,242)49%,#f09433 50%, #e6683c 62.5%, #dc2743 75%, #cc2366 87.5%, #bc1888 100%);
+	background-size:250%;
+}
+/* passar o mouse */
+.instagram:hover , .facebook:hover, .whatsapp:hover{
+	background-position: right;
+}
+/* animação */
+.facebook{
+	background: linear-gradient(45deg, rgb(224,224,240),rgb(244,243,242)49%,rgb(25,175,255) 50%, rgba(0, 7, 224, 0.8) 100%);
+	background-size:250%;
+}
+/* passar o mouse */
+.margin_facebook{
+	margin-top: 12px !important;
+	margin-right: 1px;
+}
+ 
+/* animações redes sociais fim */
+ 
+/* Mapa do site */
+ 
+/* .mapSite {
+	height: 300px;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+	bottom: -300px;
+	overflow-x: auto;
+	transition: all 5s ease-out;
+	opacity: 0;
+	background-color: #bc1888;
+	margin-left: 0;
+}
+ 
+.mapSidebar-open {
+	bottom: 0px;
+	opacity: 1;
+	overflow: visible;
+} */
+ 
+/* Fim do mapa do site */
