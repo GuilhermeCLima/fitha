@@ -22,6 +22,18 @@
                 <header class="card-header">
                     <h6 class="title">Categoria </h6>
                 </header>
+                <div class="row">
+                    <div class="col-md-6 mr-0">
+                        <input class="form-control  search-box barra-width " type="text" placeholder="cadastrar categoria" aria-label="Search">
+                    </div>
+                        <div class="col-md-6 ml-0">
+                            <button class="btn btn-outline-info ">cadastrar</button>
+                        </div>
+                </div>
+               
+                
+                
+                
                 <div class="filter-content" >
                     <div class="card-body">
 
@@ -196,12 +208,13 @@
 
             <div class="col"  *ngFor="let item of listProduto">
                 <div class="card" >
-                    <img src="https://avozdaserra.com.br/sites/default/files/noticias/dicas-de-artesanato-para-vender_0.jpg"
+                    <img src="{{item.produtoImagem}}"
                         class="card-img-top" alt="...">
                     <div class="card-body " >
                         
-                        <button class="btn btn-outline-info ">comprar</button>
+                        <button class="btn btn-outline-info " >comprar</button>
                             <h5 class="card-title" >{{item.nome}}</h5>
+                            <p>{{item.descricao}}</p>
                      
                         
 

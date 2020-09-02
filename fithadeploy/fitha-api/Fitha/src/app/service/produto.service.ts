@@ -16,6 +16,6 @@ export class ProdutoService {
     return this.http.get("http://localhost:8080/produtos",)
   }
   getByIdProduto(id: number) {
-    return this.http.get(`http://localhost:9000/produtos/${id}`, this.token)
+    return this.http.get(`http://localhost:8080/produtos/${id}`, this.token)
   }
 }
