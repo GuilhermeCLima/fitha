@@ -5,6 +5,7 @@
   position: relative;
   align-items: center;
   margin-left:20px;
+  margin-top: 20px;
 
  z-index: 100;
   
@@ -25,15 +26,14 @@
 {
   color: #be09ff;
 }
-
-
 #menuToggle input /* altera clique no menu e ele aparecer */
 {
  display: flex;
- width: 40px;
- height: 32px;
- position: absolute;
+ width: 50px;
+ height: 50px;
  cursor: pointer;
+ float:left;
+
   
   
   
@@ -42,7 +42,10 @@
   
   -webkit-touch-callout: none;
 }
+.ajuste-menu{
+    padding: 50px;;
 
+}
 #menuToggle span /*animação e cor do icone*/
 {
   display: block;
@@ -50,6 +53,7 @@
   height: 4px;
   margin-bottom: 5px;
   position: relative;
+
   
   background: #232323;
   border-radius: 3px;
@@ -99,10 +103,12 @@
   position: absolute;
   width: 300px;
   margin: 0 0 0 -50px; /*mexe na distancia embaixo do menu */
-  padding: 50px;
+  padding: 0;
+  margin-top:19px;
+
 
   
-  background: rgb(220, 234, 238);
+  background: #f8f9fa;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   
@@ -116,13 +122,12 @@
 {
   padding: 10px 0;
   font-size: 14px;
-  border-bottom:2px solid;
-  
 }
 #menuToggle input:checked ~ ul
 {
   transform: none;
 }
+
 .margi{
  margin:0px 0px 10px 40px;
 }
@@ -159,4 +164,22 @@ color: black;
 }
 .search-box{
   border-color:transparent;
+}
+li{
+  font-size:14pt
+}
+li:hover{
+  color: black; 
+  background-color: #be09ff;
+}
+span{
+  cursor: pointer;
+}
+.text-click{
+  
+  user-select: none;
+}
+.cor-bg{
+  color: black;
+background-color:#be09ff ;
 }

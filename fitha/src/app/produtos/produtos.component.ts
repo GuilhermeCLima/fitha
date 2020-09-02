@@ -46,5 +46,6 @@ export class ProdutosComponent implements OnInit {
       this.categoria = resp
     })
   }
+  
 
 }

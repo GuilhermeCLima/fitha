@@ -15,6 +15,8 @@ import{HttpClientModule} from '@angular/common/http'
 import { ContatoComponent } from './contato/contato.component';
 import { LoginComponent } from './login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
+import { CadastrarProdutoComponent } from './cadastrar-produto/cadastrar-produto.component';
+import { CadastrarCategoriaComponent } from './cadastrar-categoria/cadastrar-categoria.component';
 
 
 @NgModule({
@@ -29,6 +31,8 @@ import { CadastroComponent } from './cadastro/cadastro.component';
     ContatoComponent,
     CadastroComponent,
     LoginComponent,
+    CadastrarProdutoComponent,
+    CadastrarCategoriaComponent,
   ],
 
   imports: [

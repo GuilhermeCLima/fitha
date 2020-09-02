@@ -1,6 +1,5 @@
 package com.fita.fita.model;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -56,8 +55,7 @@ public class UsuarioModel {
 	private String telefone;
 	
 	@NotNull
-	@Column( columnDefinition = "boolean default false")
-	private boolean admin  ;
+	private boolean admin = false  ;
 
 	public String getBairro() {
 		return bairro;

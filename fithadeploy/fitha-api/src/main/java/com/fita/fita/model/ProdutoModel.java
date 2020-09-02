@@ -24,30 +24,26 @@ public class ProdutoModel {
 
 	@NotNull
 	@Size(min = 3, max = 40)
-	@Column(nullable = false)
 	private String nome;
+	
+	private String produtoImagem;
 
 	@NotNull
-	@Column(nullable = false)
 	private float preco;
 
 	@NotNull
-	@Column(nullable = false)
-	@Size(min = 10, max = 200)
+	@Size(min=5,max = 200)
 	private String descricao;
 
 	@NotNull
-	@Column(nullable = false)
 	@Size(min = 3, max = 50)
 	private String material;
 
 	@NotNull
-	@Column(nullable = false)
 	@Size(min = 3, max = 20)
 	private String cor;
 
 	@NotNull
-	@Column(nullable = false)
 	private BigInteger quantidade;
 
 	private boolean disponibilidade;
@@ -56,6 +52,14 @@ public class ProdutoModel {
 	@JsonIgnoreProperties("produto")
 	private CategoriaModel categoria;
 
+	public String getProdutoImagem() {
+		return produtoImagem;
+	}
+
+	public void setProdutoImagem(String produtoImagem) {
+		this.produtoImagem = produtoImagem;
+	}
+	
 	public long getId() {
 		return id;
 	}

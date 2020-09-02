@@ -1,8 +1,6 @@
 package com.fita.fita.model;
 
 
-
-
 public class UsuarioLogin {
 
 	private String nome;

@@ -1,3 +1,5 @@
+import { CategoriaModel } from './Categoria';
+
 export class ProdutoModel {
     public id: number;
     public nome: string;
@@ -8,4 +10,5 @@ export class ProdutoModel {
     public cor: string;
     public quantidade: number;
     public disponibilidade: boolean;
+    public categoria :CategoriaModel;
 }
