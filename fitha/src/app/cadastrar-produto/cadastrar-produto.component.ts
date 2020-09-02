@@ -17,6 +17,8 @@ export class CadastrarProdutoComponent implements OnInit {
   idCategoria: number
   
   produto: ProdutoModel = new ProdutoModel()
+  listProduto :ProdutoModel[]
+  idProduto:number
   constructor(
     private produtoService: ProdutoService,
     private categoriaService: CategoriaService,

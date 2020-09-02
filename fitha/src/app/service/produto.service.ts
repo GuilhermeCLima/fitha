@@ -14,13 +14,13 @@ export class ProdutoService {
   }
 
   getAllProduto() {
-    return this.http.get("http://localhost:8080/produtos")
+    return this.http.get("http://localhost:9000/produtos")
   }
   getByIdProduto(id: number) {
-    return this.http.get(`http://localhost:8080/produtos/${id}`)
+    return this.http.get(`http://localhost:9000/produtos/${id}`)
   }
   postProduto(produtos: ProdutoModel) {
-    return this.http.post('http://localhost:8080/produtos/cadastrar', produtos, this.token)
+    return this.http.post('http://localhost:9000/produtos/cadastrar', produtos, this.token)
   }
  
 }

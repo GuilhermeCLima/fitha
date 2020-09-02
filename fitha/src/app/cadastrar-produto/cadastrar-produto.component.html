@@ -11,6 +11,10 @@
             <label for="nomeProduto">Nome do Produto</label>
             <input type="text" class="form-control" id="nomeProduto" placeholder="Informe o nome do produto" [(ngModel)]="produto.nome" >
           </div>
+          <div class="form-group">
+            <label for="nomeProduto">Imagem do Produto</label>
+            <input type="text" class="form-control" id="nomeProduto" placeholder="Informe o link da imagem" [(ngModel)]="produto.produtoImagem" >
+          </div>
   
           <div class="form-group">
             <label for="corProduto">Cor do Produto</label>
@@ -51,4 +55,41 @@
       </div>
     </div>
   
+    <div class="row mt-5">
+      <div class="col-md-12">
+        <h4 class="text-center text-monospace">Lista de categorias</h4>
+      </div>
+    </div>
+
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Nome</th>
+          <th scope="col">imagem</th>
+          <th scope="col">Preço</th>
+          <th scope="col">descrição</th>
+          <th scope="col">material</th>
+          <th scope="col">Cor</th>
+          <th scope="col">quantidade</th>
+          <th scope="col">Disponibilidade</th>
+
+          
+
+          <th scope="col" class="d-flex justify-content-end">Modificações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor='let item of listProduto'>
+          <th scope="row">{{item.id}}</th>
+          <td>{{item.nome}}</td>
+          
+          <td class="d-flex justify-content-end">
+            <a class="btn btn-outline-info mr-3" >Editar</a>
+            <a class="btn btn-outline-danger" >Apagar</a>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
   </div>

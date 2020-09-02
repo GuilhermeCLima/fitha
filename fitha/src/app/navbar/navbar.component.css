@@ -139,7 +139,7 @@ svg{
 
 }
 .barra-width{
-width: 400px;
+width: 600px;
 }
 .botao-borda {
   color:black;
@@ -147,7 +147,11 @@ width: 400px;
 }
 .botao-borda:hover{
   color: #be09ff;
-  background-color:transparent
+  background-color:transparent;
+}
+.botao-borda:active{
+  border-color: #f8f9fa;
+  background-color: transparent;
 }
 
 .botao-pesquisa{
@@ -182,4 +186,9 @@ span{
 .cor-bg{
   color: black;
 background-color:#be09ff ;
+}
+textarea:focus, input:focus, select:focus {
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  outline: 0;
 }
