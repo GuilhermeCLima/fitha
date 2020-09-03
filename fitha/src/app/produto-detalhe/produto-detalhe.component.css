@@ -1,6 +1,22 @@
-.bg-tamanho{
-    margin-top: 150px;
-    padding: 100px;;
-    background-color:rgb(255, 255, 169) ;
+h1{
+   
+}
+.font-preco{
+    font-size: 20px;
+}
+.color-letra{
+    color: #00e1b8;
+    font-weight: bolder
+}
+.botão-alter{
+    font-weight: bolder;
 
+    height: 50px;
+    width: 170px;;
+    color: white;
+background-color: #a125ce;
+}
+.input-tam{
+    height: 50px;
+    width:100px;
 }

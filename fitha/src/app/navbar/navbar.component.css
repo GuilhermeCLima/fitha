@@ -104,7 +104,7 @@
   width: 300px;
   margin: 0 0 0 -50px; /*mexe na distancia embaixo do menu */
   padding: 0;
-  margin-top:19px;
+  margin-top:9px;
 
 
   
@@ -173,7 +173,7 @@ li{
   font-size:14pt
 }
 li:hover{
-  color: black; 
+  color: white; 
   background-color: #be09ff;
 }
 span{
@@ -184,11 +184,14 @@ span{
   user-select: none;
 }
 .cor-bg{
+  padding-top: 10px;
   color: black;
-background-color:#be09ff ;
+  background-color:#f1d7fa ;
+  height: 50px;
 }
 textarea:focus, input:focus, select:focus {
   box-shadow: 0 0 0 0;
   border: 0 none;
   outline: 0;
 }
+

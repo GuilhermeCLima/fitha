@@ -17,10 +17,13 @@ export class ProdutoService {
     return this.http.get("http://localhost:9000/produtos")
   }
   getByIdProduto(id: number) {
-    return this.http.get(`http://localhost:9000/produtos/${id}`)
+    return this.http.get(`http://localhost:9000/produtos/${id}`,this.token)
   }
-  postProduto(produtos: ProdutoModel) {
-    return this.http.post('http://localhost:9000/produtos/cadastrar', produtos, this.token)
+  postProduto(produto: ProdutoModel) {
+    return this.http.post('http://localhost:9000/produtos/cadastrar', produto, this.token)
   }
- 
+  putProduto(produto: ProdutoModel) {
+    return this.http.put('http://localhost:9000/produtos', produto, this.token)
+  }
+
 }
