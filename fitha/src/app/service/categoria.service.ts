@@ -22,7 +22,7 @@ export class CategoriaService {
   }
 
   postCategoria(categoria: CategoriaModel) {
-    return this.http.post("http://localhost:8080/categoria/cadastrar", categoria, this.token)
+    return this.http.post("http://localhost:8080/categoria/cadastrar", categoria,this.token)
   }
 
 }

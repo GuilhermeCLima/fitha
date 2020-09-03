@@ -13,8 +13,8 @@
             [(ngModel)]="produto.nome">
         </div>
         <div class="form-group">
-          <label for="nomeProduto">Imagem do Produto</label>
-          <input type="text" class="form-control" id="nomeProduto" placeholder="Informe o link da imagem"
+          <label for="imagemProduto">Imagem do Produto</label>
+          <input type="text" class="form-control" id="ImagemDoProduto" placeholder="Informe o link da imagem"
             [(ngModel)]="produto.produtoImagem">
         </div>
 
@@ -85,6 +85,7 @@
         <tr>
           <th scope="col">ID</th>
           <th scope="col">Nome</th>
+          <th scope="col">Imagem</th>
           <th scope="col">Preço</th>
           <th scope="col">material</th>
           <th scope="col">Cor</th>
@@ -97,6 +98,7 @@
         <tr *ngFor='let item of listProduto'>
           <th scope="row">{{item.id}}</th>
           <td>{{item.nome}}</td>
+          <td>{{item.produtoImagem}}</td>
           <td>{{item.preco}}</td>
           <td>{{item.material}}</td>
           <td>{{item.cor}}</td>

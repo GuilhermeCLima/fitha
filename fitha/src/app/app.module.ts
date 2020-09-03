@@ -17,9 +17,7 @@ import { LoginComponent } from './login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { CadastrarProdutoComponent } from './cadastrar-produto/cadastrar-produto.component';
 import { CadastrarCategoriaComponent } from './cadastrar-categoria/cadastrar-categoria.component';
-import { PutCategoriaComponent } from './put-categoria/put-categoria.component';
 import { PutProdutoComponent } from './put-produto/put-produto.component';
-import { DeleteCategoriaComponent } from './delete-categoria/delete-categoria.component';
 import { DeleteProdutoComponent } from './delete-produto/delete-produto.component';
 
 
@@ -37,10 +35,8 @@ import { DeleteProdutoComponent } from './delete-produto/delete-produto.componen
     LoginComponent,
     CadastrarProdutoComponent,
     CadastrarCategoriaComponent,
-    PutCategoriaComponent,
     PutProdutoComponent,
-    DeleteCategoriaComponent,
-    DeleteProdutoComponent,
+    DeleteProdutoComponent
   ],
 
   imports: [

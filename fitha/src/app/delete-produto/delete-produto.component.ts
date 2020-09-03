@@ -9,8 +9,11 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./delete-produto.component.css']
 })
 export class DeleteProdutoComponent implements OnInit {
+
   produto: ProdutoModel = new ProdutoModel()
+  
   constructor(
+    
     private produtoService: ProdutoService,
     private router: Router,
     private route: ActivatedRoute
@@ -23,7 +26,7 @@ export class DeleteProdutoComponent implements OnInit {
 
   }
   findByIdProduto(id: number) {
-    this.produtoService.getByIdProduto(id).subscribe((resp: ProdutoModel) => {
+    this.produtoService.getByIdProduto(id).subscribe((resp: ProdutoModel) =>{
       this.produto = resp
     })
   }
