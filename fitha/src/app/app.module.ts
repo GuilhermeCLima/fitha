@@ -17,6 +17,8 @@ import { LoginComponent } from './login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { CadastrarProdutoComponent } from './cadastrar-produto/cadastrar-produto.component';
 import { CadastrarCategoriaComponent } from './cadastrar-categoria/cadastrar-categoria.component';
+import { CategoriaPutComponent } from './categoria-put/categoria-put.component';
+import { CategoriaDelComponent } from './categoria-del/categoria-del.component';
 
 
 @NgModule({
@@ -33,6 +35,8 @@ import { CadastrarCategoriaComponent } from './cadastrar-categoria/cadastrar-cat
     LoginComponent,
     CadastrarProdutoComponent,
     CadastrarCategoriaComponent,
+    CategoriaPutComponent,
+    CategoriaDelComponent,
   ],
 
   imports: [

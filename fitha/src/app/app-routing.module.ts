@@ -9,6 +9,8 @@ import { ContatoComponent } from './contato/contato.component';
 import { LoginComponent } from './login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component'
 import { CadastrarProdutoComponent } from './cadastrar-produto/cadastrar-produto.component';
+import { CategoriaDelComponent } from './categoria-del/categoria-del.component';
+import { CategoriaPutComponent } from './categoria-put/categoria-put.component';
 
 
 const routes: Routes = [
@@ -21,7 +23,9 @@ const routes: Routes = [
   { path: "cadastro", component: CadastroComponent },
   { path: "login", component: LoginComponent },
   { path: "cadastrar-produto", component: CadastrarProdutoComponent },
-  { path: "cadastrar-categoria", component: CadastrarCategoriaComponent }
+  { path: "cadastrar-categoria", component: CadastrarCategoriaComponent },
+  { path: "deletar-categoria", component: CategoriaDelComponent },
+  { path: "editar-categoria", component: CategoriaPutComponent }
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

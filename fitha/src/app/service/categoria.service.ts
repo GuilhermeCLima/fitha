@@ -25,4 +25,11 @@ export class CategoriaService {
     return this.http.post("http://localhost:8080/categoria/cadastrar",categoria, this.token)
   }
 
+  putCategoria(categoria: CategoriaModel) {
+    return this.http.put("http://localhost:8080/categoria/categoria",categoria, this.token)
+  }
+
+  deleteCategoria(id: number) {
+    return this.http.delete(`http://localhost:8080/produtos/${id}`, this.token)
+  }
 }
