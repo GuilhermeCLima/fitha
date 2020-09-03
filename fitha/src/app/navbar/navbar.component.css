@@ -28,22 +28,22 @@
 }
 #menuToggle input /* altera clique no menu e ele aparecer */
 {
- display: flex;
- width: 50px;
- height: 50px;
+ display: block;
+ justify-items: stretch;
+ width: 50px; /*tamanho do checkbox*/
+ height: 45px; /*tamanho do checkbox*/
+ position: absolute;
  cursor: pointer;
  float:left;
-
-  
-  
-  
-  opacity: 0; /* hide this */
-  z-index: 2; /* and place it over the hamburger */
-  
+ top: -17px; /*distancia top do checkbox*/
+ left: -10px;
+  opacity: 0; /* opacidade */
+  z-index: 2; /* profundidade */
   -webkit-touch-callout: none;
 }
 .ajuste-menu{
-    padding: 50px;;
+    padding: 20px;
+    
 
 }
 #menuToggle span /*animação e cor do icone*/
@@ -58,7 +58,7 @@
   background: #232323;
   border-radius: 3px;
   
-  z-index: 100;
+  z-index: 1;
   
   transform-origin: 4px 0px;
   
