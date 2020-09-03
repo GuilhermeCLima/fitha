@@ -12,6 +12,8 @@ import { CadastrarProdutoComponent } from './cadastrar-produto/cadastrar-produto
 import { componentFactoryName } from '@angular/compiler';
 import { PutProdutoComponent } from './put-produto/put-produto.component';
 import { DeleteProdutoComponent } from './delete-produto/delete-produto.component';
+import { CategoriaDelComponent } from './categoria-del/categoria-del.component';
+import { CategoriaPutComponent } from './categoria-put/categoria-put.component';
 
 
 const routes: Routes = [
@@ -26,7 +28,9 @@ const routes: Routes = [
   { path: "cadastrar-produto", component: CadastrarProdutoComponent },
   { path: "cadastrar-categoria", component: CadastrarCategoriaComponent },
   {path: "editar-produto/:id",component:PutProdutoComponent},
-  {path:"delete-produto/:id",component:DeleteProdutoComponent}
+  {path:"delete-produto/:id",component:DeleteProdutoComponent},
+  { path: "deletar-categoria/:id", component: CategoriaDelComponent },
+  { path: "editar-categoria/:id", component: CategoriaPutComponent }
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
