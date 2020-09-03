@@ -38,6 +38,17 @@
             <label for="form-group">Descrição do Produto</label>
             <textarea class="form-control" id="textarea" rows="3" placeholder="Informe a Descrição do produto" [(ngModel)]="produto.descricao"></textarea>
           </div>
+          <div class="form-group">
+            <label for="form-group">Disponibilidade</label>
+           <select [(ngModel)]="produto.disponibilidade">
+             <option>
+               true 
+             </option>
+             <option>
+              false 
+            </option>
+           </select>
+          </div>
           <div class="form-group" >
             <label for="form-group" for = "categoria" >Selecione uma categoria</label>
             <select name="categoria" id="categoria" class="form-control" [(ngModel)]='idCategoria' (change)='findByIdCategoria()'>
@@ -57,7 +68,7 @@
   
     <div class="row mt-5">
       <div class="col-md-12">
-        <h4 class="text-center text-monospace">Lista de categorias</h4>
+        <h4 class="text-center text-monospace">Lista de Produtos</h4>
       </div>
     </div>
 
@@ -73,9 +84,6 @@
           <th scope="col">Cor</th>
           <th scope="col">quantidade</th>
           <th scope="col">Disponibilidade</th>
-
-          
-
           <th scope="col" class="d-flex justify-content-end">Modificações</th>
         </tr>
       </thead>
@@ -83,6 +91,13 @@
         <tr *ngFor='let item of listProduto'>
           <th scope="row">{{item.id}}</th>
           <td>{{item.nome}}</td>
+          <td>{{item.produtoImagem}}</td>
+          <td>{{item.preco}}</td>
+          <td>{{item.descricao}}</td>
+          <td>{{item.material}}</td>
+          <td>{{item.cor}}</td>
+          <td>{{item.quantidade}}</td>
+          <td>{{item.disponibilidade}}</td>
           
           <td class="d-flex justify-content-end">
             <a class="btn btn-outline-info mr-3" >Editar</a>

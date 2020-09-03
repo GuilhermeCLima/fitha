@@ -19,6 +19,7 @@ export class CadastrarProdutoComponent implements OnInit {
   produto: ProdutoModel = new ProdutoModel()
   listProduto :ProdutoModel[]
   idProduto:number
+
   constructor(
     private produtoService: ProdutoService,
     private categoriaService: CategoriaService,
@@ -26,6 +27,8 @@ export class CadastrarProdutoComponent implements OnInit {
 
   ngOnInit() {
     this.findAllCategorias()
+    this.findAllProduto()
+    this.findByIdProduto()
     
   }
 
@@ -56,6 +59,16 @@ export class CadastrarProdutoComponent implements OnInit {
   findAllCategorias(){
     this.categoriaService.getAllCategoria().subscribe((resp:CategoriaModel[]) => {
       this.listCategoria = resp
+    })
+  }
+  findAllProduto(){
+    this.produtoService.getAllProduto().subscribe((resp:ProdutoModel[]) => {
+      this.listProduto = resp
+    })
+  }
+  findByIdProduto() {
+    this.produtoService.getByIdProduto(this.idProduto).subscribe((resp: ProdutoModel) => {
+      this.produto = resp
     })
   }
 }
