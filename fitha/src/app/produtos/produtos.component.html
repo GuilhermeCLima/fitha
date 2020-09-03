@@ -1,64 +1,25 @@
-<div class="d-flex w-100" id="wrapper">
-
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-
-    <!-- inicio do sidebar-filtro-->
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
 
     <aside class="col-md-2 hidden-sm">
 
         <!--filtro categoria-->
 
-        <div class="card d-flex justify-content-center">
-            <article class="card-group-item d-flex justify-content-center">
+
+        <article class="card-group-item d-flex justify-content-center">
+            <div class="container">
                 <header class="card-header">
                     <h6 class="title d-flex justify-content-center ">Categoria </h6>
-
-                    <div class="container ">
-                        <div class="row ">
-                            <input class=" form-control search-box text-input" type="text"
-                            placeholder="nome da categoria" aria-label="Search">
-
-                            <div>
-                                <button class="btn btn-outline-light bg-info">cadastrar</button>
-                            </div>
-
-                            <div>
-                                <button class="btn btn-outline-light bg-danger ">deletar</button>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="filter-content">
-                        <div class="card-body">
-                            <div class="row">
-                                <div *ngFor="let item of listCategoria" >
-                                    <div>
-                                        <a href="" class=""> {{item.nome}} </a>
-                                    </div>
-                                    
-                                    <div>
-                                        <a class="btn btn-outline-light bg-info  " [routerLink]="['/editar-tema', item.id]">Editar</a>
-                                        <a class="btn btn-outline-light bg-danger " [routerLink]="['/delete-tema', item.id]">Apagar</a>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <div>
-
-                    </div>
-           
                 </header>
-            </article>
+            </div>
+
+        </article>
+        <div class="filter-content">
+            <label class="form-check">
+                <div *ngFor="let item of listCategoria">
+                    <div>
+                        <a href="" class=""> {{item.nome}} </a>
+                    </div>
+                </div>
+            </label>
         </div>
         <!--filtro material-->
         <article class="card-group-item">
@@ -153,7 +114,6 @@
 
     </aside>
 
-</div>
 
 
 
