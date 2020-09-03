@@ -1,45 +1,19 @@
-
-<body>
-    <div class="container h-100">
-        <div class="d-flex justify-content-center h-100">
-            <div class="user_card">
-                <div class="d-flex justify-content-center">
-                    <div class="brand_logo_container">
-                        <img src="../../assets/f-shape-by-studiomore.jpg" class="brand_logo" alt="Logo">
-                    </div>
-                </div>
-                <div class="d-flex justify-content-center form_container">
-                    <form>
-                        <div class="input-group mb-3">
-                            <div class="input-group-append">
-                                <span class="input-group-text"><i class="fas fa-user"></i></span>
-                            </div>
-
-                            <input name="email" type="email" class="form-control" id="exemplo"
-                                placeholder="Digite o seu email aqui" [(ngModel)]="userLogin.email">
-
-                        </div>
-                        <div class="input-group mb-3">
-                            <div class="input-group-append">
-                                <span class="input-group-text"><i class="fas fa-user"></i></span>
-                            </div>
-                            <div> <input name="senha" type="password" class="form-control" id="senha"
-                                    placeholder="Digite sua senha aqui" [(ngModel)]='userLogin.senha'>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="customControlInline">
-                                <label class="custom-control-label" for="customControlInline">Remember me</label>
-                            </div>
-                        </div>
-                        <div class="d-flex justify-content-center mt-3 login_container">
-                            <button type="button" name="button" class="btn login_btn" (click)='entrar()'>Login</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
+<div class="login-dark">
+    <form method="post">
+         <div class="row d-flex justify-content-center ">
+            <div class="col-sm-2 d-flex justify-content-center mb-4 ">
+                <img src="../../assets/Logo - Fitha.jpeg" class="rounded-circle d-flex justify-content-center logo" alt="">
+            </div> 
+        </div> 
+        <div class="form-group">
+            <input class="form-control" type="email" name="email" placeholder="Email" [(ngModel)]="userLogin.email">
         </div>
-    </div>
-</body>
-
+        <div class="form-group">
+            <input class="form-control" type="password" name="password" placeholder="Senha" [(ngModel)]='userLogin.senha'>
+        </div>
+        <div class="form-group">
+            <button class="btn btn-primary btn-block" type="submit" (click)='entrar()'>Log In</button>
+        </div>
+        <a routerLink="/login" class="forgot">Forgot your email or password?</a>
+    </form>
+</div>
