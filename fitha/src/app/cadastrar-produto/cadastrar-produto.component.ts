@@ -46,8 +46,6 @@ export class CadastrarProdutoComponent implements OnInit {
         this.produto = resp
         this.produto = new ProdutoModel()
         alert('foi rapaz')
-       
-
       })
     }
   }

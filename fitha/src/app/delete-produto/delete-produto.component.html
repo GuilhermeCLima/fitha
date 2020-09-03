@@ -1,1 +1,63 @@
-<p>delete-produto works!</p>
+<div class="container-fluid">
+    <div class="row mt-5 mb-5">
+        <div class="col-md-3 d-flex "></div>
+        <h1 class="text-center">Cadastrar Produto</h1>
+    </div>
+
+    <div class="row mb-8 d-flex justify-content-center">
+        <div class="col-md-6">
+            <div>
+                <div class="form-group">
+                    <label for="nomeProduto">Nome do Produto</label>
+                    <input type="text" class="form-control" id="nomeProduto" placeholder="Informe o nome do produto"
+                        [(ngModel)]="produto.nome">
+                </div>
+                <div class="form-group">
+                    <label for="nomeProduto">Imagem do Produto</label>
+                    <input type="text" class="form-control" id="nomeProduto" placeholder="Informe o link da imagem"
+                        [(ngModel)]="produto.produtoImagem">
+                </div>
+
+                <div class="form-group">
+                    <label for="corProduto">Cor do Produto</label>
+                    <input type="text" class="form-control" id="corProduto" placeholder="Informe a cor"
+                        [(ngModel)]="produto.cor">
+                </div>
+
+                <div class="form-group">
+                    <label for="materialProduto">Material do produto</label>
+                    <input type="text" class="form-control" id="materialProduto" placeholder="Informe o material"
+                        [(ngModel)]="produto.material">
+                </div>
+
+                <div class="form-group">
+                    <label for="quantProdutos">Quantidade de Produtos</label>
+                    <input type="number" class="form-control" id="quantProdutos"
+                        placeholder="Informe a quantidade de produtos" [(ngModel)]="produto.quantidade">
+                </div>
+                <div class="form-group">
+                    <label for="precoProduto">Preço do Produto</label>
+                    <input type="number" class="form-control" id="precoProduto" placeholder="Informe o preco do produto"
+                        [(ngModel)]="produto.preco">
+                </div>
+                <div class="form-group">
+                    <label for="form-group">Descrição do Produto</label>
+                    <textarea class="form-control" id="textarea" rows="3" placeholder="Informe a Descrição do produto"
+                        [(ngModel)]="produto.descricao"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="form-group">Disponibilidade</label>
+                    <select [(ngModel)]="produto.disponibilidade">
+                        <option>
+                            true
+                        </option>
+                        <option>
+                            false
+                        </option>
+                    </select>
+                </div>
+                <button class="btn btn-outline-info" (click)="btnSim()">Sim</button>
+                <button class="btn btn-outline-info" (click)="btnNao()">Não</button>
+
+            </div>
+        </div>
