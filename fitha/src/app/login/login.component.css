@@ -1,0 +1,96 @@
+.login-dark {
+    height:130%;
+    background:#475d627e url(../../assets/fitazul.jpg);
+    background-size:cover;
+    position:relative;
+}
+  
+.login-dark form {
+    max-width:30%;
+    min-width: 15rem;
+    width:90%;
+    background-color:#7b10a1fa;
+    padding:3%;
+    border-radius:5px;
+    transform:translate(-50%, -50%);
+    position:absolute;
+    top:50%;
+    left:50%;
+    color:#fff;
+    box-shadow:3px 3px 4px rgba(0, 0, 0, 0.13);
+}
+  
+/*.login-dark .illustration {
+    text-align:center;
+    padding:15px 0 20px;
+    font-size:30px;
+    color:#0dcf95;
+}*/
+
+img{
+    width: 10rem;
+    height: 10rem;
+    text-align: center;
+}
+  
+.login-dark form .form-control {
+    background:none;
+    border:none;
+    border-bottom:1px solid #f3f9ff;
+    border-radius:0;
+    box-shadow:none;
+    outline:none;
+    color:inherit;
+}
+
+::-webkit-input-placeholder {
+    color: #f3f9ff;
+}
+  
+:-moz-placeholder { /* Firefox 18- */
+    color: #f3f9ff;  
+}
+  
+::-moz-placeholder {  /* Firefox 19+ */
+    color: #f3f9ff;  
+}
+  
+:-ms-input-placeholder {  
+    color: #f3f9ff;  
+}
+  
+.login-dark form .btn-primary {
+    background:#2190d1ec;
+    border:none;
+    border-radius:4px;
+    padding:11px;
+    box-shadow:none;
+    margin-top:26px;
+    text-shadow:none;
+    outline:none;
+}
+  
+.login-dark form .btn-primary:hover, .login-dark form .btn-primary:active {
+    background:#1151ac;
+    outline:none;
+}
+  
+.login-dark form .forgot {
+    display:block;
+    text-align:center;
+    font-size:1rem;
+    color:#f3f9ff;
+    opacity:0.8;
+    text-decoration:none;
+}
+  
+.login-dark form .forgot:hover, .login-dark form .forgot:active {
+    opacity:1;
+    text-decoration:none;
+}
+  
+.login-dark form .btn-primary:active {
+    transform:translateY(1px);
+}
+
+  
