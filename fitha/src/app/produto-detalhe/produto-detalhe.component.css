@@ -1,5 +1,14 @@
-h1{
-   
+.btn:focus, .btn:active{
+    outline:none !important;
+    box-shadow: none !important;
+}
+button{
+    border:none;
+    font-weight: bolder;
+    height: 50px;
+    width: 170px;;
+    color: white;
+background-color: #a125ce;
 }
 .font-preco{
     font-size: 20px;
@@ -8,15 +17,20 @@ h1{
     color: #00e1b8;
     font-weight: bolder
 }
-.botão-alter{
-    font-weight: bolder;
 
-    height: 50px;
-    width: 170px;;
+button:hover{
     color: white;
-background-color: #a125ce;
+    background-color: #a125ce;
 }
 .input-tam{
     height: 50px;
     width:100px;
+}
+.neon:active{
+    color: white;
+    background-color: #2f4ac2;
+        box-shadow: 0 0 0 0;
+        border: 0 none;
+      
+    
 }

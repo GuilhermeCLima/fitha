@@ -149,10 +149,7 @@ width: 600px;
   color: #be09ff;
   background-color:transparent;
 }
-.botao-borda:active{
-  border-color: #f8f9fa;
-  background-color: transparent;
-}
+
 
 .botao-pesquisa{
  border: 0;
