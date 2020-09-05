@@ -1,12 +1,64 @@
 #tituloHeader{
-    max-width: 500px;
+    margin-top: 30px;
+    max-width: 300px;
 }
 .container{
-	position: relative;
-	width: 1200px;
+    position: relative;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
+}
+
+text-center {
+    align-items: center;
+}
+
+.h3 {
+    align-items: center;
+}
+
+h4 {
+    font-size: 16pt;
+}
+
+p {
+    font-size: 14pt;
+}
+
+.card {
+    width: 170px;
+    height: 140px;
+    border: none;
+}
+
+.p-4 {
+    padding: 1.5rem!important;
+    padding-top: 1.5rem !important;
+    padding-right: 6.5rem !important;
+    padding-bottom: 1.5rem !important;
+    padding-left: 6.5rem !important;
+}
+
+.card-img {
+    align-items: center;
+    width: 70%;
+    height: auto;
+}
+
+.card-columns {
+    @include media-breakpoint-only(lg) {
+      column-count: 4;
+    }
+    @include media-breakpoint-only(xl) {
+      column-count: 5;
+    }
+}
+
+.d-flex {
+    position: relative;
+	display: flex;
+	flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 /* FontAwesome for working BootSnippet :> */
@@ -36,7 +88,7 @@ section {
 
 section .section-title {
     text-align: center;
-    color: #007b5e;
+    color: #23cea6;
     margin-bottom: 50px;
     text-transform: uppercase;
 }
