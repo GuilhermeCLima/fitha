@@ -35,4 +35,14 @@ export class AuthService {
     }
     return ok
   }
+
+  btnTeste() {
+    let ok = false
+    let token = localStorage.getItem('token')
+    if (token == null) {
+      ok = true
+    }
+    return ok
+  }
+
 }
