@@ -136,10 +136,9 @@
 }
 svg{
   margin-bottom: 3px;
-
 }
 .barra-width{
-width: 600px;
+  width: 50vw;
 }
 .botao-borda {
   color:black;
