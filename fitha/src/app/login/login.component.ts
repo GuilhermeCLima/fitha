@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { UsuarioLogin } from '../model/UserLogin';
 import { AuthService } from '../service/auth.service';
 import { Router } from '@angular/router';
+import { UsuarioModel } from '../model/User';
 
 
 @Component({
@@ -12,7 +13,7 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
 
   userLogin: UsuarioLogin = new UsuarioLogin
-
+  
   constructor(
     private authService: AuthService,
     private router: Router
@@ -27,6 +28,7 @@ export class LoginComponent implements OnInit {
     this.authService.logar(this.userLogin).subscribe((resp: UsuarioLogin) => {
       this.userLogin = resp
       localStorage.setItem("token", this.userLogin.token)
+      
       this.router.navigate(['/home'])
     })
   }

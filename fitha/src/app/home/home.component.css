@@ -1,0 +1,24 @@
+.btn{
+    border:none;
+    font-weight: bolder;
+    height: 50px;
+    width: 170px;;
+    color: white;
+background-color: #a125ce;
+}
+.btn:focus, .btn:active{
+    outline:none !important;
+    box-shadow: none !important;
+}
+.neon:active{
+    color: white;
+    background-color: #2f4ac2;
+        box-shadow: 0 0 0 0;
+        border: 0 none;
+      
+    
+}
+button:hover{
+    color: white;
+    background-color: #a125ce;
+}
