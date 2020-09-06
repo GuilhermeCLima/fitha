@@ -88,7 +88,7 @@ section {
 
 section .section-title {
     text-align: center;
-    color: #23cea6;
+    color:#007b5e;
     margin-bottom: 50px;
     text-transform: uppercase;
 }
@@ -186,11 +186,35 @@ section .section-title {
 }
 
 .frontside .card .card-body img {
-    width: 120px;
-    height: 120px;
+    width: 160px;
+    height: 160px;
     border-radius: 50%;
 }
 
 .mat {
     font-size: 23px;
 }
+
+.container-card{
+    position: relative;
+    display: flex;
+    width: 1300px;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.bg{
+    width: 215px;
+    background-image: url(../../assets/abstract-gradient-purple-geometric-background-vector-2799114.jpg)
+}
+
+.size-cards{
+    padding-right:3rem;
+    padding-left:3rem;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+
