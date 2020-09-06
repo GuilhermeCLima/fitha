@@ -8,6 +8,5 @@ export class UsuarioModel {
     public complemento: string;
     public cpf: string;
     public telefone: string;
-    public admin: boolean;
 
 }

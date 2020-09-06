@@ -30,7 +30,6 @@ export class AuthService {
     }
     return ok
   }
-
   btnLogin() {
     let ok = false
     let token = localStorage.getItem('token')
@@ -39,5 +38,5 @@ export class AuthService {
     }
     return ok
   }
-
+  
 }
