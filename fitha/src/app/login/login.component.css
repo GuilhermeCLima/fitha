@@ -3,6 +3,7 @@
     background-image: url(../../assets/undraw_Bitcoin_P2P_re_1xqa.png) ;
     background-size:cover;
     position:relative;
+    height: 700px;
 }
   
 .login-dark form {
@@ -12,12 +13,12 @@
     background-color:#7b10a1fa;
     padding:3%;
     border-radius:5px;
-    transform:translate(-50%, -50%);
-    position:absolute;
+    transform:translate(100%, 10%);
     top:50%;
     left:50%;
     color:#fff;
     box-shadow:3px 3px 4px rgba(0, 0, 0, 0.13);
+    width: 1916px;
 }
   
 /*.login-dark .illustration {
