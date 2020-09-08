@@ -22,12 +22,19 @@
 <div class="container mb-2">
 
   <div class="row d-flex justify-content-around">
-    <div class="col-md-3 mb-1">
+    <div class="col-md-3 mb-1" *ngFor="let item of listProduto">
       <div class="card border-0 " >
+<<<<<<< HEAD
         <img class="card-img-top rounded-0" src="../../assets/download.jfif"
           alt="Imagem de capa do card" width="250" height="250">
         <div class="card-body text-center">
           <h5 class="card-title">Boneca de Cabaça - Frida Kahlo</h5>
+=======
+        <img class="card-img-top rounded-0" src="{{item.produtoImagem}}"
+          alt="Imagem de capa do card">
+        <div class="card-body text-center">
+          <button class="btn neon botao-config" [routerLink]="['/produto-detalhe',item.id]">COMPRAR</button>
+>>>>>>> teste1
         </div>
       </div>
     </div>
@@ -72,9 +79,15 @@
 
   <div class="row mb-4 d-flex justify-content-around">
 
+<<<<<<< HEAD
     <div class="col-md-2 mb-1" *ngFor="let item of listCategoria">
       <div class="card border-0 text-white">
         <img src="../../assets/png-transparent-hand-painted-black-circle-hand-cane-vine-dot.png" class="card-img rounded-circle" alt="...">
+=======
+    <div class="col-md-2 mb-1" *ngFor = "let item of listCategoria">
+      <div class="card border-0 text-white">
+        <img src="https://http2.mlstatic.com/D_NQ_NP_2X_673078-MLB31934679125_082019-F.webp" class="card-img rounded-circle" alt="...">
+>>>>>>> teste1
         <button class="btn neon botao-config" [routerLink]="['/produtos', item.categoria]">{{item.categoria}}</button>
       </div>
     </div>

@@ -3,6 +3,7 @@ import { CategoriaModel } from '../model/Categoria'
 import { CategoriaService } from '../service/categoria.service'
 import { ProdutoModel } from '../model/Produto';
 import { ProdutoService } from '../service/produto.service'
+import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -19,13 +20,16 @@ export class ProdutosComponent implements OnInit {
 
   constructor(
     private categoriaService: CategoriaService,
-    private produtoService: ProdutoService
+    private produtoService: ProdutoService,
+    private route: ActivatedRoute
   ) { }
 
   ngOnInit() {
     window.scroll(0, 0)
     this.findAllProduto()
     this.findAllCategoria()
+    let nomeCategoria = this.route.snapshot.params['categoria']
+    this.findCategoria(nomeCategoria)
   }
 
   findAllProduto() {
