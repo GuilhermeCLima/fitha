@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CategoriaModel } from '../model/Categoria';
 import { CategoriaService } from '../service/categoria.service';
 import { Router, ActivatedRoute } from '@angular/router';
+import { environment } from 'src/environments/environment.prod';
 
 @Component({
   selector: 'app-categoria-del',
@@ -22,6 +23,10 @@ export class CategoriaDelComponent implements OnInit {
     window.scroll(0,0);
     let id:number = this.route.snapshot.params["id"];
     this.findByIdCategoria(id);
+    if (environment.admin == false) {
+      alert("SEM PERMISSÃO!!")
+      this.router.navigate(["/home"])
+    }
   }
 
 findByIdCategoria(id:number){

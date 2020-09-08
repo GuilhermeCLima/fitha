@@ -1,10 +1,7 @@
 #formContato
 {
     padding-top: 2%;
-
-  
 }
-
 #faleConosco
 {
     text-align: center;
@@ -20,4 +17,26 @@
 }
 .img-alter{
     width: 100%;
+}
+.btn:focus, .btn:active{
+    outline:none !important;
+    box-shadow: none !important;
+}
+button{
+    border:none;
+    font-weight: bolder;
+    height: 40px;
+    width: 100px;
+    color: white;
+background-color: #a125ce;
+}
+.neon:active{
+    color: white;
+    background-color: #2f4ac2;
+        box-shadow: 0 0 0 0;
+        border: 0 none;
+}
+button:hover{
+    color: white;
+    background-color: #a125ce;
 }

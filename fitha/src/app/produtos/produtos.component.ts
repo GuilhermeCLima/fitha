@@ -48,7 +48,7 @@ export class ProdutosComponent implements OnInit {
     })
   }
   findByNomeProduto() {
-    if (this.nomeProduto === '') {
+    if (this.nomeProduto =='') {
       this.findAllProduto()
     } else {
       this.produtoService.getByNomeProduto(this.nomeProduto).subscribe((resp: ProdutoModel[]) => {
