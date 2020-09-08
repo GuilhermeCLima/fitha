@@ -1,6 +1,3 @@
-
-
-
 import { Component, OnInit } from '@angular/core';
 import { ProdutoModel } from '../model/Produto';
 import { ProdutoService } from '../service/produto.service';
