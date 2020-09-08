@@ -1,0 +1,5 @@
+#erro_senha, #erro_nome, #erro_confirmaSenha, #erro_cpf, #erro_cnpj, #erro_email, #vazio_senha, #vazio_nome, #vazio_cpf, #vazio_cnpj,
+#vazio_email, #vazio_dataNascimento, #erro_dataNascimento,#dezoito_dataNascimento, #erro_celular, #vazio_celular, #erro_login{  
+  display: none;
+  color: red;
+}
