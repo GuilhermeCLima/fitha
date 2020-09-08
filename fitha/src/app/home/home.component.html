@@ -22,12 +22,12 @@
 <div class="container mb-4">
 
   <div class="row d-flex justify-content-around">
-    <div class="col-md-3 mb-1">
+    <div class="col-md-3 mb-1" *ngFor="let item of listProduto">
       <div class="card border-0 " >
-        <img class="card-img-top rounded-0" src="https://http2.mlstatic.com/D_NQ_NP_2X_673078-MLB31934679125_082019-F.webp"
+        <img class="card-img-top rounded-0" src="{{item.produtoImagem}}"
           alt="Imagem de capa do card">
         <div class="card-body text-center">
-          <h5 class="card-title">Título do card</h5>
+          <button class="btn neon botao-config" [routerLink]="['/produto-detalhe',item.id]">COMPRAR</button>
         </div>
       </div>
     </div>
@@ -72,46 +72,12 @@
 
   <div class="row mb-4 d-flex justify-content-around">
 
-    <div class="col-md-2 mb-1">
+    <div class="col-md-2 mb-1" *ngFor = "let item of listCategoria">
       <div class="card border-0 text-white">
         <img src="https://http2.mlstatic.com/D_NQ_NP_2X_673078-MLB31934679125_082019-F.webp" class="card-img rounded-circle" alt="...">
+        <button class="btn neon botao-config" [routerLink]="['/produtos', item.categoria]">{{item.categoria}}</button>
       </div>
     </div>
-
-    <div class="col-md-2 mb-1">
-      <div class="card border-0 text-white">
-        <img src="https://http2.mlstatic.com/D_NQ_NP_2X_673078-MLB31934679125_082019-F.webp" class="card-img rounded-circle" alt="...">
-      </div>
-    </div>
-
-    <div class="col-md-2 mb-1">
-      <div class="card border-0 text-white">
-        <img src="https://http2.mlstatic.com/D_NQ_NP_2X_673078-MLB31934679125_082019-F.webp" class="card-img rounded-circle" alt="...">
-      </div>
-    </div>
-
-    <div class="col-md-2 mb-1">
-      <div class="card border-0 text-white">
-        <img src="https://http2.mlstatic.com/D_NQ_NP_2X_673078-MLB31934679125_082019-F.webp" class="card-img rounded-circle" alt="...">
-      </div>
-    </div>
-
-    <div class="col-md-2 mb-1">
-      <div class="card border-0 text-white">
-        <img src="https://http2.mlstatic.com/D_NQ_NP_2X_673078-MLB31934679125_082019-F.webp" class="card-img rounded-circle" alt="...">
-      </div>
-    </div>
-
-    <div class="col-md-2 mb-1">
-      <div class="card border-0 text-white">
-        <img src="https://http2.mlstatic.com/D_NQ_NP_2X_673078-MLB31934679125_082019-F.webp" class="card-img rounded-circle" alt="...">
-      </div>
-    </div>
-    
-      
-  
-
-    
 
   </div>
 
