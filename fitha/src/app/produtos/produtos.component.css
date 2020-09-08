@@ -1,4 +1,28 @@
-
+.botao-config:focus, .btn:active{
+    outline:none !important;
+    box-shadow: none !important;
+}
+.botao-config{
+    border:none;
+    font-weight: bolder;
+    height: 50px;
+    width: 120px;
+    color: white;
+background-color: #a125ce;
+}
+.botao-config:hover{
+    color: white;
+    background-color: #a125ce;
+}
+.neon:active{
+    color: white;
+    background-color: #2f4ac2;
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+}
+.filtro{
+    list-style: none;
+}
 a{
     color: black;
 }
@@ -9,6 +33,14 @@ a:hover{
 .text-input{
     width: 150px
   }
-
-  
+  .btpFiltro{
+    border: 0;
+    padding: 5px;
+    background-color: white;
+    color: #000;
+}
+.search-button{
+    height:40px;
+    width: 70px;
+}
   

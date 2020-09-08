@@ -29,7 +29,6 @@ export class CadastroComponent implements OnInit {
 
   cadastro() {
 
-    this.user.admin = false
     if (this.senha === this.user.senha) {
       this.authService.cadastro(this.user).subscribe((resp: UsuarioModel) => {
         this.user = resp

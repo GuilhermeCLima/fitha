@@ -14,7 +14,7 @@ export class CategoriaService {
     headers: new HttpHeaders().set('Authorization', localStorage.getItem('token'))
   }
   getAllCategoria() {
-    return this.http.get("http://localhost:8080/categoria", this.token)
+    return this.http.get("http://localhost:8080/categoria")
   }
 
   getByIdCategoria(id: number) {
@@ -22,7 +22,7 @@ export class CategoriaService {
   }
 
   postCategoria(categoria: CategoriaModel) {
-    return this.http.post("http://localhost:8080/categoria/cadastrar", categoria,this.token)
+    return this.http.post("http://localhost:8080/categoria/cadastrar", categoria, this.token)
   }
 
   putCategoria(categoria: CategoriaModel) {

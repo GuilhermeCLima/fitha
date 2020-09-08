@@ -10,6 +10,8 @@ import com.fita.fita.model.CategoriaModel;
 @Repository
 public interface CategoriaRepository extends JpaRepository<CategoriaModel, Long> {
 
-	public List<CategoriaModel> findAllByNomeContainingIgnoreCase(String CategoriaModel);
+	public List<CategoriaModel> findAllByCategoriaContainingIgnoreCase(String CategoriaModel);
+	
+	
 
 }

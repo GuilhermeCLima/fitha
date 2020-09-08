@@ -1,21 +1,21 @@
 <div class="container">
 
-    
-        <div class="col-md-8">
-          <div class="card mt-5">
-  
-             <div class="card-body" >
-               <p class="card-text" aria-describedby="texto">{{categoria.nome}} </p>
-             </div>
-          </div>
-  
-          <hr class="mt-4 mb-4">
-  
-          <h5 class="text-center">Tem certeza que deseja apagar essa categoria?</h5>
-          <div class="d-flex justify-content-center mt-5">
-             <button class="btn btn-outline-success mr-3" (click)="btnSim()">Sim</button>
-             <button class="btn btn-outline-danger" (click)="bntNao()">Não</button>
-          </div>
-        </div>
-   
+
+  <div class="col-md-8">
+    <div class="card mt-5">
+
+      <div class="card-body">
+        <p class="card-text" aria-describedby="texto">{{categoria.categoria}} </p>
+      </div>
+    </div>
+
+    <hr class="mt-4 mb-4">
+
+    <h5 class="text-center">Tem certeza que deseja apagar essa categoria?</h5>
+    <div class="d-flex justify-content-center mt-5">
+      <button class="btn btn-outline-success mr-3" (click)="btnSim()">Sim</button>
+      <button class="btn btn-outline-danger" (click)="bntNao()">Não</button>
+    </div>
   </div>
+
+</div>

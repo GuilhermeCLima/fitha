@@ -1,0 +1,23 @@
+#formContato
+{
+    padding-top: 2%;
+
+  
+}
+
+#faleConosco
+{
+    text-align: center;
+}
+#linhaContato
+{
+    padding-top: 3%;
+}
+
+.erro{
+    color: red;
+    font-size: unset;
+}
+.img-alter{
+    width: 100%;
+}

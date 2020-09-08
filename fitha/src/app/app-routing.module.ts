@@ -21,14 +21,14 @@ const routes: Routes = [
   { path: "home", component: HomeComponent },
   { path: "quemsomos", component: QuemsomosComponent },
   { path: "produtos", component: ProdutosComponent },
-  { path: "produto-detalhe", component: ProdutoDetalheComponent },
+  { path: "produto-detalhe/:id", component: ProdutoDetalheComponent },
   { path: "contato", component: ContatoComponent },
   { path: "cadastro", component: CadastroComponent },
   { path: "login", component: LoginComponent },
   { path: "cadastrar-produto", component: CadastrarProdutoComponent },
   { path: "cadastrar-categoria", component: CadastrarCategoriaComponent },
-  {path: "editar-produto/:id",component:PutProdutoComponent},
-  {path:"delete-produto/:id",component:DeleteProdutoComponent},
+  { path: "editar-produto/:id", component: PutProdutoComponent },
+  { path: "delete-produto/:id", component: DeleteProdutoComponent },
   { path: "deletar-categoria/:id", component: CategoriaDelComponent },
   { path: "editar-categoria/:id", component: CategoriaPutComponent }
 ];

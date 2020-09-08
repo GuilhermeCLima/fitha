@@ -1,25 +1,27 @@
 .login-dark {
-    height:130%;
+   
+    max-height: 1000px;
     background-image: url(../../assets/undraw_Bitcoin_P2P_re_1xqa.png) ;
-    background-size:cover;
-    position:relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:1500px auto ;
+
 }
   
-.login-dark form {
-    max-width:30%;
+.formulario{
+    margin-top: 150px;
+    margin-bottom: 150px;
+    height: 500px;
+    max-width:400px;
     min-width: 15rem;
-    width:90%;
+    width:100%;
     background-color:#7b10a1fa;
     padding:3%;
     border-radius:5px;
-    transform:translate(-50%, -50%);
-    position:absolute;
-    top:50%;
-    left:50%;
     color:#fff;
     box-shadow:3px 3px 4px rgba(0, 0, 0, 0.13);
+    width: 1916px;
 }
-  
 /*.login-dark .illustration {
     text-align:center;
     padding:15px 0 20px;
@@ -33,7 +35,7 @@ img{
     text-align: center;
 }
   
-.login-dark form .form-control {
+.formulario .form-control {
     background:none;
     border:none;
     border-bottom:1px solid #f3f9ff;
@@ -92,5 +94,3 @@ img{
 .login-dark form .btn-primary:active {
     transform:translateY(1px);
 }
-
-  
