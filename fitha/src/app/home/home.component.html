@@ -70,13 +70,13 @@
 
 <div class="container mb-5">
 
-  <div class="row mb-4 d-flex justify-content-around">
+  <div class="row mb-4 d-flex justify-content-around ">
 
-    <div class="col-md-2" *ngFor="let item of listCategoria">
-      <div class="card border-0 text-white">
-        <img src="../../assets/png-transparent-hand-painted-black-circle-hand-cane-vine-dot.png" class="card-img" alt="...">
-        <div class="card-img-overlay d-flex justify-content-center">
-          <h5 class="card-title categoria"[routerLink]="['/produtos', item.categoria]">{{item.categoria}}</h5>
+    <div class="col-md-2 border-0 " *ngFor="let item of listCategoria">
+      <div class="card border-0 text-white semborda" [routerLink]="['/produtos', item.categoria]">
+        <img src="../../assets/png-transparent-hand-painted-black-circle-hand-cane-vine-dot.png" class="card-img" alt="..."  >
+        <div class="card-img-overlay d-flex justify-content-center border-0">
+          <h5 class="card-title categoria">{{item.categoria}}</h5>
         </div>
       </div>
     </div>
@@ -160,8 +160,8 @@
                   alt="Primeiro Slide" width="462" height="308">
 
                 <div class="col-md-5 pl-4">
-                  <h3>Conheça Maria</h3>
-                  <p> Maria aprendeu a fazer artesanato com a avó aos 8 anos de idade. Trabalhou em diversos ramos mas sempre pensou em trabalhar com artesanato. Após ser demitida em 2019, decidiu realizar o sonho e se aprimorou na arte de amigumi. Hoje é uma colaboradora <b>Fitha</b> e está realizando novos cursos para poder exercer livremente sua criatividade</p>
+                  <h2>Conheça Maria</h2>
+                  <p class="pessoas"> Maria aprendeu a fazer artesanato com a avó aos 8 anos de idade. Trabalhou em diversos ramos mas sempre pensou em trabalhar com artesanato. Após ser demitida em 2019, decidiu realizar o sonho e se aprimorou na arte de amigumi. Hoje é uma colaboradora <b>Fitha</b> e está realizando novos cursos para poder exercer livremente sua criatividade</p>
                 </div>
                 <h5 class="mt-2 mb-0">Conheça alguns dos produtos de Maria</h5>
               </div>
@@ -171,7 +171,7 @@
               <div class="row mt-2 pl-0">
 
                 <div class="col mt-2">
-                  <a href="">
+                  <a routerLink="/produtos">
                     <img class="" style="width: 8rem;"
                       src="../../assets/WhatsApp Image 2020-08-21 at 16.26.42 (1).jpeg"
                       alt="" width="100" height="120">
@@ -179,7 +179,7 @@
                 </div>
 
                 <div class="col  mt-2">
-                  <a href="">
+                  <a routerLink="/produtos">
                     <img class="" style="width: 8rem;"
                       src="../../assets/WhatsApp Image 2020-08-21 at 16.26.42 (2).jpeg"
                       alt="" width="100" height="120">
@@ -187,7 +187,7 @@
                 </div>
 
                 <div class="col  mt-2">
-                  <a href="">
+                  <a routerLink="/produtos">
                     <img class="" style="width: 8rem;"
                       src="../../assets/WhatsApp Image 2020-09-01 at 19.07.45 (1).jpeg"
                       alt="" width="100" height="120">
@@ -195,7 +195,7 @@
                 </div>
 
                 <div class="col  mt-2">
-                  <a href="">
+                  <a routerLink="/produtos">
                     <img class="" style="width: 8rem;"
                       src="../../assets/WhatsApp Image 2020-09-01 at 19.07.45.jpeg"
                       alt="" width="100" height="120">
@@ -203,7 +203,7 @@
                 </div>
 
                 <div class="col  mt-2">
-                  <a href="">
+                  <a routerLink="/produtos">
                     <img class="" style="width: 8rem;"
                       src="../../assets/WhatsApp Image 2020-09-01 at 19.07.46 (1).jpeg"
                       alt="" width="100" height="120">
@@ -211,7 +211,7 @@
                 </div>
 
                 <div class="col  mt-2">
-                  <a href="">
+                  <a routerLink="/produtos">
                     <img class="" style="width: 8rem;"
                       src="../../assets/WhatsApp Image 2020-09-04 at 14.49.47.jpeg"
                       alt="" width="100" height="120">
@@ -227,17 +227,17 @@
           <!--SEGUNDO CAROUSEL-->
           <div class="carousel-item">
             <div class="container">
-              <div class="row mt-5 d-flex justify-content-center">
+              <div class="row mt-5 d-flex justify-content-center mb-0" >
 
                 <img class="d-block w-50 col-md-5 p-0"
                   src="../../assets/mom.jpeg"
                   alt="Segundo Slide" width="462" height="308">
 
                   <div class="col-md-5 pl-4">
-                    <h3>Conheça Zélia</h3>
-                    <p> Zélia se aposentou e não sabia o que fazer com o tempo livre. Buscando por um hobbie no Youtube encontrou pintura em vidro e se apaixonou! Assistiu diversos videos até poder comprar os materiais necessários para realizar as pinturas e então colocou todo o aprendizado em prática. Agora ela ocupa o seu tempo livre e ainda obtem uma renda extra para o sustento da família.</p>
+                    <h2>Conheça Zélia</h2>
+                    <p class="pessoas mb-0"> Zélia se aposentou e não sabia o que fazer com o tempo livre. Buscando por um hobbie no Youtube encontrou pintura em vidro e se apaixonou! Assistiu diversos videos até poder comprar os materiais necessários para realizar as pinturas e então colocou todo o aprendizado em prática. Agora ela ocupa o seu tempo livre e ainda obtem uma renda extra para o sustento da família.</p>
                   </div>
-                  <h5 class="mt-2 mb-0">Conheça alguns dos produtos de Zélia</h5>
+                  <h5 class="mt-1 mb-0">Conheça alguns dos produtos de Zélia</h5>
                 </div>
               </div>
 
@@ -245,7 +245,7 @@
               <div class="row mt-2 pl-0">
 
                 <div class="col mt-2">
-                  <a href="">
+                  <a routerLink="/produtos">
                     <img class="" style="width: 8rem;"
                       src="../../assets/images (3).jfif"
                       alt="" width="100" height="120">
@@ -253,7 +253,7 @@
                 </div>
 
                 <div class="col mt-2">
-                  <a href="">
+                  <a routerLink="/produtos">
                     <img class="" style="width: 8rem;"
                       src="../../assets/vaso-artesanal-gato-amarelo.jpg"
                       alt="" width="100" height="120">
@@ -261,7 +261,7 @@
                 </div>
 
                 <div class="col mt-2">
-                  <a href="">
+                  <a routerLink="/produtos">
                     <img class="" style="width: 8rem;"
                       src="../../assets/trio-conjunto-vaso-porta-suculenta-maria-namoradeira-20190912200236.9644330015.jpg"
                       alt="" width="100" height="120">
@@ -269,7 +269,7 @@
                 </div>
 
                 <div class="col mt-2">
-                  <a href="">
+                  <a routerLink="/produtos">
                     <img class="" style="width: 8rem;"
                       src="../../assets/360052891027915.jpg"
                       alt="" width="100" height="120">
@@ -277,7 +277,7 @@
                 </div>
 
                 <div class="col mt-2">
-                  <a href="">
+                  <a routerLink="/produtos">
                     <img class="" style="width: 8rem;"
                       src="../../assets/5f799d34a054bbefc564e69a1f30d627.jpg"
                       alt="" width="100" height="120">
@@ -285,7 +285,7 @@
                 </div>
 
                 <div class="col mt-2">
-                  <a href="">
+                  <a routerLink="/produtos">
                     <img class="" style="width: 8rem;"
                       src="../../assets/mandala-em-mosaico-para-piso-piso-mosaico.jpg"
                       alt="" width="100" height="120">
@@ -307,8 +307,8 @@
                 alt="Terceiro Slide" width="462" height="308">
 
                   <div class="col-md-5 pl-4">
-                    <h3>Conheça Gustavo</h3>
-                    <p> Após um acidente de moto, Gustavo teve que ficar em casa por muito tempo sem poder trabalhar. As contas não paravam de chegar e os remédios para a recuperação eram caros. Foi quando um amigo indicou que ele fizesse réplicas de motos e aviões. O projeto deu tão certo que hoje ele tem um canal no Youtube onde ensina a criar as réplicas, além de claro, ser nosso colaborador na <b>Fitha</b>.</p>
+                    <h2>Conheça Gustavo</h2>
+                    <p class="pessoas mb-0"> Após um acidente de moto, Gustavo teve que ficar em casa por muito tempo sem poder trabalhar. As contas não paravam de chegar e os remédios para a recuperação eram caros. Foi quando um amigo indicou que ele fizesse réplicas de motos e aviões. O projeto deu tão certo que hoje ele tem um canal no Youtube onde ensina a criar as réplicas, além de claro, ser nosso colaborador na <b>Fitha</b>.</p>
                   </div>
                   <h5 class="mt-2 mb-0">Conheça alguns dos produtos de Gustavo</h5>
                 </div>
@@ -318,7 +318,7 @@
               <div class="row mt-2 pl-0">
 
                 <div class="col mt-2">
-                  <a href="">
+                  <a [routerLink]="['/produtos']">
                     <img class="" style="width: 8rem;"
                       src="../../assets/avi.jfif"
                       alt="" width="100" height="120">
@@ -326,7 +326,7 @@
                 </div>
 
                 <div class="col mt-2">
-                  <a href="">
+                  <a routerLink="/produtos">
                     <img class="" style="width: 8rem;"
                       src="../../assets/aviao-de-madeira-asa-dupla-brinquedo-educativo.jpg"
                       alt="" width="100" height="120">
@@ -334,7 +334,7 @@
                 </div>
 
                 <div class="col mt-2">
-                  <a href="">
+                  <a routerLink="/produtos">
                     <img class="" style="width: 8rem;"
                       src="../../assets/aviao-mdf-monomotor-mdf.jpg"
                       alt="" width="100" height="120">
@@ -342,7 +342,7 @@
                 </div>
 
                 <div class="col mt-2">
-                  <a href="">
+                  <a routerLink="/produtos">
                     <img class="" style="width: 8rem;"
                       src="../../assets/download (1).jfif"
                       alt="" width="100" height="120">
@@ -350,7 +350,7 @@
                 </div>
 
                 <div class="col mt-2">
-                  <a href="">
+                  <a routerLink="/produtos">
                     <img class="" style="width: 8rem;"
                       src="../../assets/carrinho-de-madeira-macica-ford-t-artesanato.jpg"
                       alt="" width="100" height="120">
@@ -358,7 +358,7 @@
                 </div>
 
                 <div class="col mt-2">
-                  <a href="">
+                  <a routerLink="/produtos">
                     <img class="" style="width: 8rem;"
                       src="../../assets/fusca.jfif"
                       alt="" width="100" height="120">
