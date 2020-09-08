@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProdutoModel } from '../model/Produto';
 import { ProdutoService } from '../service/produto.service';
 import { Router, ActivatedRoute } from '@angular/router';
+import { environment } from 'src/environments/environment.prod';
 
 @Component({
   selector: 'app-delete-produto',
@@ -23,6 +24,11 @@ export class DeleteProdutoComponent implements OnInit {
     window.scroll(0, 0)
     let id: number = this.route.snapshot.params['id']
     this.findByIdProduto(id)
+
+    if (environment.admin == false) {
+      alert("SEM PERMISSÃO!!")
+      this.router.navigate(["/home"])
+    }
 
   }
   findByIdProduto(id: number) {

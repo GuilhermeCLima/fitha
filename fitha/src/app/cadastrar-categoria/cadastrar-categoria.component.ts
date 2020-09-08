@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CategoriaService } from '../service/categoria.service';
 import { CategoriaModel } from '../model/Categoria';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment.prod';
 
 @Component({
   selector: 'app-cadastrar-categoria',
@@ -20,6 +21,10 @@ export class CadastrarCategoriaComponent implements OnInit {
 
   ngOnInit() {
     this.findAllCategorias()
+    if (environment.admin == false) {
+      alert("SEM PERMISSÃO!!")
+      this.router.navigate(["/home"])
+    }
   }
 
   findAllCategorias() {

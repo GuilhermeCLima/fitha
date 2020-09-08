@@ -5,8 +5,8 @@
 .botao-config{
     border:none;
     font-weight: bolder;
-    height: 50px;
-    width: 120px;
+    height: 40px;
+    width: 100px;
     color: white;
 background-color: #a125ce;
 }
@@ -19,6 +19,9 @@ background-color: #a125ce;
     background-color: #2f4ac2;
     box-shadow: 0 0 0 0;
     border: 0 none;
+}
+.lupa-btn:hover{
+    color:#a125ce ;
 }
 .filtro{
     list-style: none;
@@ -33,14 +36,14 @@ a:hover{
 .text-input{
     width: 150px
   }
-  .btpFiltro{
+.btpFiltro{
     border: 0;
     padding: 5px;
     background-color: white;
     color: #000;
 }
 .search-button{
-    height:40px;
-    width: 70px;
+    height:38px;
+    width: 40px;
 }
   
