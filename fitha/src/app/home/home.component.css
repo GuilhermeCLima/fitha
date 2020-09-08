@@ -22,3 +22,20 @@ button:hover{
     color: white;
     background-color: #a125ce;
 }
+
+.categoria{
+    color: turquoise;
+    font-size: 25px;
+    margin-top: 43px;
+    text-align: center;
+}
+
+.semborda:focus, .semborda:active{
+    outline:none !important;
+    box-shadow: none !important;
+}
+
+.pessoas{
+    font-size: 20px;
+    text-align: justify;
+}

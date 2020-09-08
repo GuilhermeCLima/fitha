@@ -1,3 +1,6 @@
+
+
+
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
@@ -21,6 +24,7 @@ const routes: Routes = [
   { path: "home", component: HomeComponent },
   { path: "quemsomos", component: QuemsomosComponent },
   { path: "produtos", component: ProdutosComponent },
+  { path: "produtos/:categoria", component: ProdutosComponent },
   { path: "produto-detalhe/:id", component: ProdutoDetalheComponent },
   { path: "contato", component: ContatoComponent },
   { path: "cadastro", component: CadastroComponent },
