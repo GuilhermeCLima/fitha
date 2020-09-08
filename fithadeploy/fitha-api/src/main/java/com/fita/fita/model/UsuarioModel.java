@@ -51,7 +51,7 @@ public class UsuarioModel {
 	private String cpf;
 	
 	@NotNull
-	@Size(min = 9, max = 12)
+	@Size(min = 9, max = 15)
 	private String telefone;
 	
 	@NotNull
