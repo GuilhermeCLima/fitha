@@ -2,6 +2,7 @@ import { Component, OnInit, ɵbypassSanitizationTrustResourceUrl } from '@angula
 import { AuthService } from '../service/auth.service';
 import { Router } from '@angular/router';
 import { UsuarioModel } from '../model/User';
+import { environment } from '../../environments/environment.prod';
 
 @Component({
   selector: 'app-navbar',
@@ -10,8 +11,7 @@ import { UsuarioModel } from '../model/User';
 })
 export class NavbarComponent implements OnInit {
 
-  admin: boolean = false
-  carrinho:boolean = true
+  carrinho: boolean = true
 
   constructor(
     public auth: AuthService,
@@ -20,10 +20,9 @@ export class NavbarComponent implements OnInit {
   private usuario: UsuarioModel
 
   ngOnInit() {
-    if (localStorage.getItem("admin") == 'true') {
-      this.admin = true
-      this.carrinho = false
-    }
+  }
+  admin() {
+    return environment.admin
   }
   sair() {
     localStorage.clear();

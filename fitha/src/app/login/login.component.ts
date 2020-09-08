@@ -3,6 +3,7 @@ import { UsuarioLogin } from '../model/UserLogin';
 import { AuthService } from '../service/auth.service';
 import { Router } from '@angular/router';
 import { UsuarioModel } from '../model/User';
+import { environment } from '../../environments/environment.prod'
 
 
 @Component({
@@ -25,17 +26,13 @@ export class LoginComponent implements OnInit {
   }
 
   entrar() {
-    
     this.authService.logar(this.userLogin).subscribe((resp: UsuarioLogin) => {
       this.userLogin = resp
       localStorage.setItem("token", this.userLogin.token)
       if (resp.admin == true) {
-        localStorage.setItem("admin", 'true')
-      } else {
-        localStorage.setItem('admin', 'false')
+        environment.admin = this.userLogin.admin
       }
       this.router.navigate(["/home"])
-      location.assign('/home')
     })
   }
 }

@@ -18,7 +18,7 @@
         <a href="#">
           <li>Contato</li>
         </a>
-        <p class="text-center cor-bg">
+        <p class="text-center cor-bg" routerLink="/produtos">
           Produtos
         </p>
       </ul>
@@ -59,7 +59,7 @@
       </button>
 
     </div>
-    <div *ngIf='carrinho'>
+    <div *ngIf !='admin()'>
       <button type="button" class="btn b-0 mr-4 botao-borda btn-outline-light p-0">
         <svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-cart-plus-fill" fill="currentColor"
           xmlns="http://www.w3.org/2000/svg">
