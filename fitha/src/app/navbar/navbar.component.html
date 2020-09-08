@@ -9,18 +9,18 @@
       <span></span>
 
       <ul id="menu" class="teste">
-        <a href="#">
+        <a routerLink="/home">
           <li>Home</li>
         </a>
-        <a href="#">
+        <a routerLink="/quemsomos">
           <li>Quem somos</li>
         </a>
-        <a href="#">
+        <a routerLink="/contato">
           <li>Contato</li>
         </a>
-        <p class="text-center cor-bg" routerLink="/produtos">
-          Produtos
-        </p>
+        <a class="text-center  " routerLink="/produtos">
+          <li>Produtos</li>
+        </a>
       </ul>
     </div>
 
@@ -59,7 +59,7 @@
       </button>
 
     </div>
-    <div *ngIf !='admin()'>
+    <div *ngIf="!admin()">
       <button type="button" class="btn b-0 mr-4 botao-borda btn-outline-light p-0">
         <svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-cart-plus-fill" fill="currentColor"
           xmlns="http://www.w3.org/2000/svg">
@@ -71,9 +71,9 @@
     </div>
 
 
-    <div *ngIf="admin">
+    <div *ngIf="admin()">
       <button type="button" class="btn botao-borda btn-outline-light p-0 carrinho " routerLink="/cadastrar-categoria">
-        | Cadastrar
+        Cadastrar
       </button>
     </div>
 

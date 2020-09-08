@@ -6,9 +6,19 @@ button{
     border:none;
     font-weight: bolder;
     height: 50px;
-    width: 170px;;
+    width: 120px;
     color: white;
 background-color: #a125ce;
+}
+.neon:active{
+    color: white;
+    background-color: #2f4ac2;
+        box-shadow: 0 0 0 0;
+        border: 0 none;
+}
+button:hover{
+    color: white;
+    background-color: #a125ce;
 }
 .font-preco{
     font-size: 20px;
@@ -18,21 +28,12 @@ background-color: #a125ce;
     font-weight: bolder
 }
 
-button:hover{
-    color: white;
-    background-color: #a125ce;
-}
+
 .input-tam{
     height: 50px;
     width:100px;
 }
-.neon:active{
-    color: white;
-    background-color: #2f4ac2;
-        box-shadow: 0 0 0 0;
-        border: 0 none;
-      
-}
+
 .carousel-inner{
     height: auto;
 }

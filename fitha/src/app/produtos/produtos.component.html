@@ -11,16 +11,16 @@
                 </header>
             </div>
         </article>
-        <div class="filter-content">
+        <div class="filter-content ">
             <label class="form-check">
 
                 <div>
 
                     <div *ngFor='let item of listCategoria'>
-                        <ul class="list-group">
-                            <li class="list-group-item">
+                        <ul class="list-group ">
+                            <li class="filtro">
                                 <div class="checkbox">
-                                    <button class="btpFiltro" (click)="findCategoria(item.categoria)">
+                                    <button class="btpFiltro " (click)="findCategoria(item.categoria)">
                                         {{item.categoria}}</button>
                                 </div>
                             </li>
@@ -31,7 +31,7 @@
 
                 </div>
 
-                <li class=" list-group-item">
+                <li class="filtro ">
                     <div class="checkbox">
                         <button class="btpFiltro" (click)='findAllProduto()'>Remover
                             filtro</button>
@@ -113,7 +113,13 @@
                 <div class="container center d-flex mb-5 mr-5 ml-5">
                     <input type="text" name="nome" id="nome" class="form-control mb-3 borda"
                         placeholder="Procurar produto" [(ngModel)]="nomeProduto">
-                    <button class="btn btn-success ml-3 buscar" (click)='findByNomeProduto()'>buscar</button>
+                    <button class="btn neon botao-config ml-3 buscar search-button" (click)='findByNomeProduto()'>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
+                            <path fill-rule="evenodd"
+                                d="M11.5 7a4.499 4.499 0 11-8.998 0A4.499 4.499 0 0111.5 7zm-.82 4.74a6 6 0 111.06-1.06l3.04 3.04a.75.75 0 11-1.06 1.06l-3.04-3.04z">
+                            </path>
+                        </svg>
+                    </button>
                 </div>
             </div>
         </div>
@@ -150,10 +156,6 @@
             </div>
         </label>-->
 
-
-
-
-
         <div class="row d-flex justify-content-around mr-3 ml-3">
             <div class="col-md-3 mt-5 mb-5" *ngFor="let item of listProduto">
 
@@ -164,7 +166,7 @@
 
                     <h5 class="card-title">{{item.nome}}</h5>
                     <p>{{item.descricao}}</p>
-                    <button class="btn btn-outline-info " [routerLink]="['/produto-detalhe',item.id]">comprar</button>
+                    <button class="btn neon botao-config" [routerLink]="['/produto-detalhe',item.id]">COMPRAR</button>
                 </div>
 
             </div>
