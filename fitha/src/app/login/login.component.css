@@ -94,3 +94,11 @@ img{
 .login-dark form .btn-primary:active {
     transform:translateY(1px);
 }
+.cadastro{
+    color: white;
+}
+.cadastro:focus , .cadastro:active{
+    outline:none !important;
+    box-shadow: none !important;
+    color: white;
+}

@@ -17,12 +17,12 @@ export class CadastroComponent implements OnInit {
   email: string;
   senha: string;
   confirmaSenha: string;
-   cep: string;
-   bairro: string;
-   complemento: string;
-   cpf: string;
-   usuario: string;
-  
+  cep: string;
+  bairro: string;
+  complemento: string;
+  cpf: string;
+  usuario: string;
+
   msgnome: string;
   msgTelefone: string;
   msgEmail: string;
@@ -31,7 +31,7 @@ export class CadastroComponent implements OnInit {
   msgusuario: string;
 
   user: UsuarioModel = new UsuarioModel()
-  
+
 
   constructor(
     private authService: AuthService,
@@ -53,11 +53,11 @@ export class CadastroComponent implements OnInit {
     this.msgSenha = this.verificaSenha(this.senha);
     this.verificaConfirmaSenha();
 
-    if (this.msgnome          == "" &&
-        this.msgEmail         == "" &&
-        this.msgTelefone      == "" &&
-        this.msgSenha        == "Senha Forte" &&
-        this.msgConfirmaSenha == "" ) {
+    if (this.msgnome == "" &&
+      this.msgEmail == "" &&
+      this.msgTelefone == "" &&
+      this.msgSenha == "Senha Forte" &&
+      this.msgConfirmaSenha == "") {
 
       var cliente: UsuarioModel;
       cliente = new UsuarioModel();
@@ -72,25 +72,25 @@ export class CadastroComponent implements OnInit {
       cliente.cpf = this.cpf;
       cliente.usuario = this.usuario;
 
-      
+
       this.authService.cadastro(cliente).subscribe(
         res => {
           alert("Cadastro realizado com sucesso!!!")
-          this.nome           = "";
-          this.email          = "";
-          this.telefone       = "";
-          this.senha          = "";
-          this.confirmaSenha  = "";
-          this.cep            = "";
-          this.usuario            = "";
-          this.complemento            = "";
-          this.bairro            = "";
-          this.cpf            = "";
+          this.nome = "";
+          this.email = "";
+          this.telefone = "";
+          this.senha = "";
+          this.confirmaSenha = "";
+          this.cep = "";
+          this.usuario = "";
+          this.complemento = "";
+          this.bairro = "";
+          this.cpf = "";
 
-          this.msgnome          = "";
-          this.msgEmail         = "";
-          this.msgTelefone      = "";          
-          this.msgSenha         = "";
+          this.msgnome = "";
+          this.msgEmail = "";
+          this.msgTelefone = "";
+          this.msgSenha = "";
           this.msgConfirmaSenha = "";
         },
         err => {
@@ -171,8 +171,8 @@ export class CadastroComponent implements OnInit {
       this.verificanumero();
     }
   }
- 
-  
+
+
   public verificanumero() {
     if (this.telefone != null) {
       var uc: string = this.telefone.charAt(this.telefone.length - 1);
