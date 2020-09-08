@@ -211,7 +211,6 @@ section .section-title {
 .size-cards{
     padding-right:3rem;
     padding-left:3rem;
-    
     display: flex;
     justify-content: center;
     align-items: center
