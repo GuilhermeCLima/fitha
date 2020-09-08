@@ -1,10 +1,9 @@
 #menuToggle /*coloca o menu dentro da navbar */
 {
-
   display: block;
   position: relative;
   align-items: center;
-  margin-left:20px;
+  margin-left:15px;
   margin-top: 10px;
 
  z-index: 100;
@@ -43,8 +42,6 @@
 }
 .ajuste-menu{
     padding: 20px;
-    
-
 }
 #menuToggle span /*animação e cor do icone*/
 {
@@ -106,18 +103,24 @@
   padding: 0;
   margin-top:9px;
 
-
-  
   background: #f8f9fa;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
-  
+}
+
+#menu{
   transform-origin: 0% 0%;
-  transform: translate(-100%, 0);
+  transform: translate(-100%,0);
   
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
+.menuClose{
+  transform-origin: 0% 0%;
+  transform: translate(0,-100%);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
 #menu li /* mexe no espaçamento dos botões dentro */
 {
   padding: 10px 0;
@@ -127,6 +130,7 @@
 {
   transform: none;
 }
+
 #modal{
   margin-top: 250px;
 }
@@ -156,9 +160,6 @@ color: black;
   border-color: #be09ff;
   
 }
-.search-box{
-  border-color:transparent;
-}
 li{
   font-size:14pt
 }
@@ -179,13 +180,21 @@ span{
   background-color:#f1d7fa ;
   height: 50px;
 }
-textarea:focus, input:focus, select:focus {
-  box-shadow: 0 0 0 0;
-  border: 0 none;
-  outline: 0;
-}
 .carrinho{
   margin-top: -6px;
+}
+img{
+  border: transparent;
   
+}
+a , img:hover{
+  cursor: pointer;
+}
+img:active{
+  border-color:none ;
+}
+.semborda:focus , .semborda:active{
+  outline:none !important;
+  box-shadow: none !important;
 }
 

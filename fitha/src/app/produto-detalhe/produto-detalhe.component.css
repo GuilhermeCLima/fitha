@@ -5,8 +5,8 @@
 button{
     border:none;
     font-weight: bolder;
-    height: 50px;
-    width: 120px;
+    height: 40px;
+    width: 100px;
     color: white;
 background-color: #a125ce;
 }
@@ -27,11 +27,9 @@ button:hover{
     color: #00e1b8;
     font-weight: bolder
 }
-
-
 .input-tam{
-    height: 50px;
-    width:100px;
+    height: 40px;
+    width:70px;
 }
 
 .carousel-inner{

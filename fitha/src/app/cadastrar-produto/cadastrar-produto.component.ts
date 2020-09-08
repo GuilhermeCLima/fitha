@@ -4,6 +4,7 @@ import { ProdutoService } from '../service/produto.service';
 import { CategoriaModel } from '../model/Categoria';
 import { CategoriaService } from '../service/categoria.service';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment.prod';
 
 @Component({
   selector: 'app-cadastrar-produto',
@@ -29,6 +30,11 @@ export class CadastrarProdutoComponent implements OnInit {
 
     this.findAllCategorias()
     this.findAllProduto()
+
+    if (environment.admin == false) {
+      alert("SEM PERMISSÃO!!")
+      this.router.navigate(["/home"])
+    }
    
 
   }

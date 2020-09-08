@@ -4,6 +4,7 @@ import { CategoriaModel } from '../model/Categoria';
 import { CategoriaService } from '../service/categoria.service';
 import { ProdutoService } from '../service/produto.service';
 import { Router, ActivatedRoute } from '@angular/router';
+import { environment } from 'src/environments/environment.prod';
 
 @Component({
   selector: 'app-put-produto',
@@ -30,8 +31,12 @@ export class PutProdutoComponent implements OnInit {
     window.scroll(0, 0)
     this.idProduto = this.route.snapshot.params["id"]
     this.findByIdProduto(this.idProduto)
-
     this.findAllCategoria()
+    
+    if (environment.admin == false) {
+      alert("SEM PERMISSÃO!!")
+      this.router.navigate(["/home"])
+    }
   }
   findByIdProduto(id: number) {
     this.produtoService.getByIdProduto(id).subscribe((resp: ProdutoModel) => {

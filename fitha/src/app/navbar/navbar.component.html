@@ -1,4 +1,4 @@
-<nav class="navbar navbar-light bg-light d-flex align-items-center mb-2">
+<nav class="navbar navbar-light bg-light d-flex align-items-center ">
   <div class="d-flex align-items-center">
 
     <div id="menuToggle">
@@ -8,32 +8,28 @@
       <span></span>
       <span></span>
 
-      <ul id="menu" class="teste">
-        <a routerLink="/home">
+      <ul id="menu" class="menuClose">
+        <a id="home" routerLink="/home">
           <li>Home</li>
         </a>
-        <a routerLink="/quemsomos">
+        <a id="quemSomos" routerLink="/quemsomos" class="menuClose">
           <li>Quem somos</li>
         </a>
-        <a routerLink="/contato">
+        <a id="testando" routerLink="/contato" class="menuClose">
           <li>Contato</li>
         </a>
-        <a class="text-center  " routerLink="/produtos">
+        <a id="produto" class="text-center  " routerLink="/produtos" class="menuClose">
           <li>Produtos</li>
         </a>
       </ul>
     </div>
-
-    <a class="navbar-brand mr-1 ml-3" href="#">Fitha</a>
+    <img src="../../assets/logo.png" alt="" width="80px" routerLink="/home" class="semborda">
   </div>
 
   <div class="d-flex align-items-center">
 
-
-
-
     <div *ngIf='auth.btnLogin()'>
-      <button type="button" class="btn btn-outline-light mr-2 botao-borda b-0 p-0 mr-3" routerLink="/login">
+      <button type="button" class="btn btn-outline-light botao-borda b-0 p-0 mr-2 ml-0" routerLink="/login">
         <svg width=" 20px" height="20px" viewBox="0 0 16 16" class="bi bi-person-circle" fill="currentColor"
           xmlns="http://www.w3.org/2000/svg">
           <path
@@ -60,7 +56,7 @@
 
     </div>
     <div *ngIf="!admin()">
-      <button type="button" class="btn b-0 mr-4 botao-borda btn-outline-light p-0">
+      <button type="button" class="btn b-0 mr-2 botao-borda btn-outline-light p-0">
         <svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-cart-plus-fill" fill="currentColor"
           xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd"
