@@ -41,6 +41,12 @@ public class ProdutoController {
 	public ResponseEntity<List<ProdutoModel>> getByNome(@PathVariable String nome) {
 		return ResponseEntity.ok(repository.findAllByNomeContainingIgnoreCase(nome));
 	}
+	
+	@GetMapping("/categoria/{categoria}")
+	public ResponseEntity<List<ProdutoModel>> getByCategoria(@PathVariable String categoria) {
+		return ResponseEntity.ok(repository.findAllProdutoModelByCategoria_categoria(categoria));
+	}
+	
 
 	@PostMapping("/cadastrar")
 	@PreAuthorize("hasRole(ADMIN)")

@@ -1,25 +1,19 @@
-<div class="justify-content-center">
-    <header class="align-items-center justify-content-center">
-        <div class="login-dark">
-            <form method="post ">
-                <div class="d-flex justify-content-center ">
-                    <div class="col-sm-2 d-flex justify-content-center mb-4 ">
-                        <img src="../../assets/Logo - Fitha.jpeg" class="rounded-circle d-flex justify-content-center logo"
-                            alt="">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <input class="form-control" type="email" name="email" placeholder="Email" [(ngModel)]="userLogin.email">
-                </div>
-                <div class="form-group">
-                    <input class="form-control" type="password" name="password" placeholder="Senha"
-                        [(ngModel)]='userLogin.senha'>
-                </div>
-                <div class="form-group">
-                    <button class="btn btn-primary btn-block" type="submit" (click)='entrar()'>Log In</button>
-                </div>
-                <a routerLink="/login" class="forgot">Forgot your email or password?</a>c
-            </form>
+<div class="login-dark d-flex justify-content-center ">
+    <div class="formulario">
+        <div class="row d-flex justify-content-center ">
+            <div class="col-sm-2 d-flex justify-content-center mb-4 ">
+                <img src="../../assets/Logo - Fitha.jpeg" class="rounded-circle d-flex justify-content-center logo"
+                    alt="">
+            </div>
         </div>
-    </header>
-</div>
+        <div class="form-group">
+            <input class="form-control" type="email" name="email" placeholder="Email" [(ngModel)]="userLogin.email">
+        </div>
+        <div class="form-group">
+            <input class="form-control" type="password" name="password" placeholder="Senha"
+                [(ngModel)]='userLogin.senha'>
+        </div>
+        <div class="form-group">
+            <button class="btn btn-primary btn-block" type="submit" (click)='entrar()'>Login</button>
+        </div>
+    </div>

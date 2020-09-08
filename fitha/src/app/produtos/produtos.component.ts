@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import{CategoriaModel} from '../model/Categoria'
-import{CategoriaService} from '../service/categoria.service'
+import { CategoriaModel } from '../model/Categoria'
+import { CategoriaService } from '../service/categoria.service'
 import { ProdutoModel } from '../model/Produto';
-import{ProdutoService} from '../service/produto.service'
+import { ProdutoService } from '../service/produto.service'
+
 
 @Component({
   selector: 'app-produtos',
@@ -11,41 +12,44 @@ import{ProdutoService} from '../service/produto.service'
 })
 export class ProdutosComponent implements OnInit {
 
-  categoria:CategoriaModel = new CategoriaModel()
-  listCategoria: CategoriaModel[]
+  listProduto: ProdutoModel[]
+  nomeProduto: string
 
-  produto: ProdutoModel = new ProdutoModel()
-  listProduto:ProdutoModel[]
-  idCategoria:number
-  idProduto:number
+  listCategoria: CategoriaModel[]
 
   constructor(
     private categoriaService: CategoriaService,
-    private produtoService : ProdutoService
+    private produtoService: ProdutoService
   ) { }
 
-  ngOnInit()
-   {  
-     window.scroll(0,0)
-     this.findAllCategorias()
-     this.findAllProduto()
+  ngOnInit() {
+    window.scroll(0, 0)
+    this.findAllProduto()
+    this.findAllCategoria()
   }
- 
-  findAllCategorias(){
-    this.categoriaService.getAllCategoria().subscribe((resp:CategoriaModel[]) => {
-      this.listCategoria = resp
-    })
-  }
-  findAllProduto(){
-    this.produtoService.getAllProduto().subscribe((resp:ProdutoModel[]) => {
+
+  findAllProduto() {
+    this.produtoService.getAllProduto().subscribe((resp: ProdutoModel[]) => {
       this.listProduto = resp
     })
   }
-    findByIdCategoria() {
-    this.categoriaService.getByIdCategoria(this.idCategoria).subscribe((resp: CategoriaModel) => {
-      this.categoria = resp
+  findAllCategoria() {
+    this.categoriaService.getAllCategoria().subscribe((resp: CategoriaModel[]) => {
+      this.listCategoria = resp
     })
   }
-  
-
+  findCategoria(categoria: string) {
+    this.produtoService.getByProdutoCategoria(categoria).subscribe((resp: ProdutoModel[]) => {
+      this.listProduto = resp
+    })
+  }
+  findByNomeProduto() {
+    if (this.nomeProduto === '') {
+      this.findAllProduto()
+    } else {
+      this.produtoService.getByNomeProduto(this.nomeProduto).subscribe((resp: ProdutoModel[]) => {
+        this.listProduto = resp
+      })
+    }
+  }
 }

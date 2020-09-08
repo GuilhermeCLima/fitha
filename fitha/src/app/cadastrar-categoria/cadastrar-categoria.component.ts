@@ -35,7 +35,7 @@ export class CadastrarCategoriaComponent implements OnInit {
   }
 
   cadastrar() {
-    if (this.categoria.nome == null) {
+    if (this.categoria.categoria == null) {
       alert("A categoria não pode estar vazia")
     } else {
       this.categoriaService.postCategoria(this.categoria).subscribe((resp: CategoriaModel) => {

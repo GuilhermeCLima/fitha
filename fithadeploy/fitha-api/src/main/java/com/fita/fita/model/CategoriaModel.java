@@ -26,7 +26,7 @@ public class CategoriaModel {
 
 	@NotNull
 	@Size(min = 3, max = 20)
-	private String nome;
+	private String categoria;
 
 	@OneToMany(mappedBy = "categoria", cascade = CascadeType.ALL)
 	@JsonIgnoreProperties
@@ -48,13 +48,16 @@ public class CategoriaModel {
 		this.id = id;
 	}
 
-	public String getNome() {
-		return nome;
+	public String getCategoria() {
+		return categoria;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setCategoria(String categoria) {
+		this.categoria = categoria;
 	}
+
+	
+
 
 	
 }
