@@ -22,10 +22,10 @@ export class CadastrarCategoriaComponent implements OnInit {
   ngOnInit() {
     this.findAllCategorias()
 
-    //if (environment.admin == false) {
-    ///  alert("SEM PERMISSÃO!!")
-    //  this.router.navigate(["/home"])
-    // }
+    if (environment.admin == false) {
+      alert("SEM PERMISSÃO!!")
+      this.router.navigate(["/home"])
+    }
   }
   findAllCategorias() {
     this.categoriaService.getAllCategoria().subscribe((resp: CategoriaModel[]) => {

@@ -5,6 +5,7 @@ import { CategoriaService } from '../service/categoria.service';
 import { ProdutoService } from '../service/produto.service';
 import { ActivatedRoute } from '@angular/router';
 
+
 @Component({
   selector: 'app-produto-detalhe',
   templateUrl: './produto-detalhe.component.html',
@@ -14,6 +15,8 @@ export class ProdutoDetalheComponent implements OnInit {
 
   categoria: CategoriaModel = new CategoriaModel()
   listCategoria: CategoriaModel[]
+
+
 
   produto: ProdutoModel = new ProdutoModel()
   listProduto: ProdutoModel[]
