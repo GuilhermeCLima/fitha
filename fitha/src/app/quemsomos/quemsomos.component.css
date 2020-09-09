@@ -10,7 +10,11 @@
 }
 
 .bg {
-    width: 215px;
+    width: 86rem;
+    background-image: url(https://i.imgur.com/s7Jnl4x.png);
+}
+
+.bgg{
     background-image: url(https://i.imgur.com/s7Jnl4x.png);
 }
 
@@ -200,11 +204,12 @@ section .section-title {
 }
 
 .frontside .card .card-body img {
-    width: 120px;
-    height: 120px;
+    width: 160px;
+    height: 160px;
     border-radius: 50%;
 }
 
 .mat {
     font-size: 23px;
 }
+
