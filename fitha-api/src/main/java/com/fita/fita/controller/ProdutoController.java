@@ -44,7 +44,7 @@ public class ProdutoController {
 	
 	@GetMapping("/categoria/{categoria}")
 	public ResponseEntity<List<ProdutoModel>> getByCategoria(@PathVariable String categoria) {
-		return ResponseEntity.ok(repository.findAllProdutoModelByCategoria_categoria(categoria));
+		return ResponseEntity.ok(repository.findAllProdutoModelByCategoria_categoriaNome(categoria));
 	}
 	
 

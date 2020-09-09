@@ -11,6 +11,6 @@ public interface ProdutoRepository extends JpaRepository<ProdutoModel, Long> {
 
 	public List<ProdutoModel> findAllByNomeContainingIgnoreCase(String ProdutoModel);
 	
-	public List<ProdutoModel> findAllProdutoModelByCategoria_categoria(String categoria);
+	public List<ProdutoModel> findAllProdutoModelByCategoria_categoriaNome(String categoria);
 	
 }

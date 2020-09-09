@@ -14,22 +14,22 @@ export class CategoriaService {
     headers: new HttpHeaders().set('Authorization', localStorage.getItem('token'))
   }
   getAllCategoria() {
-    return this.http.get("http://localhost:8080/categoria")
+    return this.http.get("http://172.26.0.1:9000/categoria")
   }
 
   getByIdCategoria(id: number) {
-    return this.http.get(`http://localhost:8080/categoria/${id}`, this.token)
+    return this.http.get(`http://172.26.0.1:9000/categoria/${id}`, this.token)
   }
 
   postCategoria(categoria: CategoriaModel) {
-    return this.http.post("http://localhost:8080/categoria/cadastrar", categoria, this.token)
+    return this.http.post("http://172.26.0.1:9000/categoria/cadastrar", categoria, this.token)
   }
 
   putCategoria(categoria: CategoriaModel) {
-    return this.http.put('http://localhost:8080/categoria', categoria, this.token)
+    return this.http.put('http://172.26.0.1:9000/categoria', categoria, this.token)
   }
 
   deleteCategoria(id: number) {
-    return this.http.delete(`http://localhost:9000/categoria/${id}`, this.token)
+    return this.http.delete(`http://172.26.0.1:9000/categoria/${id}`, this.token)
   }
 }

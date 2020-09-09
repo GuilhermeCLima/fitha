@@ -28,7 +28,7 @@ export class NavbarComponent implements OnInit {
   }
   sair() {
     localStorage.clear();
-    location.assign('/home')
+    this.router.navigate(['/home'])
   }
 
 }

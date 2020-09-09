@@ -35,6 +35,15 @@ services:
       - db
     networks: 
       - generation-network
+
+  fitah-ui:
+    image: nginx
+    volumes:
+      - ./Fitha/dist/Fitha:/usr/share/nginx/html/
+    ports:
+      - "4200:80"
+    networks:
+      - generation-network
 networks:
     generation-network:
         driver: bridge                

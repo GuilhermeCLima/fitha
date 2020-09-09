@@ -15,11 +15,11 @@ export class AuthService {
 
 
   logar(userLogin: UsuarioLogin) {
-    return this.http.post("http://localhost:8080/usuarios/logar", userLogin)
+    return this.http.post("http://172.26.0.1:9000/usuarios/logar", userLogin)
   }
 
   cadastro(user: UsuarioModel) {
-    return this.http.post("http://localhost:8080/usuarios/cadastrar", user)
+    return this.http.post("http://172.26.0.1gi:9000/usuarios/cadastrar", user)
   }
 
   btnSair() {

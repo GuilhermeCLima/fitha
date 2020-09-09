@@ -22,10 +22,10 @@
 <div class="container mb-2">
 
   <div class="row d-flex justify-content-around">
-    <div class="col-md-3 mb-1" >
-      <div class="card border-0 " >
-        <img class="card-img-top rounded-0" src="../../assets/download.jfif"
-          alt="Imagem de capa do card" width="250" height="250">
+    <div class="col-md-3 mb-1">
+      <div class="card border-0 ">
+        <img class="card-img-top rounded-0" src="../../assets/download.jfif" alt="Imagem de capa do card" width="250"
+          height="250">
         <div class="card-body text-center">
           <h5 class="card-title">Boneca de Cabaça - Frida Kahlo</h5>
         </div>
@@ -33,8 +33,9 @@
     </div>
 
     <div class="col-md-3 mb-1">
-      <div class="card border-0" >
-        <img class="card-img-top rounded-0 row-1" src="../../assets/miniatura-replica-aviao-artesanato-madeira-11x22-cm-Carro-de-Mola-0imwg.jpg"
+      <div class="card border-0">
+        <img class="card-img-top rounded-0 row-1"
+          src="../../assets/miniatura-replica-aviao-artesanato-madeira-11x22-cm-Carro-de-Mola-0imwg.jpg"
           alt="Imagem de capa do card " width="250" height="250">
         <div class="card-body text-center">
           <h5 class="card-title">Avião Biplano de Madeira </h5>
@@ -43,9 +44,10 @@
     </div>
 
     <div class="col-md-3 mb-1">
-      <div class="card border-0" >
-        <img class="card-img-top rounded-0" src="../../assets/fruteira_artesanal_e_rustica_banana_madeira_e_ferro_195_1_20190322225749.webp"
-          alt="Imagem de capa do card" width="250" height="250" >
+      <div class="card border-0">
+        <img class="card-img-top rounded-0"
+          src="../../assets/fruteira_artesanal_e_rustica_banana_madeira_e_ferro_195_1_20190322225749.webp"
+          alt="Imagem de capa do card" width="250" height="250">
         <div class="card-body text-center">
           <h5 class="card-title">Fruteira Banana em Madeira</h5>
         </div>
@@ -53,9 +55,10 @@
     </div>
 
     <div class="col-md-3 mb-1">
-      <div class="card border-0" >
-        <img class="card-img-top rounded-0" src="https://http2.mlstatic.com/D_NQ_NP_2X_673078-MLB31934679125_082019-F.webp"
-          alt="Imagem de capa do card" width="250" height="250">
+      <div class="card border-0">
+        <img class="card-img-top rounded-0"
+          src="https://http2.mlstatic.com/D_NQ_NP_2X_673078-MLB31934679125_082019-F.webp" alt="Imagem de capa do card"
+          width="250" height="250">
         <div class="card-body text-center">
           <h5 class="card-title">Tapete pom pom</h5>
         </div>
@@ -73,14 +76,15 @@
   <div class="row mb-4 d-flex justify-content-around ">
 
     <div class="col-md-2 border-0 " *ngFor="let item of listCategoria">
-      <div class="card border-0 text-white semborda" [routerLink]="['/produtos', item.categoria]">
-        <img src="../../assets/png-transparent-hand-painted-black-circle-hand-cane-vine-dot.png" class="card-img" alt="..."  >
+      <div class="card border-0 text-white semborda" [routerLink]="['/produtos', item.categoriaNome]">
+        <img src="../../assets/png-transparent-hand-painted-black-circle-hand-cane-vine-dot.png" class="card-img"
+          alt="...">
         <div class="card-img-overlay d-flex justify-content-center border-0">
-          <h5 class="card-title categoria">{{item.categoria}}</h5>
+          <h5 class="card-title categoria">{{item.categoriaNome}}</h5>
         </div>
       </div>
     </div>
-    
+
 
 
   </div>
@@ -94,7 +98,7 @@
 
   <div class="row d-flex justify-content-around">
     <div class="col-md-3 mb-1">
-      <div class="card border-0 " >
+      <div class="card border-0 ">
         <img class="card-img-top rounded-0" src="../../assets/WhatsApp Image 2020-08-21 at 16.26.43.jpeg"
           alt="Imagem de capa do card" width="250" height="250">
         <div class="card-body text-center">
@@ -104,9 +108,9 @@
     </div>
 
     <div class="col-md-3 mb-1">
-      <div class="card border-0" >
+      <div class="card border-0">
         <img class="card-img-top rounded-0" src="../../assets/WhatsApp Image 2020-09-01 at 19.07.46.jpeg"
-          alt="Imagem de capa do card"width="250" height="250">
+          alt="Imagem de capa do card" width="250" height="250">
         <div class="card-body text-center">
           <h5 class="card-title">Boneca Amigumi Grande</h5>
         </div>
@@ -114,7 +118,7 @@
     </div>
 
     <div class="col-md-3 mb-1">
-      <div class="card border-0" >
+      <div class="card border-0">
         <img class="card-img-top rounded-0" src="../../assets/relógio+com+colheres+de+plástico.jpg"
           alt="Imagem de capa do card">
         <div class="card-body text-center">
@@ -124,7 +128,7 @@
     </div>
 
     <div class="col-md-3 mb-1">
-      <div class="card border-0" >
+      <div class="card border-0">
         <img class="card-img-top rounded-0" src="../../assets/luminaria-feita-de-garrafa-pet.jpg"
           alt="Imagem de capa do card" width="250" height="250">
         <div class="card-body text-center">
@@ -155,13 +159,15 @@
             <div class="container">
               <div class="row mt-5 d-flex justify-content-center">
 
-                <img class="d-block w-50 col-md-5 p-0"
-                  src="../../assets/maribarbosa.jpg"
-                  alt="Primeiro Slide" width="462" height="308">
+                <img class="d-block w-50 col-md-5 p-0" src="../../assets/maribarbosa.jpg" alt="Primeiro Slide"
+                  width="462" height="308">
 
                 <div class="col-md-5 pl-4">
                   <h2>Conheça Maria</h2>
-                  <p class="pessoas"> Maria aprendeu a fazer artesanato com a avó aos 8 anos de idade. Trabalhou em diversos ramos mas sempre pensou em trabalhar com artesanato. Após ser demitida em 2019, decidiu realizar o sonho e se aprimorou na arte de amigumi. Hoje é uma colaboradora <b>Fitha</b> e está realizando novos cursos para poder exercer livremente sua criatividade</p>
+                  <p class="pessoas"> Maria aprendeu a fazer artesanato com a avó aos 8 anos de idade. Trabalhou em
+                    diversos ramos mas sempre pensou em trabalhar com artesanato. Após ser demitida em 2019, decidiu
+                    realizar o sonho e se aprimorou na arte de amigumi. Hoje é uma colaboradora <b>Fitha</b> e está
+                    realizando novos cursos para poder exercer livremente sua criatividade</p>
                 </div>
                 <h5 class="mt-2 mb-0">Conheça alguns dos produtos de Maria</h5>
               </div>
@@ -172,48 +178,42 @@
 
                 <div class="col mt-2">
                   <a routerLink="/produtos">
-                    <img class="" style="width: 8rem;"
-                      src="../../assets/WhatsApp Image 2020-08-21 at 16.26.42 (1).jpeg"
+                    <img class="" style="width: 8rem;" src="../../assets/WhatsApp Image 2020-08-21 at 16.26.42 (1).jpeg"
                       alt="" width="100" height="120">
                   </a>
                 </div>
 
                 <div class="col  mt-2">
                   <a routerLink="/produtos">
-                    <img class="" style="width: 8rem;"
-                      src="../../assets/WhatsApp Image 2020-08-21 at 16.26.42 (2).jpeg"
+                    <img class="" style="width: 8rem;" src="../../assets/WhatsApp Image 2020-08-21 at 16.26.42 (2).jpeg"
                       alt="" width="100" height="120">
                   </a>
                 </div>
 
                 <div class="col  mt-2">
                   <a routerLink="/produtos">
-                    <img class="" style="width: 8rem;"
-                      src="../../assets/WhatsApp Image 2020-09-01 at 19.07.45 (1).jpeg"
+                    <img class="" style="width: 8rem;" src="../../assets/WhatsApp Image 2020-09-01 at 19.07.45 (1).jpeg"
                       alt="" width="100" height="120">
                   </a>
                 </div>
 
                 <div class="col  mt-2">
                   <a routerLink="/produtos">
-                    <img class="" style="width: 8rem;"
-                      src="../../assets/WhatsApp Image 2020-09-01 at 19.07.45.jpeg"
+                    <img class="" style="width: 8rem;" src="../../assets/WhatsApp Image 2020-09-01 at 19.07.45.jpeg"
                       alt="" width="100" height="120">
                   </a>
                 </div>
 
                 <div class="col  mt-2">
                   <a routerLink="/produtos">
-                    <img class="" style="width: 8rem;"
-                      src="../../assets/WhatsApp Image 2020-09-01 at 19.07.46 (1).jpeg"
+                    <img class="" style="width: 8rem;" src="../../assets/WhatsApp Image 2020-09-01 at 19.07.46 (1).jpeg"
                       alt="" width="100" height="120">
                   </a>
                 </div>
 
                 <div class="col  mt-2">
                   <a routerLink="/produtos">
-                    <img class="" style="width: 8rem;"
-                      src="../../assets/WhatsApp Image 2020-09-04 at 14.49.47.jpeg"
+                    <img class="" style="width: 8rem;" src="../../assets/WhatsApp Image 2020-09-04 at 14.49.47.jpeg"
                       alt="" width="100" height="120">
                   </a>
                 </div>
@@ -227,11 +227,19 @@
           <!--SEGUNDO CAROUSEL-->
           <div class="carousel-item">
             <div class="container">
-              <div class="row mt-5 d-flex justify-content-center mb-0" >
+              <div class="row mt-5 d-flex justify-content-center mb-0">
 
-                <img class="d-block w-50 col-md-5 p-0"
-                  src="../../assets/mom.jpeg"
-                  alt="Segundo Slide" width="462" height="308">
+                <img class="d-block w-50 col-md-5 p-0" src="../../assets/mom.jpeg" alt="Segundo Slide" width="462"
+                  height="308">
+
+
+                <div class="col-md-5 pl-4">
+                  <h2>Conheça Zélia</h2>
+                  <p class="pessoas mb-0"> Zélia se aposentou e não sabia o que fazer com o tempo livre. Buscando por um
+                    hobbie no Youtube encontrou pintura em vidro e se apaixonou! Assistiu diversos videos até poder
+                    comprar os materiais necessários para realizar as pinturas e então colocou todo o aprendizado em
+                    prática. Agora ela ocupa o seu tempo livre e ainda obtem uma renda extra para o sustento da família.
+                  </p>
 
                   <div class="col-md-5 pl-4">
                     <h2>Conheça Zélia</h2>
@@ -239,24 +247,24 @@
                   </div>
                   <h5 class="mt-1 mb-0">Conheça alguns dos produtos de Zélia</h5>
                 </div>
+                <h5 class="mt-1 mb-0">Conheça alguns dos produtos de Zélia</h5>
               </div>
+            </div>
 
             <div class="container mb-5 d-flex justify-content-center">
               <div class="row mt-2 pl-0">
 
                 <div class="col mt-2">
                   <a routerLink="/produtos">
-                    <img class="" style="width: 8rem;"
-                      src="../../assets/images (3).jfif"
-                      alt="" width="100" height="120">
+                    <img class="" style="width: 8rem;" src="../../assets/images (3).jfif" alt="" width="100"
+                      height="120">
                   </a>
                 </div>
 
                 <div class="col mt-2">
                   <a routerLink="/produtos">
-                    <img class="" style="width: 8rem;"
-                      src="../../assets/vaso-artesanal-gato-amarelo.jpg"
-                      alt="" width="100" height="120">
+                    <img class="" style="width: 8rem;" src="../../assets/vaso-artesanal-gato-amarelo.jpg" alt=""
+                      width="100" height="120">
                   </a>
                 </div>
 
@@ -270,24 +278,21 @@
 
                 <div class="col mt-2">
                   <a routerLink="/produtos">
-                    <img class="" style="width: 8rem;"
-                      src="../../assets/360052891027915.jpg"
-                      alt="" width="100" height="120">
+                    <img class="" style="width: 8rem;" src="../../assets/360052891027915.jpg" alt="" width="100"
+                      height="120">
                   </a>
                 </div>
 
                 <div class="col mt-2">
                   <a routerLink="/produtos">
-                    <img class="" style="width: 8rem;"
-                      src="../../assets/5f799d34a054bbefc564e69a1f30d627.jpg"
-                      alt="" width="100" height="120">
+                    <img class="" style="width: 8rem;" src="../../assets/5f799d34a054bbefc564e69a1f30d627.jpg" alt=""
+                      width="100" height="120">
                   </a>
                 </div>
 
                 <div class="col mt-2">
                   <a routerLink="/produtos">
-                    <img class="" style="width: 8rem;"
-                      src="../../assets/mandala-em-mosaico-para-piso-piso-mosaico.jpg"
+                    <img class="" style="width: 8rem;" src="../../assets/mandala-em-mosaico-para-piso-piso-mosaico.jpg"
                       alt="" width="100" height="120">
                   </a>
                 </div>
@@ -302,66 +307,63 @@
             <div class="container">
               <div class="row mt-5 d-flex justify-content-center">
 
-                <img class="d-block w-50 col-md-5 p-0"
-                  src="../../assets/k-000.jpg"
-                alt="Terceiro Slide" width="462" height="308">
+                <img class="d-block w-50 col-md-5 p-0" src="../../assets/k-000.jpg" alt="Terceiro Slide" width="462"
+                  height="308">
 
-                  <div class="col-md-5 pl-4">
-                    <h2>Conheça Gustavo</h2>
-                    <p class="pessoas mb-0"> Após um acidente de moto, Gustavo teve que ficar em casa por muito tempo sem poder trabalhar. As contas não paravam de chegar e os remédios para a recuperação eram caros. Foi quando um amigo indicou que ele fizesse réplicas de motos e aviões. O projeto deu tão certo que hoje ele tem um canal no Youtube onde ensina a criar as réplicas, além de claro, ser nosso colaborador na <b>Fitha</b>.</p>
-                  </div>
-                  <h5 class="mt-2 mb-0">Conheça alguns dos produtos de Gustavo</h5>
+                <div class="col-md-5 pl-4">
+                  <h2>Conheça Gustavo</h2>
+                  <p class="pessoas mb-0"> Após um acidente de moto, Gustavo teve que ficar em casa por muito tempo sem
+                    poder trabalhar. As contas não paravam de chegar e os remédios para a recuperação eram caros. Foi
+                    quando um amigo indicou que ele fizesse réplicas de motos e aviões. O projeto deu tão certo que hoje
+                    ele tem um canal no Youtube onde ensina a criar as réplicas, além de claro, ser nosso colaborador na
+                    <b>Fitha</b>.</p>
                 </div>
+                <h5 class="mt-2 mb-0">Conheça alguns dos produtos de Gustavo</h5>
               </div>
+            </div>
 
             <div class="container mb-5 d-flex justify-content-center">
               <div class="row mt-2 pl-0">
 
                 <div class="col mt-2">
                   <a [routerLink]="['/produtos']">
-                    <img class="" style="width: 8rem;"
-                      src="../../assets/avi.jfif"
-                      alt="" width="100" height="120">
+                    <img class="" style="width: 8rem;" src="../../assets/avi.jfif" alt="" width="100" height="120">
                   </a>
                 </div>
 
                 <div class="col mt-2">
                   <a routerLink="/produtos">
                     <img class="" style="width: 8rem;"
-                      src="../../assets/aviao-de-madeira-asa-dupla-brinquedo-educativo.jpg"
-                      alt="" width="100" height="120">
+                      src="../../assets/aviao-de-madeira-asa-dupla-brinquedo-educativo.jpg" alt="" width="100"
+                      height="120">
+                  </a>
+                </div>
+
+                <div class="col mt-2">
+                  <a routerLink="/produtos">
+                    <img class="" style="width: 8rem;" src="../../assets/aviao-mdf-monomotor-mdf.jpg" alt="" width="100"
+                      height="120">
+                  </a>
+                </div>
+
+                <div class="col mt-2">
+                  <a routerLink="/produtos">
+                    <img class="" style="width: 8rem;" src="../../assets/download (1).jfif" alt="" width="100"
+                      height="120">
                   </a>
                 </div>
 
                 <div class="col mt-2">
                   <a routerLink="/produtos">
                     <img class="" style="width: 8rem;"
-                      src="../../assets/aviao-mdf-monomotor-mdf.jpg"
-                      alt="" width="100" height="120">
+                      src="../../assets/carrinho-de-madeira-macica-ford-t-artesanato.jpg" alt="" width="100"
+                      height="120">
                   </a>
                 </div>
 
                 <div class="col mt-2">
                   <a routerLink="/produtos">
-                    <img class="" style="width: 8rem;"
-                      src="../../assets/download (1).jfif"
-                      alt="" width="100" height="120">
-                  </a>
-                </div>
-
-                <div class="col mt-2">
-                  <a routerLink="/produtos">
-                    <img class="" style="width: 8rem;"
-                      src="../../assets/carrinho-de-madeira-macica-ford-t-artesanato.jpg"
-                      alt="" width="100" height="120">
-                  </a>
-                </div>
-
-                <div class="col mt-2">
-                  <a routerLink="/produtos">
-                    <img class="" style="width: 8rem;"
-                      src="../../assets/fusca.jfif"
-                      alt="" width="100" height="120">
+                    <img class="" style="width: 8rem;" src="../../assets/fusca.jfif" alt="" width="100" height="120">
                   </a>
                 </div>
 
@@ -393,12 +395,12 @@
 <div class="container">
   <div class="row d-flex justify-content-center">
     <div class="col-md-8">
-      <div class="card text-center" >
+      <div class="card text-center">
         <div class="card-body">
           <h5 class="card-title text-center">Sobre nós</h5>
           <p class="card-text">Com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional. E
             aqui a gent fala um pouco do projeto q o botão abaixo direciona o cliente para o campo sobre nós</p>
-          <button class="btn btn-primary neon">Junte-se a nós</button> 
+          <button class="btn btn-primary neon">Junte-se a nós</button>
         </div>
       </div>
     </div>
