@@ -37,17 +37,17 @@ public class CategoriaController {
 	}
 	@GetMapping("/nome/{nome}")
 	public ResponseEntity<List<CategoriaModel>> getByNome(@PathVariable String nome){
-		return ResponseEntity.ok(repository.findAllByCategoriaContainingIgnoreCase(nome));
+		return ResponseEntity.ok(repository.findAllByCategoriaNomeContainingIgnoreCase(nome));
 	}
 	@PostMapping("/cadastrar")
 	@PreAuthorize("hasRole(ADMIN)")
-	public ResponseEntity<CategoriaModel> postCategoria (@RequestBody CategoriaModel categoriaProduto){
+	public ResponseEntity<CategoriaModel> postCategoria (@RequestBody CategoriaModel categoria){
 		
-		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(categoriaProduto));
+		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(categoria));
 	}
 	@PutMapping
-	public ResponseEntity<CategoriaModel> putCategoria  (@RequestBody CategoriaModel categoriaProduto){
-		return ResponseEntity.status(HttpStatus.OK).body(repository.save(categoriaProduto));
+	public ResponseEntity<CategoriaModel> putCategoria  (@RequestBody CategoriaModel categoria){
+		return ResponseEntity.status(HttpStatus.OK).body(repository.save(categoria));
 	}
 	@DeleteMapping("/{id}")
 	public void deleteCategoria (@PathVariable long id) {
