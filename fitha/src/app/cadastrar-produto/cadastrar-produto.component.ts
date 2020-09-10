@@ -32,8 +32,8 @@ export class CadastrarProdutoComponent implements OnInit {
     this.findAllProduto()
 
     if (environment.admin == false) {
-      alert("SEM PERMISSÃO!!")
-      this.router.navigate(["/home"])
+    alert("SEM PERMISSÃO!!")
+this.router.navigate(["/home"])
     }
    
 
