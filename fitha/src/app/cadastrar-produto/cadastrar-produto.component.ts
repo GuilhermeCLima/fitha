@@ -31,10 +31,10 @@ export class CadastrarProdutoComponent implements OnInit {
     this.findAllCategorias()
     this.findAllProduto()
 
-    if (environment.admin == false) {
-    alert("SEM PERMISSÃO!!")
-this.router.navigate(["/home"])
-    }
+    //if (environment.admin == false) {
+  //  alert("SEM PERMISSÃO!!")
+//this.router.navigate(["/home"])
+  //  }
    
 
   }
