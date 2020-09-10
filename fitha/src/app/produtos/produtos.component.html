@@ -20,7 +20,7 @@
                         <ul class="list-group ">
                             <li class="filtro">
                                 <div class="checkbox">
-                                    <button class="btpFiltro " (click)="findCategoria(item.categoriaNome)">
+                                    <button class="btpFiltro " (click)="findProdutoCategoria(item.categoriaNome)">
                                         {{item.categoriaNome}}</button>
                                 </div>
                             </li>
@@ -125,11 +125,11 @@
             </div>
         </div>
 
-        <div class="row d-flex justify-content-around mr-3 ml-3">
-            <div class="col-md-3 mt-5 mb-5" *ngFor="let item of listProduto">
+        <div class="row d-flex justify-content-center">
 
+            <div class="col-md-3 mt-5 mb-5" *ngFor="let item of listProduto">
                 <div class="card">
-                    <img src="{{item.produtoImagem}}" class="card-img-top" alt="..." id="cardproduto">
+                    <img src="{{item.produtoImagem}}" class="card-img-top" alt="..." id="ca rdproduto">
                 </div>
                 <div class="card-body border mt-2">
 
@@ -138,7 +138,9 @@
                     <button class="btn neon botao-config" [routerLink]="['/produto-detalhe',item.id]">COMPRAR</button>
                 </div>
 
+
             </div>
+
         </div>
 
 

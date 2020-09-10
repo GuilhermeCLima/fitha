@@ -1,4 +1,5 @@
 export const environment = {
   production: true,
-  admin: false
+  admin: false,
+  menuClose:false
 };

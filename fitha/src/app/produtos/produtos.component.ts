@@ -17,6 +17,7 @@ export class ProdutosComponent implements OnInit {
   nomeProduto: string
 
   listCategoria: CategoriaModel[]
+  nomeCategoria: string
 
   constructor(
     private categoriaService: CategoriaService,
@@ -28,8 +29,12 @@ export class ProdutosComponent implements OnInit {
     window.scroll(0, 0)
     this.findAllProduto()
     this.findAllCategoria()
-    let nomeCategoria = this.route.snapshot.params['categoria']
-    this.findCategoria(nomeCategoria)
+    this.nomeCategoria = this.route.snapshot.params['categoria']
+    if (this.nomeCategoria == null) {
+      this.findAllProduto()
+    } else {
+      this.findProdutoCategoria(this.nomeCategoria)
+    }
   }
 
   findAllProduto() {
@@ -42,13 +47,13 @@ export class ProdutosComponent implements OnInit {
       this.listCategoria = resp
     })
   }
-  findCategoria(categoria: string) {
+  findProdutoCategoria(categoria: string) {
     this.produtoService.getByProdutoCategoria(categoria).subscribe((resp: ProdutoModel[]) => {
       this.listProduto = resp
     })
   }
   findByNomeProduto() {
-    if (this.nomeProduto =='') {
+    if (this.nomeProduto == null || this.nomeProduto == '') {
       this.findAllProduto()
     } else {
       this.produtoService.getByNomeProduto(this.nomeProduto).subscribe((resp: ProdutoModel[]) => {
