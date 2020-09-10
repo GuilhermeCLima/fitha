@@ -1,0 +1,25 @@
+td{
+    padding: 12px 12px 0px 12px;
+}
+.botao-config:focus, .btn:active{
+    outline:none !important;
+    box-shadow: none !important;
+}
+.botao-config{
+    border:none;
+    font-weight: bolder;
+    height: 40px;
+    width: 100px;
+    color: white;
+background-color: #a125ce;
+}
+.botao-config:hover{
+    color: white;
+    background-color: #a125ce;
+}
+.neon:active{
+    color: white;
+    background-color: #2f4ac2;
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+}
