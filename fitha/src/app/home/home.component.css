@@ -1,3 +1,6 @@
+body{
+    background-color: rgb(235, 235, 235);
+}
 .btn{
     border:none;
     font-weight: bolder;

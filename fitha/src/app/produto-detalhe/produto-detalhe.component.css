@@ -6,7 +6,7 @@ button{
     border:none;
     font-weight: bolder;
     height: 40px;
-    width: 100px;
+    width: 150px;
     color: white;
 background-color: #a125ce;
 }
@@ -20,8 +20,14 @@ button:hover{
     color: white;
     background-color: #a125ce;
 }
+.borda{
+    max-width: 500px;
+    height: 500px;
+
+    border-radius: 2%;
+}
 .font-preco{
-    font-size: 20px;
+    font-size: 40px;
 }
 .color-letra{
     color: #00e1b8;
@@ -34,4 +40,19 @@ button:hover{
 
 .carousel-inner{
     height: auto;
+}
+.cor-preco{
+    font-weight: bold;
+    color: #a125ce;
+}
+.font{
+    font-size: 20px;
+}
+h4{
+    background-color: #a125ce;
+    line-height: 35px;
+    color: white;
+}
+.teste1{
+    margin-top: 120px;
 }

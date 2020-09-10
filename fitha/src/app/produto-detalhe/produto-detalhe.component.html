@@ -1,25 +1,51 @@
 <div class="container mb-3 mt-5 ">
-  <div class="row d-flex justify-content-around">
+  <div class="d-flex justify-content-around">
 
     <div class="col-md-6 mb-5 mt-5 ">
       <img class="d-block w-100 h-100" src="{{produto.produtoImagem}}" alt="Primeiro Slide">
     </div>
 
-    <div class="col-md-5 border mb-5 mt-5 ">
-      <h1 class="text-center">{{produto.nome}}</h1>
-      <h3 class="mt-4">Descrição</h3>
-      <p>{{produto.descricao}}</p>
-      <p class="font-preco mt-5 mb-0"> Por Apenas: R$ {{produto.preco}}</p>
-      <div class="d-flex justify-content-start">
-        <p class="mt-4 mr-1 ml-0">Estoque:</p>
-        <p class="color-letra mt-4">Disponivel</p>
+    <div class="col-md-6 borda mb-5 mt-5 ">
+      <h1 class="text-center teste1">{{produto.nome}}</h1>
+      <p class="font mb-0 "> Por Apenas:</p>
+      <div class="d-flex">
+        <p class="font-preco cor-preco">R$:{{produto.preco}}</p>
+        <p class="ml-2">2x sem juros</p>
       </div>
-
-      <div class="container d-flex justify-content-end p-0">
-        <button class="btn botão-alter neon mr-1 mb-3">COMPRAR</button>
+      <div class="d-flex ">
+        <p>Quantidade disponivel: </p>
+        <p> {{produto.quantidade}}</p>
+      </div>
+     
+      <div class="d-flex ">
+        <p class="mt-2 mr-1 ml-0">Estoque:</p>
+        <p class="color-letra mt-2">Disponivel</p>
+        
+      </div>
+      
+      <hr >
+      <div class="container d-flex justify-content-center  p-0">
+        <button class="btn botão-alter neon mr-1 mb-3 ">COMPRAR</button>
         <input type="number" class="form-control input-tam mb-3" id="quantProdutos" placeholder="0">
       </div>
     </div>
+  </div>
+  <h4 class="text-center ">Informações sobre o produto</h4>
+  <hr class="mt-0">
+  <div class="d-flex">
+    <p>Cor:</p>
+    <p class="ml-2">{{produto.cor}}</p>
+  </div>
+  <div class="d-flex">
+    <p>Material:</p>
+    <p class="ml-2">{{produto.material}}</p>
+  </div>
+  <div>
+
+    <p>{{produto.descricao}}</p>
+
+
+
   </div>
 
   <div class="row d-flex justify-content-end mr-2">

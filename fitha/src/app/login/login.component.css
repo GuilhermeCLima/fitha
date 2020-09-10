@@ -1,10 +1,11 @@
 .login-dark {
    
     max-height: 1000px;
-    background-image: url(../../assets/undraw_Bitcoin_P2P_re_1xqa.png) ;
+    background-image: url() ;
     background-repeat: no-repeat;
     background-position: center;
     background-size:1500px auto ;
+    background-image: url(../../assets/fotos-FITHA/bg-login.png);
 
 }
   
@@ -101,4 +102,27 @@ img{
     outline:none !important;
     box-shadow: none !important;
     color: white;
+}
+
+.btn:focus, .btn:active{
+    outline:none !important;
+    box-shadow: none !important;
+}
+button{
+    border:none;
+    font-weight: bolder;
+    height: 40px;
+    width: 320px;
+    color: white;
+background-color: #2f4ac2;
+}
+.neon:active{
+    color: white;
+    background-color:  #a125ce;
+        box-shadow: 0 0 0 0;
+        border: 0 none;
+}
+button:hover{
+    color: white;
+    background-color: #a125ce;
 }
