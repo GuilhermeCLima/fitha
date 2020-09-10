@@ -3,7 +3,7 @@ import { CategoriaModel } from '../model/Categoria';
 import { ProdutoModel } from '../model/Produto';
 import { CategoriaService } from '../service/categoria.service';
 import { ProdutoService } from '../service/produto.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router, ROUTER_CONFIGURATION } from '@angular/router';
 
 
 @Component({
@@ -27,6 +27,7 @@ export class ProdutoDetalheComponent implements OnInit {
     private categoriaService: CategoriaService,
     private produtoService: ProdutoService,
     private route: ActivatedRoute,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -36,10 +37,11 @@ export class ProdutoDetalheComponent implements OnInit {
     this.findAllCategorias()
     this.findAllProduto()
     this.findByIdProduto()
-
-
   }
-
+  compra() {
+    alert("Produto Adicionado ao carrinho!")
+    this.router.navigate(["/carrinho"])
+  }
   findAllCategorias() {
     this.categoriaService.getAllCategoria().subscribe((resp: CategoriaModel[]) => {
       this.listCategoria = resp

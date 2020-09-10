@@ -123,6 +123,7 @@
   
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 }
+
 #menu li /* mexe no espaçamento dos botões dentro */
 {
   padding: 10px 0;

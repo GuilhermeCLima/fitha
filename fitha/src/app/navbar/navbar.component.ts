@@ -6,6 +6,7 @@ import { environment } from '../../environments/environment.prod';
 import { elementEventFullName } from '@angular/compiler/src/view_compiler/view_compiler';
 import { style } from '@angular/animations';
 
+
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -22,6 +23,13 @@ export class NavbarComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+  }
+  clicar() {
+    document.getElementById("menu").style.transform = "translate(-100%,0)"
+    setTimeout(() => {
+      document.getElementById("menu").style.transform = "translate(0,-100%)"
+    }, 3000)
+    environment.menuClose = true
   }
   admin() {
     return environment.admin

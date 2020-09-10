@@ -21,6 +21,7 @@ import { PutProdutoComponent } from './put-produto/put-produto.component';
 import { DeleteProdutoComponent } from './delete-produto/delete-produto.component';
 import { CategoriaPutComponent } from './categoria-put/categoria-put.component';
 import { CategoriaDelComponent } from './categoria-del/categoria-del.component';
+import { PedidoComponent } from './pedido/pedido.component';
 
 
 @NgModule({
@@ -41,6 +42,7 @@ import { CategoriaDelComponent } from './categoria-del/categoria-del.component';
     DeleteProdutoComponent,
     CategoriaPutComponent,
     CategoriaDelComponent,
+    PedidoComponent,
   ],
 
   imports: [

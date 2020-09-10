@@ -35,7 +35,7 @@ export class CadastrarProdutoComponent implements OnInit {
       alert("SEM PERMISSÃO!!")
       this.router.navigate(["/home"])
     }
-   
+
 
   }
 
@@ -52,6 +52,7 @@ export class CadastrarProdutoComponent implements OnInit {
       this.produtoService.postProduto(this.produto).subscribe((resp: ProdutoModel) => {
         this.produto = resp
         this.produto = new ProdutoModel()
+        this.findAllProduto()
         alert('foi rapaz')
       })
     }
