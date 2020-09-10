@@ -24,13 +24,7 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit() {
   }
-  clicar() {
-    document.getElementById("menu").style.transform = "translate(-100%,0)"
-    setTimeout(() => {
-      document.getElementById("menu").style.transform = "translate(0,-100%)"
-    }, 3000)
-    environment.menuClose = true
-  }
+ 
   admin() {
     return environment.admin
   }

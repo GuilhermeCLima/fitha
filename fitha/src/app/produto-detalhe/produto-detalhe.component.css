@@ -59,3 +59,7 @@ h4{
 .font-duasvezes{
     font-size: 18px;
 }
+img{
+    max-width: 500px;
+    max-height: 700px;
+}
