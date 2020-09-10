@@ -15,7 +15,7 @@
         <p class="ml-1"><b> sem juros</b></p>
       </div>
       <div class="d-flex ">
-        <p class="font-duasvezes">Quantidade disponivel:  {{produto.quantidade}} unidades</p>
+        <p class="font-duasvezes">Quantidade disponivel: {{produto.quantidade}} unidades</p>
       </div>
 
       <div class="d-flex ">
@@ -24,7 +24,8 @@
       </div>
       <hr>
       <div class="container d-flex justify-content-center  p-0">
-        <button class="btn botão-alter neon mr-1 mb-3 " (click)='compra()'>Adicionar ao carrinho</button>
+        <button class="btn botão-alter neon mr-1 mb-3 " [routerLink]="['/pedido',produto.id]">Adicionar ao
+          carrinho</button>
         <input type="number" class="form-control input-tam mb-3" id="quantProdutos" placeholder="0">
       </div>
     </div>

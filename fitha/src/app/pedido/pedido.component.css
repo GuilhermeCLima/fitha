@@ -1,7 +1,7 @@
 td{
     padding: 12px 12px 0px 12px;
 }
-.botao-config:focus, .btn:active{
+.botao-config:focus, .botao-config:active{
     outline:none !important;
     box-shadow: none !important;
 }
@@ -22,4 +22,39 @@ background-color: #a125ce;
     background-color: #2f4ac2;
     box-shadow: 0 0 0 0;
     border: 0 none;
+}
+
+.cont{
+    border:none;
+    font-weight: bolder;
+    color: white;
+    background-color: #a125ce;
+    height: 37px;
+    width: 50px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.cont:focus, .cont:active{
+    outline:none !important;
+    box-shadow: none !important;
+}
+
+h1 {
+    background-color: #a125ce;
+    height: 60px;
+    color: white;
+}
+
+.borda{
+    border-color: #d79bec;
+}
+
+hr{
+    background-color: #a125ce;
+}
+
+.shadow-sm{
+    background-color: #a125ce71;
+    
 }
