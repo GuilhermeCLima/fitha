@@ -17,6 +17,7 @@ import { PutProdutoComponent } from './put-produto/put-produto.component';
 import { DeleteProdutoComponent } from './delete-produto/delete-produto.component';
 import { CategoriaDelComponent } from './categoria-del/categoria-del.component';
 import { CategoriaPutComponent } from './categoria-put/categoria-put.component';
+import { PedidoComponent } from './pedido/pedido.component';
 
 
 const routes: Routes = [
@@ -34,7 +35,8 @@ const routes: Routes = [
   { path: "editar-produto/:id", component: PutProdutoComponent },
   { path: "delete-produto/:id", component: DeleteProdutoComponent },
   { path: "deletar-categoria/:id", component: CategoriaDelComponent },
-  { path: "editar-categoria/:id", component: CategoriaPutComponent }
+  { path: "editar-categoria/:id", component: CategoriaPutComponent },
+  { path: "pedido/:id", component: PedidoComponent }
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
