@@ -201,4 +201,6 @@ img:active{
   outline:none !important;
   box-shadow: none !important;
 }
-
+.aumenta-letra{
+  font-size: 18pt;
+}

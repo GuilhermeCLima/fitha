@@ -24,13 +24,14 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit() {
   }
- 
+
   admin() {
     return environment.admin
   }
   sair() {
     localStorage.clear();
     this.router.navigate(['/home'])
+    environment.admin = false
   }
 
 }
