@@ -1,5 +1,5 @@
 .cor-nav{
-  background-color: rgb(204, 204, 204);
+  background-color: #f8f8f8;
 }
 #menuToggle /*coloca o menu dentro da navbar */
 {
@@ -105,7 +105,7 @@
   padding: 0;
   margin-top:13px;
 
-  background: #cccccc;
+  background: #f8f8f8;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
 }

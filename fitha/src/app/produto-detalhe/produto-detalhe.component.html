@@ -1,20 +1,21 @@
 <div class="container mb-3 mt-5 ">
-  <div class="d-flex justify-content-around">
+  <div class="d-flex justify-content-center">
 
     <div class="col-md-6 mb-5 mt-5 ">
-      <img class="d-block w-100 h-100" src="{{produto.produtoImagem}}" alt="Primeiro Slide">
+      <img class="d-block w-90 h-90" src="{{produto.produtoImagem}}" alt="Primeiro Slide">
     </div>
 
-    <div class="col-md-6 borda mb-5 mt-5 ">
-      <h1 class="text-center teste1">{{produto.nome}}</h1>
+    <div class="col-md-6 borda mb-5 mt-5 pl-5 shadow-sm ">
+      <h1 class="text-center teste1 ">{{produto.nome}}</h1>
       <p class="font mb-0 "> Por Apenas:</p>
       <div class="d-flex">
         <p class="font-preco cor-preco">R$:{{produto.preco}}</p>
-        <p class="ml-2">2x sem juros</p>
+        <p class="ml-2 "><b>Ou até 2x de </b></p>
+        <p class="ml-1 cor-preco font-duasvezes"> {{(produto.preco/2).toFixed(2)}}</p>
+        <p class="ml-1"><b> sem juros</b></p>
       </div>
       <div class="d-flex ">
-        <p>Quantidade disponivel: </p>
-        <p> {{produto.quantidade}}</p>
+        <p class="font-duasvezes">Quantidade disponivel:  {{produto.quantidade}} unidades</p>
       </div>
 
       <div class="d-flex ">

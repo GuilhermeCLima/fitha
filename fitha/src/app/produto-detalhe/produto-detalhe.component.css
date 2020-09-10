@@ -1,11 +1,11 @@
-.btn:focus, .btn:active{
+ .btn:focus, .btn:active{
     outline:none !important;
     box-shadow: none !important;
 }
 button{
     border:none;
     font-weight: bolder;
-    height: 40px;
+    height: 60px;
     width: 150px;
     color: white;
 background-color: #a125ce;
@@ -34,7 +34,7 @@ button:hover{
     font-weight: bolder
 }
 .input-tam{
-    height: 40px;
+    height:  60px;
     width:70px;
 }
 
@@ -55,4 +55,7 @@ h4{
 }
 .teste1{
     margin-top: 120px;
+}
+.font-duasvezes{
+    font-size: 18px;
 }

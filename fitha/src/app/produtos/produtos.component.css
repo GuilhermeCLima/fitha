@@ -34,16 +34,57 @@ a:hover{
     text-decoration: none;
 }
 .text-input{
-    width: 150px
+    width: 50px
   }
 .btpFiltro{
-    border: 0;
+    border: none;
     padding: 5px;
     background-color: white;
-    color: #000;
+    color: black;
+    outline:none !important;
+    box-shadow: none !important;
+
 }
 .search-button{
     height:38px;
     width: 40px;
 }
-  
+.cor-preco{
+    font-weight: bold;
+    color: #a125ce;
+}
+.font-preco{
+    font-size: 30px;
+}
+.border{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    border-radius: 2% 2% 2% 2%;
+}
+.bg-card{
+    background-color:  #f8f8f8;
+}
+.btn-categoria:hover{
+    color:#be09ff ;
+}
+
+.margin-categoria{
+    margin-top: 70px;
+}
+#serchBar{
+    max-width: 500px;
+}
+img{
+    max-width: auto;
+   max-height: 353.812;
+   width: auto;
+   min-width: 265;
+   min-height: 270;
+ 
+}
+.col-md-2{
+    height: auto;
+    width: auto;
+
+}
