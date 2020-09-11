@@ -3,6 +3,7 @@ import { UsuarioModel } from '../model/User';
 import { AuthService } from "../service/auth.service"
 import { from } from 'rxjs';
 import { Router } from '@angular/router';
+import { AlertasService } from '../service/alertas.service';
 
 @Component({
   selector: 'app-cadastro',
@@ -35,7 +36,8 @@ export class CadastroComponent implements OnInit {
 
   constructor(
     private authService: AuthService,
-    private router: Router
+    private router: Router,
+    private alert: AlertasService
   ) { }
 
   ngOnInit() {
@@ -75,7 +77,7 @@ export class CadastroComponent implements OnInit {
 
       this.authService.cadastro(cliente).subscribe(
         res => {
-          alert("Cadastro realizado com sucesso!!!")
+          this.alert.showAlerSuccess("Cadastro realizado com sucesso!!!")
           this.nome = "";
           this.email = "";
           this.telefone = "";
@@ -94,11 +96,11 @@ export class CadastroComponent implements OnInit {
           this.msgConfirmaSenha = "";
         },
         err => {
-          alert("Erro ao realizar o cadastro");
+          this.alert.showAlertDanger("Erro ao realizar o cadastro");
         }
       )
     } else {
-      alert("Por favor, preencha os campos destacados")
+      this.alert.showAlertWarning("Por favor, preencha os campos destacados")
       this.verificanumero();
     }
   }

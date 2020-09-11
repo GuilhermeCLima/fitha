@@ -4,6 +4,7 @@ import { ProdutoModel } from '../model/Produto';
 import { CategoriaService } from '../service/categoria.service';
 import { ProdutoService } from '../service/produto.service';
 import { ActivatedRoute, Router, ROUTER_CONFIGURATION } from '@angular/router';
+import { AlertasService } from '../service/alertas.service';
 
 
 @Component({
@@ -27,7 +28,8 @@ export class ProdutoDetalheComponent implements OnInit {
     private categoriaService: CategoriaService,
     private produtoService: ProdutoService,
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private alert :AlertasService
   ) { }
 
   ngOnInit() {
@@ -39,7 +41,7 @@ export class ProdutoDetalheComponent implements OnInit {
     this.findByIdProduto()
   }
   compra() {
-    alert("Produto Adicionado ao carrinho!")
+    this.alert.showAlerSuccess("Produto Adicionado ao carrinho!")
     this.router.navigate(["/carrinho"])
   }
   findAllCategorias() {

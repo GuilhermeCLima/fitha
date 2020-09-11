@@ -3,6 +3,7 @@ import { CategoriaService } from '../service/categoria.service';
 import { CategoriaModel } from '../model/Categoria';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
+import { AlertasService } from '../service/alertas.service'
 
 @Component({
   selector: 'app-cadastrar-categoria',
@@ -17,7 +18,9 @@ export class CadastrarCategoriaComponent implements OnInit {
 
   constructor(
     private categoriaService: CategoriaService,
-    private router: Router) { }
+    private router: Router,
+    private alert: AlertasService
+  ) { }
 
   ngOnInit() {
     this.findAllCategorias()
@@ -25,7 +28,7 @@ export class CadastrarCategoriaComponent implements OnInit {
     //if (environment.admin == false) {
     //  alert("SEM PERMISSÃO!!")
     //  this.router.navigate(["/home"])
-   // }
+    // }
   }
   findAllCategorias() {
     this.categoriaService.getAllCategoria().subscribe((resp: CategoriaModel[]) => {
@@ -43,7 +46,7 @@ export class CadastrarCategoriaComponent implements OnInit {
     this.categoriaService.postCategoria(this.categoria).subscribe((resp: CategoriaModel) => {
       this.categoria = resp
       this.findAllCategorias()
-      alert("Categoria cadastrada com sucesso!")
+      this.alert.showAlerSuccess("Categoria cadastrada com sucesso!")
 
     })
 

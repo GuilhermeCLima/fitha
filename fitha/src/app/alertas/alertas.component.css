@@ -1,0 +1,13 @@
+.success{
+        
+       color: white;
+       background-color: rgb(47, 177, 47);
+}
+.danger{
+    color: white;
+     background-color: rgb(255, 97, 97);
+}
+.warning{
+    color: black;
+    background-color: rgb(253, 253, 97);
+}

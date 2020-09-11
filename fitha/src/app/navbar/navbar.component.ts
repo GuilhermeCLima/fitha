@@ -5,6 +5,7 @@ import { UsuarioModel } from '../model/User';
 import { environment } from '../../environments/environment.prod';
 import { elementEventFullName } from '@angular/compiler/src/view_compiler/view_compiler';
 import { style } from '@angular/animations';
+import { AlertasService } from '../service/alertas.service';
 
 
 @Component({
@@ -20,6 +21,7 @@ export class NavbarComponent implements OnInit {
   constructor(
     public auth: AuthService,
     private router: Router,
+    private alert :AlertasService
   ) { }
 
   ngOnInit() {
@@ -32,6 +34,7 @@ export class NavbarComponent implements OnInit {
     localStorage.clear();
     this.router.navigate(['/home'])
     environment.admin = false
+    this.alert.showAlerSuccess("Volte sempre!")
   }
 
 }

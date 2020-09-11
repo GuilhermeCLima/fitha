@@ -10,7 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { ProdutosComponent } from './produtos/produtos.component';
 import { ProdutoDetalheComponent } from './produto-detalhe/produto-detalhe.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import{HttpClientModule} from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http'
 
 import { ContatoComponent } from './contato/contato.component';
 import { LoginComponent } from './login/login.component';
@@ -22,6 +22,8 @@ import { DeleteProdutoComponent } from './delete-produto/delete-produto.componen
 import { CategoriaPutComponent } from './categoria-put/categoria-put.component';
 import { CategoriaDelComponent } from './categoria-del/categoria-del.component';
 import { PedidoComponent } from './pedido/pedido.component';
+import { AlertasComponent } from './alertas/alertas.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 
 @NgModule({
@@ -43,6 +45,7 @@ import { PedidoComponent } from './pedido/pedido.component';
     CategoriaPutComponent,
     CategoriaDelComponent,
     PedidoComponent,
+    AlertasComponent,
   ],
 
   imports: [
@@ -50,7 +53,8 @@ import { PedidoComponent } from './pedido/pedido.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ModalModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

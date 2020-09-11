@@ -5,6 +5,7 @@ import { CategoriaService } from '../service/categoria.service';
 import { ProdutoService } from '../service/produto.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
+import { AlertasService } from '../service/alertas.service';
 
 @Component({
   selector: 'app-put-produto',
@@ -24,7 +25,8 @@ export class PutProdutoComponent implements OnInit {
     private categoriaService: CategoriaService,
     private produtoService: ProdutoService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private alert: AlertasService
   ) { }
 
   ngOnInit() {
@@ -32,9 +34,9 @@ export class PutProdutoComponent implements OnInit {
     this.idProduto = this.route.snapshot.params["id"]
     this.findByIdProduto(this.idProduto)
     this.findAllCategoria()
-    
+
     if (environment.admin == false) {
-      alert("SEM PERMISSÃO!!")
+      this.alert.showAlertDanger("SEM PERMISSÃO!!")
       this.router.navigate(["/home"])
     }
   }
@@ -50,10 +52,10 @@ export class PutProdutoComponent implements OnInit {
     this.produtoService.putProduto(this.produto).subscribe((resp: ProdutoModel) => {
       this.produto = resp
       this.router.navigate(['/cadastrar-categoria'])
-      alert('Produto alterado com sucesso!')
+      this.alert.showAlerSuccess('Produto alterado com sucesso!')
     }, err => {
       if (err.status == '500') {
-        alert('Preencha todos os campos corretamente antes de enviar!')
+        this.alert.showAlertWarning('Preencha todos os campos corretamente antes de enviar!')
       }
     })
 

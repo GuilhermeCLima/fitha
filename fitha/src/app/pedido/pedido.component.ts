@@ -3,6 +3,7 @@ import { CategoriaService } from '../service/categoria.service';
 import { ProdutoService } from '../service/produto.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProdutoModel } from '../model/Produto';
+import { AlertasService } from '../service/alertas.service';
 
 @Component({
   selector: 'app-pedido',
@@ -22,7 +23,8 @@ export class PedidoComponent implements OnInit {
     private categoriaService: CategoriaService,
     private produtoService: ProdutoService,
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private alert: AlertasService
   ) { }
 
   ngOnInit() {
@@ -70,5 +72,7 @@ export class PedidoComponent implements OnInit {
   voltar() {
     this.router.navigate(["/produtos"])
   }
-
+  comprado() {
+    this.alert.showAlerSuccess("Produto comprado com sucesso!")
+  }
 }

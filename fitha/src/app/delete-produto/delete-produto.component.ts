@@ -3,6 +3,7 @@ import { ProdutoModel } from '../model/Produto';
 import { ProdutoService } from '../service/produto.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
+import { AlertasService } from '../service/alertas.service';
 
 @Component({
   selector: 'app-delete-produto',
@@ -12,12 +13,13 @@ import { environment } from 'src/environments/environment.prod';
 export class DeleteProdutoComponent implements OnInit {
 
   produto: ProdutoModel = new ProdutoModel()
-  
+
   constructor(
-    
+
     private produtoService: ProdutoService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private alert: AlertasService
   ) { }
 
   ngOnInit() {
@@ -26,20 +28,20 @@ export class DeleteProdutoComponent implements OnInit {
     this.findByIdProduto(id)
 
     if (environment.admin == false) {
-      alert("SEM PERMISSÃO!!")
+      this.alert.showAlertDanger("SEM PERMISSÃO!!")
       this.router.navigate(["/home"])
     }
 
   }
   findByIdProduto(id: number) {
-    this.produtoService.getByIdProduto(id).subscribe((resp: ProdutoModel) =>{
+    this.produtoService.getByIdProduto(id).subscribe((resp: ProdutoModel) => {
       this.produto = resp
     })
   }
   btnSim() {
     this.produtoService.deleteProduto(this.produto.id).subscribe(() => {
       this.router.navigate(['/cadastrar-categoria'])
-      alert('Produto apagado com sucesso!')
+      this.alert.showAlerSuccess('Produto apagado com sucesso!')
     })
   }
   btnNao() {
