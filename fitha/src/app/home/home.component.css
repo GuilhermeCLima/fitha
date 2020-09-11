@@ -95,5 +95,7 @@ h2 {
 .ver-mas{
     width: 500px;
 }
-
+.cursor{
+    cursor: pointer;
+}
 

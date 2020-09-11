@@ -29,8 +29,10 @@ export class ProdutosComponent implements OnInit {
     window.scroll(0, 0)
     this.findAllProduto()
     this.findAllCategoria()
+
     this.nomeCategoria = this.route.snapshot.params['categoria']
-    if (this.nomeCategoria == null) {
+
+    if (this.nomeCategoria == null || this.nomeCategoria == '') {
       this.findAllProduto()
     } else {
       this.findProdutoCategoria(this.nomeCategoria)
