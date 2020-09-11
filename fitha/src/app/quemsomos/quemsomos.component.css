@@ -212,4 +212,7 @@ section .section-title {
 .mat {
     font-size: 23px;
 }
+p{
+    text-align: justify;
+}
 

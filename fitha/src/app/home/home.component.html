@@ -5,7 +5,7 @@
   <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="../../assets/banner.jpg" class="d-block w-100" alt="...">
+        <img src="../../assets/fotos-FITHA/banner.jpg" class="d-block w-100" alt="...">
       </div>
       <div class="carousel-item">
         <img src="https://i.imgur.com/ZQSAhfw.jpg" class="d-block w-100" alt="...">
@@ -25,9 +25,10 @@
 
   <div class="row d-flex justify-content-around">
     <div class="col-md-3 mb-1">
-      <div class="card border-0 " routerLink="/produtos">
+      <div class="card border-0 ">
         <div class="img-resp">
-          <img class="card-img-top rounded-0" src="https://i.imgur.com/HsFDhGK.jpg" alt="Imagem de capa do card">
+          <img class="card-img-top rounded-0 border-0 semborda" src="https://i.imgur.com/HsFDhGK.jpg"
+            alt="Imagem de capa do card">
         </div>
         <div class="card-body text-center">
           <h5 class="card-title">Escultura elefante</h5>
@@ -145,7 +146,7 @@
     <div class="col-md-2 border-0 tm-card" *ngFor="let item of listCategoria">
       <div class="card border-0 text-white semborda" [routerLink]="['/produtos', item.categoriaNome]">
         <img src="../../assets/fotos-FITHA/png-transparent-hand-painted-black-circle-hand-cane-vine-dot.png"
-          class="card-img cursor" >
+          class="card-img cursor">
         <div class="card-img-overlay d-flex justify-content-center border-0">
           <h5 class="card-title categoria cursor">{{item.categoriaNome}}</h5>
         </div>
@@ -309,10 +310,10 @@
           <!--TERCEIRO CAROUSEL-->
           <div class="carousel-item">
             <div class="container">
-              <div class="row mt-5 d-flex justify-content-center">
+              <div class="row mt-5 d-flex justify-content-center mb-0">
 
-                <img class="d-block mw-50 col-md-5 p-0" src="https://i.imgur.com/perIkaH.jpg" alt="Terceiro Slide"
-                  width="462" height="308">
+                <img class="d-block mw-50 col-md-5 p-0" src="https://i.imgur.com/perIkaH.jpg" alt="Segundo Slide"
+                  width="300" height="280">
 
                 <div class="col-md-5 pl-4">
                   <h2>Conheça Gustavo</h2>
@@ -320,7 +321,7 @@
                     poder trabalhar. As contas não paravam de chegar e os remédios para a recuperação eram caros. Foi
                     quando um amigo indicou que ele fizesse réplicas de motos e aviões. O projeto deu tão certo que hoje
                     ele tem um canal no Youtube onde ensina a criar as réplicas, além de claro, ser nosso colaborador na
-                    <b>Fitha</b>.</p>
+                  </p>
                 </div>
                 <h5 class="mt-4 mb-0">Conheça alguns dos produtos de Gustavo</h5>
               </div>
@@ -330,7 +331,7 @@
               <div class="row mt-4 pl-0">
 
                 <div class="col mt-2">
-                  <a [routerLink]="['/produtos']">
+                  <a routerLink="/produtos">
                     <img class="" style="width: 8rem;" src="https://i.imgur.com/4MzPDyV.jpg" alt="" width="100"
                       height="120">
                   </a>
@@ -366,7 +367,7 @@
 
                 <div class="col mt-2">
                   <a routerLink="/produtos">
-                    <img class="" style="width: 8rem;" src="https://i.imgur.com/0PiQ4Bq.jpg" alt="" width="100"
+                    <img class="" style="width: 8rem;" src="https://i.imgur.com/vL6oe2W.jpg" alt="" width="100"
                       height="120">
                   </a>
                 </div>
@@ -401,7 +402,7 @@
         <div class="larg">
           <p class="card-text">Com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional. E
             aqui a gente fala um pouco do projeto que o botão abaixo direciona o cliente para o campo sobre nós</p>
-          <button class="btn btn-primary neon">Junte-se a nós</button>
+          <button class="btn btn-primary neon" routerLink="/quemsomos">Conheça mais</button>
         </div>
       </div>
     </div>

@@ -13,10 +13,10 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ProdutosComponent implements OnInit {
 
-  listProduto: ProdutoModel[]
+  listProduto: ProdutoModel[] = []
   nomeProduto: string
 
-  listCategoria: CategoriaModel[]
+  listCategoria: CategoriaModel[] = []
   nomeCategoria: string
 
   constructor(
@@ -32,7 +32,7 @@ export class ProdutosComponent implements OnInit {
 
     this.nomeCategoria = this.route.snapshot.params['categoria']
 
-    if (this.nomeCategoria == null || this.nomeCategoria == '') {
+    if (this.nomeCategoria == null) {
       this.findAllProduto()
     } else {
       this.findProdutoCategoria(this.nomeCategoria)
