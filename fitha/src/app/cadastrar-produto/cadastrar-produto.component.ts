@@ -55,7 +55,7 @@ export class CadastrarProdutoComponent implements OnInit {
         this.produto = resp
         this.produto = new ProdutoModel()
         this.findAllProduto()
-        this.alert.showAlerSuccess('foi rapaz')
+        this.alert.showAlerSuccess('Produto cadastrado com sucesso!')
       })
     }
   }
