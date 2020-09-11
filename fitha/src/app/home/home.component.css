@@ -27,9 +27,9 @@ button:hover{
 }
 
 .categoria{
-    color: turquoise;
-    font-size: 25px;
-    margin-top: 43px;
+    color: black;
+    font-size: 23px;
+    margin-top: 45px;
     text-align: center;
 }
 
@@ -51,11 +51,6 @@ h2 {
     display: flex;
     align-items: center;
     align-content: center;
-}
-
-.card {
-    width: 25vw;
-
 }
 
 .card-body {
@@ -93,6 +88,12 @@ h2 {
 .btn {
     align-items: center;
 }
-
+.tm-card{
+    max-width: 200px;
+    max-height: 200px;
+}
+.ver-mas{
+    width: 500px;
+}
 
 

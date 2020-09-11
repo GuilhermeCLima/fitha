@@ -76,24 +76,7 @@
 
 <!--FIM Cards com produtos 1-->
 
-<!--Bolinhas de Categoria-->
 
-<div class="container mb-5">
-
-  <div class="row mb-4 d-flex justify-content-around ">
-
-    <div class="col-md-2 border-0 " *ngFor="let item of listCategoria">
-      <div class="card border-0 text-white semborda" [routerLink]="['/produtos', item.categoriaNome]">
-        <img src="../../assets/fotos-FITHA/png-transparent-hand-painted-black-circle-hand-cane-vine-dot.png"
-          class="card-img" alt="..."  width="250" height="250" >
-        <div class="card-img-overlay d-flex justify-content-center border-0">
-          <h5 class="card-title categoria">{{item.categoriaNome}}</h5>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- FIM das Bolinhas de Categoria-->
 
 <!--Cards com produtos 2-->
 
@@ -151,9 +134,28 @@
     </div>
   </div>
 </div>
-
+<div class="d-flex justify-content-center mb-5">
+  <button class="btn btn-primary neon ver-mas" routerLink="/produtos">Veja todos os nossos produtos</button>
+</div>
 <!--FIM Cards com produtos 2-->
+<!--Bolinhas de Categoria-->
 
+<div class="container mb-5 mt-3">
+
+  <div class="row mb-4 d-flex justify-content-around ">
+
+    <div class="col-md-2 border-0 tm-card" *ngFor="let item of listCategoria">
+      <div class="card border-0 text-white semborda" [routerLink]="['/produtos', item.categoriaNome]">
+        <img src="../../assets/fotos-FITHA/png-transparent-hand-painted-black-circle-hand-cane-vine-dot.png"
+          class="card-img" alt="..."   >
+        <div class="card-img-overlay d-flex justify-content-center border-0">
+          <h5 class="card-title categoria">{{item.categoriaNome}}</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- FIM das Bolinhas de Categoria-->
 <!--Carousel com imagem de pessoa e sobre ela-->
 <div class="container d-flex justify-content-around mb-3">
   <div class="row">
@@ -235,10 +237,6 @@
             </div>
           </div>
           <!--FIM - PRIMEIRO CAROUSEL -->
-
-          <div>
-            <button class="btn btn-primary neon">Ver mais</button>
-          </div>
 
           <!--SEGUNDO CAROUSEL-->
           <div class="carousel-item">
