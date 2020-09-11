@@ -26,18 +26,20 @@
   <div class="row d-flex justify-content-around">
     <div class="col-md-3 mb-1">
       <div class="card border-0 " routerLink="/produtos">
-        <img class="card-img-top rounded-0" src="https://i.imgur.com/Lj259ew.jpg" alt="Imagem de capa do card"
-          width="250" height="250">
+        <div class="img-resp">
+          <img class="card-img-top rounded-0" src="https://i.imgur.com/HsFDhGK.jpg" alt="Imagem de capa do card">
+        </div>
         <div class="card-body text-center">
-          <h5 class="card-title">Boneca de Cabaça - Frida Kahlo</h5>
+          <h5 class="card-title">Escultura elefante</h5>
         </div>
       </div>
     </div>
 
     <div class="col-md-3 mb-1">
       <div class="card border-0">
-        <img class="card-img-top rounded-0 row-1" src="https://i.imgur.com/UTXA98g.jpg" alt="Imagem de capa do card "
-          width="250" height="250">
+        <div class="img-resp">
+          <img class="card-img-top rounded-0 row-1" src="https://i.imgur.com/UTXA98g.jpg" alt="Imagem de capa do card ">
+        </div>
         <div class="card-body text-center">
           <h5 class="card-title">Avião Biplano de Madeira </h5>
         </div>
@@ -46,22 +48,26 @@
 
     <div class="col-md-3 mb-1">
       <div class="card border-0">
-        <img class="card-img-top rounded-0"
-          src="https://images-americanas.b2w.io/produtos/01/00/img/1450348/0/1450348039_1SZ.jpg"
-          alt="Imagem de capa do card" width="250" height="250">
+        <div class="img-resp">
+          <img class="card-img-top rounded-0"
+          src="https://i.imgur.com/tRZkRMf.jpg"
+          alt="Imagem de capa do card">
+        </div>
         <div class="card-body text-center">
-          <h5 class="card-title">Fruteira Banana em Madeira</h5>
+          <h5 class="card-title">Boneco Articulado de Alumínio</h5>
         </div>
       </div>
     </div>
 
     <div class="col-md-3 mb-1">
       <div class="card border-0">
-        <img class="card-img-top rounded-0"
-          src="https://http2.mlstatic.com/D_NQ_NP_2X_673078-MLB31934679125_082019-F.webp" alt="Imagem de capa do card"
+        <div class="img-resp">
+          <img class="card-img-top rounded-0"
+          src="https://i.imgur.com/3iiDGAo.jpg" alt="Imagem de capa do card"
           width="250" height="250">
+        </div>
         <div class="card-body text-center">
-          <h5 class="card-title">Tapete pom pom</h5>
+          <h5 class="card-title">Boneca Amigumi</h5>
         </div>
       </div>
     </div>
@@ -79,17 +85,13 @@
     <div class="col-md-2 border-0 " *ngFor="let item of listCategoria">
       <div class="card border-0 text-white semborda" [routerLink]="['/produtos', item.categoriaNome]">
         <img src="../../assets/fotos-FITHA/png-transparent-hand-painted-black-circle-hand-cane-vine-dot.png"
-          class="card-img" alt="...">
+          class="card-img" alt="..."  width="250" height="250" >
         <div class="card-img-overlay d-flex justify-content-center border-0">
           <h5 class="card-title categoria">{{item.categoriaNome}}</h5>
         </div>
       </div>
     </div>
-
-
-
   </div>
-
 </div>
 <!-- FIM das Bolinhas de Categoria-->
 
@@ -100,8 +102,11 @@
   <div class="row d-flex justify-content-around">
     <div class="col-md-3 mb-1">
       <div class="card border-0 ">
-        <img class="card-img-top rounded-0" src="https://i.imgur.com/vNZSRxJ.jpg" alt="Imagem de capa do card"
+        <div class="img-resp">
+          <img class="card-img-top rounded-0" src="https://i.imgur.com/vNZSRxJ.jpg" alt="Imagem de capa do card"
           width="250" height="250">
+        </div>
+
         <div class="card-body text-center">
           <h5 class="card-title">Descanso de Luminária - Raposa</h5>
         </div>
@@ -110,8 +115,10 @@
 
     <div class="col-md-3 mb-1">
       <div class="card border-0">
-        <img class="card-img-top rounded-0" src="https://i.imgur.com/7gQc4Ot.jpg" alt="Imagem de capa do card"
+        <div class="img-resp">
+          <img class="card-img-top rounded-0" src="https://i.imgur.com/7gQc4Ot.jpg" alt="Imagem de capa do card"
           width="250" height="250">
+        </div>
         <div class="card-body text-center">
           <h5 class="card-title">Boneca Amigumi Grande</h5>
         </div>
@@ -120,7 +127,10 @@
 
     <div class="col-md-3 mb-1">
       <div class="card border-0">
-        <img class="card-img-top rounded-0" src="https://i.imgur.com/9KmlzXy.jpg" alt="Imagem de capa do card">
+        <div class="img-resp">
+          <img class="card-img-top rounded-0" src="https://i.imgur.com/9KmlzXy.jpg" alt="Imagem de capa do card" width="250" height="250">
+        </div>
+        
         <div class="card-body text-center">
           <h5 class="card-title">Relógio Colheres de Plástico</h5>
         </div>
@@ -129,8 +139,11 @@
 
     <div class="col-md-3 mb-1">
       <div class="card border-0">
-        <img class="card-img-top rounded-0" src="https://i.imgur.com/cZUlHI8.jpg" alt="Imagem de capa do card"
+        <div class="img-resp">
+          <img class="card-img-top rounded-0" src="https://i.imgur.com/cZUlHI8.jpg" alt="Imagem de capa do card"
           width="250" height="250">
+        </div>
+        
         <div class="card-body text-center">
           <h5 class="card-title">Luminárias PET</h5>
         </div>
@@ -160,7 +173,7 @@
               <div class="row mt-5 d-flex justify-content-center">
 
                 <img class="d-block mw-50 col-md-5 p-0" src="https://i.imgur.com/MxrVP33.jpg" alt="Primeiro Slide"
-                  width="462" height="308">
+                  width="300" height="280">
 
                 <div class="col-md-5 pl-4">
                   <h2>Conheça Maria</h2>
@@ -169,12 +182,12 @@
                     realizar o sonho e se aprimorou na arte de amigumi. Hoje é uma colaboradora <b>Fitha</b> e está
                     realizando novos cursos para poder exercer livremente sua criatividade</p>
                 </div>
-                <h5 class="mt-2 mb-0">Conheça alguns dos produtos de Maria</h5>
+                <h5 class="mt-4 mb-0">Conheça alguns dos produtos de Maria</h5>
               </div>
             </div>
 
             <div class="container mb-5 d-flex justify-content-center">
-              <div class="row mt-2 pl-0">
+              <div class="row mt-4 pl-0">
 
                 <div class="col mt-2">
                   <a routerLink="/produtos">
@@ -223,6 +236,9 @@
           </div>
           <!--FIM - PRIMEIRO CAROUSEL -->
 
+          <div>
+            <button class="btn btn-primary neon">Ver mais</button>
+          </div>
 
           <!--SEGUNDO CAROUSEL-->
           <div class="carousel-item">
@@ -230,7 +246,7 @@
               <div class="row mt-5 d-flex justify-content-center mb-0">
 
                 <img class="d-block mw-50 col-md-5 p-0" src="https://i.imgur.com/6PrIa1r.jpg" alt="Segundo Slide"
-                  width="462" height="308">
+                  width="300" height="280">
 
                 <div class="col-md-5 pl-4">
                   <h2>Conheça Zélia</h2>
@@ -240,12 +256,12 @@
                     aprendizado em prática. Agora ela ocupa o seu tempo livre e ainda obtem uma renda extra para o
                     sustento da família.</p>
                 </div>
-                <h5 class="mt-1 mb-0">Conheça alguns dos produtos de Zélia</h5>
+                <h5 class="mt-4 mb-0">Conheça alguns dos produtos de Zélia</h5>
               </div>
             </div>
 
             <div class="container mb-5 d-flex justify-content-center">
-              <div class="row mt-2 pl-0">
+              <div class="row mt-4 pl-0">
 
                 <div class="col mt-2">
                   <a routerLink="/produtos">
@@ -310,12 +326,12 @@
                     ele tem um canal no Youtube onde ensina a criar as réplicas, além de claro, ser nosso colaborador na
                     <b>Fitha</b>.</p>
                 </div>
-                <h5 class="mt-2 mb-0">Conheça alguns dos produtos de Gustavo</h5>
+                <h5 class="mt-4 mb-0">Conheça alguns dos produtos de Gustavo</h5>
               </div>
             </div>
 
             <div class="container mb-5 d-flex justify-content-center">
-              <div class="row mt-2 pl-0">
+              <div class="row mt-4 pl-0">
 
                 <div class="col mt-2">
                   <a [routerLink]="['/produtos']">
@@ -363,9 +379,6 @@
             </div>
           </div>
           <!--FIM - TERCEIRO CAROUSEL -->
-
-
-
         </div>
 
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -384,16 +397,16 @@
 <!--FIM do Carousel com imagem de pessoa e sobre ela-->
 
 <!--Junte-se a nós-->
-<div class="container">
+<div class="container" >
   <div class="row d-flex justify-content-center">
     <div class="col-md-8">
-      <div class="card text-center">
-        <div class="card-body">
-          <h5 class="card-title text-center">Sobre nós</h5>
-          <p class="card-text">Com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional. E
-            aqui a gent fala um pouco do projeto q o botão abaixo direciona o cliente para o campo sobre nós</p>
-          <button class="btn btn-primary neon">Junte-se a nós</button>
-        </div>
+      <div class="card-about pt-4 pb-4">
+          <h5 class="text-about text-center">Sobre nós</h5>
+          <div class="larg">
+            <p class="card-text">Com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional. E
+              aqui a gente fala um pouco do projeto que o botão abaixo direciona o cliente para o campo sobre nós</p>
+            <button class="btn btn-primary neon">Junte-se a nós</button>
+          </div>
       </div>
     </div>
   </div>
