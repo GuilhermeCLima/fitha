@@ -38,13 +38,13 @@ export class CategoriaDelComponent implements OnInit {
   }
   btnSim() {
     this.categoriaService.deleteCategoria(this.categoria.id).subscribe(() => {
-      this.router.navigate(['/cadastrar-produto'])
+      this.router.navigate(['/cadastrar-categoria'])
       this.alert.showAlerSuccess('Categoria deletada com sucesso')
     })
   }
 
   bntNao() {
-    this.router.navigate(['/cadastrar-produto'])
+    this.router.navigate(['/cadastrar-categoria'])
   }
 
 }

@@ -94,9 +94,11 @@ export class CadastroComponent implements OnInit {
           this.msgTelefone = "";
           this.msgSenha = "";
           this.msgConfirmaSenha = "";
+          this.router.navigate(["/home"])
         },
         err => {
           this.alert.showAlertDanger("Erro ao realizar o cadastro");
+
         }
       )
     } else {

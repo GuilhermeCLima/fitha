@@ -40,7 +40,7 @@ export class DeleteProdutoComponent implements OnInit {
   }
   btnSim() {
     this.produtoService.deleteProduto(this.produto.id).subscribe(() => {
-      this.router.navigate(['/cadastrar-categoria'])
+      this.router.navigate(['/cadastrar-produto'])
       this.alert.showAlerSuccess('Produto apagado com sucesso!')
     })
   }
