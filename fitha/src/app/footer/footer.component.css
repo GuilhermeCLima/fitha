@@ -1,7 +1,7 @@
 /* Footer */
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 *{
-	color: #7507a1e8!important;
+	color: #ffffffe8!important;
 	font-size: 18px
 }
 h5{
@@ -27,7 +27,7 @@ i{
 	width: 40px;
 }
 section {
-	background: #09b8beb0 !important; /*#09b8bea9*/
+	background: #820aa7 !important; /*#09b8bea9*/
 	padding-bottom: 10px;
 	padding-top: 20px;
 	text-align: center;
@@ -50,7 +50,7 @@ p{
 	height: 2px;
 	bottom: -5px;
 	left: 0;
-	background-color:#7507a1e8;
+	background-color:#ffffffe8;
 	visibility: hidden;
 	transform: scaleX(0);
 	transition: all 0.3s ease-in-out 0s;
@@ -62,7 +62,7 @@ p{
 }
 
 hr {
-	background-color: #7507a1e8;
+	background-color: #ffffffe8;
 }
  
 /* Sublinhando primeira linha do footer fim*/
@@ -78,7 +78,7 @@ hr {
 }
 /* animação */
 .instagram{  
-	background: linear-gradient(45deg,#7507a1e8,#7c0986fa 49%,#f09433 50%, #e6683c 62.5%, #dc2743 75%, #cc2366 87.5%, #bc1888 100%);       /*224,224,240        244,243,242*/
+	background: linear-gradient(45deg,#b51df1e8,#e31ef5fa 49%,#f09433 50%, #e6683c 62.5%, #dc2743 75%, #cc2366 87.5%, #bc1888 100%);       /*224,224,240        244,243,242*/
 	background-size:250%;              /*#059ca1b0,#0ca8adfa*/
 }
 /* passar o mouse */
@@ -87,7 +87,7 @@ hr {
 }
 /* animação */
 .facebook{
-	background: linear-gradient(45deg, #7507a1e8,#7c0986fa 49%,rgb(25,175,255) 50%, rgba(0, 7, 224, 0.8) 100%);                               /*0,0,0          43,42,42*/
+	background: linear-gradient(45deg,#b51df1e8,#e31ef5fa 49%,rgb(25,175,255) 50%, rgba(0, 7, 224, 0.8) 100%);                               /*0,0,0          43,42,42*/
 	background-size:250%;
 }
 /* passar o mouse */

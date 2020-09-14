@@ -35,6 +35,11 @@ h1 {
     font-size: 30pt;
 }
 
+h2 {
+    color: rgb(179, 18, 179);
+}
+
+
 h3 {
     font-size: 30pt;
 }
@@ -191,6 +196,7 @@ section .section-title {
 .frontside .card,
 .backside .card {
     min-height: 312px;
+    min-width: 210px;
 }
 
 .backside .card a {
