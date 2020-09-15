@@ -70,6 +70,7 @@ h2 {
 
 .card-text {
     text-align: center;
+
 }
 
 .card-about {
@@ -97,5 +98,9 @@ h2 {
 }
 .cursor{
     cursor: pointer;
+}
+.item-home{
+    color: black;
+    text-decoration: none;
 }
 

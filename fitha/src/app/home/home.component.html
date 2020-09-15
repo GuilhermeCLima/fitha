@@ -18,388 +18,297 @@
 <div class="container mb-2">
 
   <div class="row d-flex justify-content-around">
-    <div class="col-md-3 mb-1">
-      <div class="card border-0 ">
-        <div class="img-resp">
-          <img class="card-img-top rounded-0 border-0 semborda" src="https://i.imgur.com/HsFDhGK.jpg"
-            alt="Imagem de capa do card">
+    <div class="col-md-3 mb-1" *ngFor="let item of listProduto">
+      <a class="card border-0 item-home" [routerLink]="['/produto-detalhe',item.id]">
+        <div class=" img-resp">
+          <img class="card-img-top rounded-0 border-0 semborda" src="{{item.produtoImagem}}"
+            alt="produto {{item.nome}} ">
         </div>
         <div class="card-body text-center">
-          <h5 class="card-title">Escultura elefante</h5>
+          <h5 class="card-title">{{item.nome}}</h5>
         </div>
-      </div>
+      </a>
     </div>
 
-    <div class="col-md-3 mb-1">
-      <div class="card border-0">
-        <div class="img-resp">
-          <img class="card-img-top rounded-0 row-1" src="https://i.imgur.com/iVQbkRH.jpg" alt="Imagem de capa do card ">
-        </div>
-        <div class="card-body text-center">
-          <h5 class="card-title">Casal Decorativo </h5>
-        </div>
-      </div>
+    <div class="d-flex justify-content-center mb-5">
+      <button class="btn btn-primary neon ver-mas" routerLink="/produtos">Veja todos os nossos produtos</button>
     </div>
+    <!--FIM Cards com produtos 2-->
+    <!--Bolinhas de Categoria-->
 
-    <div class="col-md-3 mb-1">
-      <div class="card border-0">
-        <div class="img-resp">
-          <img class="card-img-top rounded-0" src="https://i.imgur.com/tRZkRMf.jpg" alt="Imagem de capa do card">
-        </div>
-        <div class="card-body text-center">
-          <h5 class="card-title">Boneco Articulado de Alumínio</h5>
-        </div>
-      </div>
-    </div>
+    <div class="container mb-5 mt-3">
 
-    <div class="col-md-3 mb-1">
-      <div class="card border-0">
-        <div class="img-resp">
-          <img class="card-img-top rounded-0" src="https://i.imgur.com/3iiDGAo.jpg" alt="Imagem de capa do card"
-            width="250" height="250">
-        </div>
-        <div class="card-body text-center">
-          <h5 class="card-title">Boneca Amigumi</h5>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+      <div class="row mb-4 d-flex justify-content-around ">
 
-<!--FIM Cards com produtos 1-->
-
-
-
-<!--Cards com produtos 2-->
-
-<div class="container mb-4">
-
-  <div class="row d-flex justify-content-around">
-    <div class="col-md-3 mb-1">
-      <div class="card border-0 ">
-        <div class="img-resp">
-          <img class="card-img-top rounded-0" src="https://i.imgur.com/vNZSRxJ.jpg" alt="Imagem de capa do card"
-            width="250" height="250">
-        </div>
-
-        <div class="card-body text-center">
-          <h5 class="card-title">Descanso de Luminária - Raposa</h5>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-3 mb-1">
-      <div class="card border-0">
-        <div class="img-resp">
-          <img class="card-img-top rounded-0" src="https://i.imgur.com/7gQc4Ot.jpg" alt="Imagem de capa do card"
-            width="250" height="250">
-        </div>
-        <div class="card-body text-center">
-          <h5 class="card-title">Boneca Amigumi Grande</h5>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-3 mb-1">
-      <div class="card border-0">
-        <div class="img-resp">
-          <img class="card-img-top rounded-0" src="https://i.imgur.com/9KmlzXy.jpg" alt="Imagem de capa do card"
-            width="250" height="250">
-        </div>
-
-        <div class="card-body text-center">
-          <h5 class="card-title">Relógio Colheres de Plástico</h5>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-3 mb-1">
-      <div class="card border-0">
-        <div class="img-resp">
-          <img class="card-img-top rounded-0" src="https://i.imgur.com/cZUlHI8.jpg" alt="Imagem de capa do card"
-            width="250" height="250">
-        </div>
-
-        <div class="card-body text-center">
-          <h5 class="card-title">Luminárias PET</h5>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="d-flex justify-content-center mb-5">
-  <button class="btn btn-primary neon ver-mas" routerLink="/produtos">Veja todos os nossos produtos</button>
-</div>
-<!--FIM Cards com produtos 2-->
-<!--Bolinhas de Categoria-->
-
-<div class="container mb-5 mt-3">
-
-  <div class="row mb-4 d-flex justify-content-around ">
-
-    <div class="col-md-2 border-0 tm-card" *ngFor="let item of listCategoria">
-      <div class="card border-0 text-white semborda" [routerLink]="['/produtos', item.categoriaNome]">
-        <img src="../../assets/fotos-FITHA/png-transparent-hand-painted-black-circle-hand-cane-vine-dot.png"
-          class="card-img cursor">
-        <div class="card-img-overlay d-flex justify-content-center border-0">
-          <h5 class="card-title categoria cursor">{{item.categoriaNome}}</h5>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- FIM das Bolinhas de Categoria-->
-<!--Carousel com imagem de pessoa e sobre ela-->
-<div class="container d-flex justify-content-around mb-3">
-  <div class="row">
-
-    <div class="col">
-      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-
-        </ol>
-        <div class="carousel-inner">
-          <!--PRIMEIRO CAROUSEL-->
-          <div class="carousel-item active">
-            <div class="container">
-              <div class="row mt-5 d-flex justify-content-center">
-
-                <img class="d-block mw-50 col-md-5 p-0" src="https://i.imgur.com/MxrVP33.jpg" alt="Primeiro Slide"
-                  width="300" height="280">
-
-                <div class="col-md-5 pl-4">
-                  <h2>Conheça Maria</h2>
-                  <p class="pessoas"> Maria aprendeu a fazer artesanato com a avó aos 8 anos de idade. Trabalhou em
-                    diversos ramos mas sempre pensou em trabalhar com artesanato. Após ser demitida em 2019, decidiu
-                    realizar o sonho e se aprimorou na arte de amigumi. Hoje é uma colaboradora <b>Fitha</b> e está
-                    realizando novos cursos para poder exercer livremente sua criatividade</p>
-                </div>
-                <h5 class="mt-4 mb-0">Conheça alguns dos produtos de Maria</h5>
-              </div>
-            </div>
-
-            <div class="container mb-5 d-flex justify-content-center">
-              <div class="row mt-4 pl-0">
-
-                <div class="col mt-2">
-                  <a routerLink="/produtos">
-                    <img class="" style="width: 8rem;" src="https://i.imgur.com/mZj3lAR.jpg" alt="" width="100"
-                      height="120">
-                  </a>
-                </div>
-
-                <div class="col  mt-2">
-                  <a routerLink="/produtos">
-                    <img class="" style="width: 8rem;" src="https://i.imgur.com/a1GZjyy.jpg" alt="" width="100"
-                      height="120">
-                  </a>
-                </div>
-
-                <div class="col  mt-2">
-                  <a routerLink="/produtos">
-                    <img class="" style="width: 8rem;" src="https://i.imgur.com/i8vWXtg.jpg" alt="" width="100"
-                      height="120">
-                  </a>
-                </div>
-
-                <div class="col  mt-2">
-                  <a routerLink="/produtos">
-                    <img class="" style="width: 8rem;" src="https://i.imgur.com/L01fgn9.jpg" alt="" width="100"
-                      height="120">
-                  </a>
-                </div>
-
-                <div class="col  mt-2">
-                  <a routerLink="/produtos">
-                    <img class="" style="width: 8rem;" src="https://i.imgur.com/FHWpIY3.jpg" alt="" width="100"
-                      height="120">
-                  </a>
-                </div>
-
-                <div class="col  mt-2">
-                  <a routerLink="/produtos">
-                    <img class="" style="width: 8rem;" src="https://i.imgur.com/yzZYFGR.jpg" alt="" width="100"
-                      height="120">
-                  </a>
-                </div>
-
-              </div>
+        <div class="col-md-2 border-0 tm-card" *ngFor="let item of listCategoria">
+          <div class="card border-0 text-white semborda" [routerLink]="['/produtos', item.categoriaNome]">
+            <img src="../../assets/fotos-FITHA/png-transparent-hand-painted-black-circle-hand-cane-vine-dot.png"
+              class="card-img cursor">
+            <div class="card-img-overlay d-flex justify-content-center border-0">
+              <h5 class="card-title categoria cursor">{{item.categoriaNome}}</h5>
             </div>
           </div>
-          <!--FIM - PRIMEIRO CAROUSEL -->
-
-          <!--SEGUNDO CAROUSEL-->
-          <div class="carousel-item">
-            <div class="container">
-              <div class="row mt-5 d-flex justify-content-center mb-0">
-
-                <img class="d-block mw-50 col-md-5 p-0" src="https://i.imgur.com/6PrIa1r.jpg" alt="Segundo Slide"
-                  width="300" height="280">
-
-                <div class="col-md-5 pl-4">
-                  <h2>Conheça Zélia</h2>
-                  <p class="pessoas mb-0"> Zélia se aposentou e não sabia o que fazer com o tempo livre. Buscando por um
-                    hobbie no Youtube encontrou esculturas em cerâmica e se apaixonou! Assistiu diversos videos até
-                    poder comprar os materiais necessários para realizar as esculturas e então colocou todo o
-                    aprendizado em prática. Agora ela ocupa o seu tempo livre e ainda obtem uma renda extra para o
-                    sustento da família.</p>
-                </div>
-                <h5 class="mt-4 mb-0">Conheça alguns dos produtos de Zélia</h5>
-              </div>
-            </div>
-
-            <div class="container mb-5 d-flex justify-content-center">
-              <div class="row mt-4 pl-0">
-
-                <div class="col mt-2">
-                  <a routerLink="/produtos">
-                    <img class="" style="width: 8rem;" src="https://i.imgur.com/nRL016W.jpg" alt="" width="100"
-                      height="120">
-                  </a>
-                </div>
-
-                <div class="col mt-2">
-                  <a routerLink="/produtos">
-                    <img class="" style="width: 8rem;" src="https://i.imgur.com/zrkZTu5.jpg" alt="" width="100"
-                      height="120">
-                  </a>
-                </div>
-
-                <div class="col mt-2">
-                  <a routerLink="/produtos">
-                    <img class="" style="width: 8rem;" src="https://i.imgur.com/ZbGAmA0.jpg" alt="" width="100"
-                      height="120">
-                  </a>
-                </div>
-
-                <div class="col mt-2">
-                  <a routerLink="/produtos">
-                    <img class="" style="width: 8rem;" src="https://i.imgur.com/Qr3bc6u.jpg" alt="" width="100"
-                      height="120">
-                  </a>
-                </div>
-
-                <div class="col mt-2">
-                  <a routerLink="/produtos">
-                    <img class="" style="width: 8rem;" src="https://i.imgur.com/EGnB7IW.jpg" alt="" width="100"
-                      height="120">
-                  </a>
-                </div>
-
-                <div class="col mt-2">
-                  <a routerLink="/produtos">
-                    <img class="" style="width: 8rem;" src="https://i.imgur.com/vL6oe2W.jpg" alt="" width="100"
-                      height="120">
-                  </a>
-                </div>
-
-              </div>
-            </div>
-          </div>
-          <!--FIM - SEGUNDO CAROUSEL -->
-
-          <!--TERCEIRO CAROUSEL-->
-          <div class="carousel-item">
-            <div class="container">
-              <div class="row mt-5 d-flex justify-content-center mb-0">
-
-                <img class="d-block mw-50 col-md-5 p-0" src="https://i.imgur.com/perIkaH.jpg" alt="Segundo Slide"
-                  width="300" height="280">
-
-                <div class="col-md-5 pl-4">
-                  <h2>Conheça Gustavo</h2>
-                  <p class="pessoas mb-0"> Após um acidente de moto, Gustavo teve que ficar em casa por muito tempo sem
-                    poder trabalhar. As contas não paravam de chegar e os remédios para a recuperação eram caros. Foi
-                    quando um amigo indicou que ele fizesse réplicas de motos e aviões. O projeto deu tão certo que hoje
-                    ele tem um canal no Youtube onde ensina a criar as réplicas, além de claro, ser nosso colaborador na
-                  </p>
-                </div>
-                <h5 class="mt-4 mb-0">Conheça alguns dos produtos de Gustavo</h5>
-              </div>
-            </div>
-
-            <div class="container mb-5 d-flex justify-content-center">
-              <div class="row mt-4 pl-0">
-
-                <div class="col mt-2">
-                  <a routerLink="/produtos">
-                    <img class="" style="width: 8rem;" src="https://i.imgur.com/4MzPDyV.jpg" alt="" width="100"
-                      height="120">
-                  </a>
-                </div>
-
-                <div class="col mt-2">
-                  <a routerLink="/produtos">
-                    <img class="" style="width: 8rem;" src="https://i.imgur.com/76hn35K.jpg" alt="" width="100"
-                      height="120">
-                  </a>
-                </div>
-
-                <div class="col mt-2">
-                  <a routerLink="/produtos">
-                    <img class="" style="width: 8rem;" src="https://i.imgur.com/JG3Ulyf.jpg" alt="" width="100"
-                      height="120">
-                  </a>
-                </div>
-
-                <div class="col mt-2">
-                  <a routerLink="/produtos">
-                    <img class="" style="width: 8rem;" src="https://i.imgur.com/F1Iu71j.jpg" alt="" width="100"
-                      height="120">
-                  </a>
-                </div>
-
-                <div class="col mt-2">
-                  <a routerLink="/produtos">
-                    <img class="" style="width: 8rem;" src="https://i.imgur.com/jIVshcu.jpg" alt="" width="100"
-                      height="120">
-                  </a>
-                </div>
-
-                <div class="col mt-2">
-                  <a routerLink="/produtos">
-                    <img class="" style="width: 8rem;" src="https://i.imgur.com/vL6oe2W.jpg" alt="" width="100"
-                      height="120">
-                  </a>
-                </div>
-
-              </div>
-            </div>
-          </div>
-          <!--FIM - TERCEIRO CAROUSEL -->
-        </div>
-
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Anterior</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Próximo</span>
-        </a>
-      </div>
-    </div>
-
-  </div>
-</div>
-<!--FIM do Carousel com imagem de pessoa e sobre ela-->
-
-<!--Junte-se a nós-->
-<div class="container">
-  <div class="row d-flex justify-content-center">
-    <div class="col-md-8">
-      <div class="card-about pt-4 pb-4">
-        <h5 class="text-about text-center">Sobre nós</h5>
-        <div class="larg">
-          <p class="card-text">No Brasil o artesanato é o que mais gera renda, porém muitos artesãos não tem acesso à
-            internet limitando a sua inclusão no mercado</p>
-          <button class="btn btn-primary neon" routerLink="/quemsomos">Conheça mais</button>
         </div>
       </div>
     </div>
-  </div>
-</div>
-<!--FIM do Junte-se a nós-->
+    <!-- FIM das Bolinhas de Categoria-->
+    <!--Carousel com imagem de pessoa e sobre ela-->
+    <div class="container d-flex justify-content-around mb-3">
+      <div class="row">
+
+        <div class="col">
+          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+
+            </ol>
+            <div class="carousel-inner">
+              <!--PRIMEIRO CAROUSEL-->
+              <div class="carousel-item active">
+                <div class="container">
+                  <div class="row mt-5 d-flex justify-content-center">
+
+                    <img class="d-block mw-50 col-md-5 p-0" src="https://i.imgur.com/MxrVP33.jpg" alt="Primeiro Slide"
+                      width="300" height="280">
+
+                    <div class="col-md-5 pl-4">
+                      <h2>Conheça Maria</h2>
+                      <p class="pessoas"> Maria aprendeu a fazer artesanato com a avó aos 8 anos de idade. Trabalhou em
+                        diversos ramos mas sempre pensou em trabalhar com artesanato. Após ser demitida em 2019, decidiu
+                        realizar o sonho e se aprimorou na arte de amigumi. Hoje é uma colaboradora <b>Fitha</b> e está
+                        realizando novos cursos para poder exercer livremente sua criatividade</p>
+                    </div>
+                    <h5 class="mt-4 mb-0">Conheça alguns dos produtos de Maria</h5>
+                  </div>
+                </div>
+
+                <div class="container mb-5 d-flex justify-content-center">
+                  <div class="row mt-4 pl-0">
+
+                    <div class="col mt-2">
+                      <a routerLink="/produtos">
+                        <img class="" style="width: 8rem;" src="https://i.imgur.com/mZj3lAR.jpg" alt="" width="100"
+                          height="120">
+                      </a>
+                    </div>
+
+                    <div class="col  mt-2">
+                      <a routerLink="/produtos">
+                        <img class="" style="width: 8rem;" src="https://i.imgur.com/a1GZjyy.jpg" alt="" width="100"
+                          height="120">
+                      </a>
+                    </div>
+
+                    <div class="col  mt-2">
+                      <a routerLink="/produtos">
+                        <img class="" style="width: 8rem;" src="https://i.imgur.com/i8vWXtg.jpg" alt="" width="100"
+                          height="120">
+                      </a>
+                    </div>
+
+                    <div class="col  mt-2">
+                      <a routerLink="/produtos">
+                        <img class="" style="width: 8rem;" src="https://i.imgur.com/L01fgn9.jpg" alt="" width="100"
+                          height="120">
+                      </a>
+                    </div>
+
+                    <div class="col  mt-2">
+                      <a routerLink="/produtos">
+                        <img class="" style="width: 8rem;" src="https://i.imgur.com/FHWpIY3.jpg" alt="" width="100"
+                          height="120">
+                      </a>
+                    </div>
+
+                    <div class="col  mt-2">
+                      <a routerLink="/produtos">
+                        <img class="" style="width: 8rem;" src="https://i.imgur.com/yzZYFGR.jpg" alt="" width="100"
+                          height="120">
+                      </a>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <!--FIM - PRIMEIRO CAROUSEL -->
+
+              <!--SEGUNDO CAROUSEL-->
+              <div class="carousel-item">
+                <div class="container">
+                  <div class="row mt-5 d-flex justify-content-center mb-0">
+
+                    <img class="d-block mw-50 col-md-5 p-0" src="https://i.imgur.com/6PrIa1r.jpg" alt="Segundo Slide"
+                      width="300" height="280">
+
+                    <div class="col-md-5 pl-4">
+                      <h2>Conheça Zélia</h2>
+                      <p class="pessoas mb-0"> Zélia se aposentou e não sabia o que fazer com o tempo livre. Buscando
+                        por um
+                        hobbie no Youtube encontrou esculturas em cerâmica e se apaixonou! Assistiu diversos videos até
+                        poder comprar os materiais necessários para realizar as esculturas e então colocou todo o
+                        aprendizado em prática. Agora ela ocupa o seu tempo livre e ainda obtem uma renda extra para o
+                        sustento da família.</p>
+                    </div>
+                    <h5 class="mt-4 mb-0">Conheça alguns dos produtos de Zélia</h5>
+                  </div>
+                </div>
+
+                <div class="container mb-5 d-flex justify-content-center">
+                  <div class="row mt-4 pl-0">
+
+                    <div class="col mt-2">
+                      <a routerLink="/produtos">
+                        <img class="" style="width: 8rem;" src="https://i.imgur.com/nRL016W.jpg" alt="" width="100"
+                          height="120">
+                      </a>
+                    </div>
+
+                    <div class="col mt-2">
+                      <a routerLink="/produtos">
+                        <img class="" style="width: 8rem;" src="https://i.imgur.com/zrkZTu5.jpg" alt="" width="100"
+                          height="120">
+                      </a>
+                    </div>
+
+                    <div class="col mt-2">
+                      <a routerLink="/produtos">
+                        <img class="" style="width: 8rem;" src="https://i.imgur.com/ZbGAmA0.jpg" alt="" width="100"
+                          height="120">
+                      </a>
+                    </div>
+
+                    <div class="col mt-2">
+                      <a routerLink="/produtos">
+                        <img class="" style="width: 8rem;" src="https://i.imgur.com/Qr3bc6u.jpg" alt="" width="100"
+                          height="120">
+                      </a>
+                    </div>
+
+                    <div class="col mt-2">
+                      <a routerLink="/produtos">
+                        <img class="" style="width: 8rem;" src="https://i.imgur.com/EGnB7IW.jpg" alt="" width="100"
+                          height="120">
+                      </a>
+                    </div>
+
+                    <div class="col mt-2">
+                      <a routerLink="/produtos">
+                        <img class="" style="width: 8rem;" src="https://i.imgur.com/vL6oe2W.jpg" alt="" width="100"
+                          height="120">
+                      </a>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <!--FIM - SEGUNDO CAROUSEL -->
+
+              <!--TERCEIRO CAROUSEL-->
+              <div class="carousel-item">
+                <div class="container">
+                  <div class="row mt-5 d-flex justify-content-center mb-0">
+
+                    <img class="d-block mw-50 col-md-5 p-0" src="https://i.imgur.com/perIkaH.jpg" alt="Segundo Slide"
+                      width="300" height="280">
+
+                    <div class="col-md-5 pl-4">
+                      <h2>Conheça Gustavo</h2>
+                      <p class="pessoas mb-0"> Após um acidente de moto, Gustavo teve que ficar em casa por muito tempo
+                        sem
+                        poder trabalhar. As contas não paravam de chegar e os remédios para a recuperação eram caros.
+                        Foi
+                        quando um amigo indicou que ele fizesse réplicas de motos e aviões. O projeto deu tão certo que
+                        hoje
+                        ele tem um canal no Youtube onde ensina a criar as réplicas, além de claro, ser nosso
+                        colaborador na
+                      </p>
+                    </div>
+                    <h5 class="mt-4 mb-0">Conheça alguns dos produtos de Gustavo</h5>
+                  </div>
+                </div>
+
+                <div class="container mb-5 d-flex justify-content-center">
+                  <div class="row mt-4 pl-0">
+
+                    <div class="col mt-2">
+                      <a routerLink="/produtos">
+                        <img class="" style="width: 8rem;" src="https://i.imgur.com/4MzPDyV.jpg" alt="" width="100"
+                          height="120">
+                      </a>
+                    </div>
+
+                    <div class="col mt-2">
+                      <a routerLink="/produtos">
+                        <img class="" style="width: 8rem;" src="https://i.imgur.com/76hn35K.jpg" alt="" width="100"
+                          height="120">
+                      </a>
+                    </div>
+
+                    <div class="col mt-2">
+                      <a routerLink="/produtos">
+                        <img class="" style="width: 8rem;" src="https://i.imgur.com/JG3Ulyf.jpg" alt="" width="100"
+                          height="120">
+                      </a>
+                    </div>
+
+                    <div class="col mt-2">
+                      <a routerLink="/produtos">
+                        <img class="" style="width: 8rem;" src="https://i.imgur.com/F1Iu71j.jpg" alt="" width="100"
+                          height="120">
+                      </a>
+                    </div>
+
+                    <div class="col mt-2">
+                      <a routerLink="/produtos">
+                        <img class="" style="width: 8rem;" src="https://i.imgur.com/jIVshcu.jpg" alt="" width="100"
+                          height="120">
+                      </a>
+                    </div>
+
+                    <div class="col mt-2">
+                      <a routerLink="/produtos">
+                        <img class="" style="width: 8rem;" src="https://i.imgur.com/vL6oe2W.jpg" alt="" width="100"
+                          height="120">
+                      </a>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <!--FIM - TERCEIRO CAROUSEL -->
+            </div>
+
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Próximo</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!--FIM do Carousel com imagem de pessoa e sobre ela-->
+
+    <!--Junte-se a nós-->
+    <div class="container container d-flex justify-content-center">
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-8">
+          <div class="card-about pt-4 pb-4 pl-3 pr-3">
+            <h5 class="text-about text-center ">Sobre nós</h5>
+            <div class="larg">
+              <p class="card-text ">No Brasil o artesanato é o que mais gera renda, porém muitos artesãos não tem acesso
+                à
+                internet limitando a sua inclusão no mercado</p>
+              <button class="btn btn-primary neon" routerLink="/quemsomos">Conheça mais</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--FIM do Junte-se a nós-->
