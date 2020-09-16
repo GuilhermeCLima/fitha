@@ -18,6 +18,7 @@ import { DeleteProdutoComponent } from './delete-produto/delete-produto.componen
 import { CategoriaDelComponent } from './categoria-del/categoria-del.component';
 import { CategoriaPutComponent } from './categoria-put/categoria-put.component';
 import { PedidoComponent } from './pedido/pedido.component';
+import { ListaContatoComponent } from './lista-contato/lista-contato.component';
 
 
 const routes: Routes = [
@@ -28,6 +29,7 @@ const routes: Routes = [
   { path: "produtos/:categoria", component: ProdutosComponent },
   { path: "produto-detalhe/:id", component: ProdutoDetalheComponent },
   { path: "contato", component: ContatoComponent },
+  { path: "lista-contato", component: ListaContatoComponent },
   { path: "cadastro", component: CadastroComponent },
   { path: "login", component: LoginComponent },
   { path: "cadastrar-produto", component: CadastrarProdutoComponent },

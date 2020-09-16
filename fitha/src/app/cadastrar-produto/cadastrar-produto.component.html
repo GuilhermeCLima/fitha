@@ -608,11 +608,9 @@
           <tr>
             <th scope="col">ID</th>
             <th scope="col">Nome</th>
-            <th scope="col">Preço</th>
-            <th scope="col">material</th>
-            <th scope="col">Cor</th>
-            <th scope="col">quantidade</th>
-            <th scope="col">Disponibilidade</th>
+            <th scope="col">telefoe</th>
+            <th scope="col">assunto</th>
+            <th scope="col">mensagem</th>
             <th scope="col" class="d-flex justify-content-end">Modificações</th>
           </tr>
         </thead>
@@ -620,11 +618,9 @@
           <tr *ngFor='let item of listProduto'>
             <th scope="row">{{item.id}}</th>
             <td>{{item.nome}}</td>
-            <td>{{item.preco}}</td>
-            <td>{{item.material}}</td>
-            <td>{{item.cor}}</td>
-            <td>{{item.quantidade}}</td>
-            <td>{{item.disponibilidade}}</td>
+            <td>{{item.telefoe}}</td>
+            <td>{{item.assunto}}</td>
+            <td>{{item.mensagem}}</td>
 
             <td class="d-flex justify-content-end">
               <a class="btn btn-outline-info mr-3" [routerLink]="['/editar-produto',item.id]">Editar</a>

@@ -1,0 +1,44 @@
+<div class="container-fluid">
+
+  <div class="row mt-5">
+    <div class="col-md-12">
+      <h1 class="text-center mb-5 mt-5">Lista de Contatos</h1>
+    </div>
+  </div>
+
+
+
+  <div class="row d-flex justify-content-center mt-2 ml-3">
+    <div class="col-md-10">
+      <table class="table table-hover ">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Telefone</th>
+            <th scope="col">Email</th>
+            <th scope="col">Assunto</th>
+            <th scope="col">Mensagem</th>
+            <th scope="col">Ação</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor='let item of listContato'>
+            <th scope="row">{{item.id}}</th>
+            <td>{{item.nome}}</td>
+            <td>{{item.telefone}}</td>
+            <td>{{item.email}}</td>
+            <td>{{item.assunto}}</td>
+            <td>{{item.mensagem}}</td>
+
+            <td class="d-flex justify-content-end">
+              <a class="btn btn-outline-danger" [routerLink]="[]">Apagar</a>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</div>
