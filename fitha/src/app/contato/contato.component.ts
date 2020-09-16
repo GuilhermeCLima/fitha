@@ -47,7 +47,7 @@ export class ContatoComponent implements OnInit {
       this.msgEmail == "" &&
       this.msgMensagem == "") {
 
-        var contato: ContatoModel;
+      var contato: ContatoModel;
       contato = new ContatoModel();
       contato.id = null;
       contato.nome = this.nome;
@@ -58,7 +58,7 @@ export class ContatoComponent implements OnInit {
 
       this.srv.enviarEmail(contato).subscribe(
         res => {
-          this.alert.showAlerSuccess("Cadastro realizado com sucesso!!!")
+          this.alert.showAlerSuccess("Obrigade pela mensagem!!")
           this.nome = "";
           this.email = "";
           this.telefone = "";

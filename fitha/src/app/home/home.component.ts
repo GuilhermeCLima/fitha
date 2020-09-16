@@ -29,7 +29,7 @@ export class HomeComponent implements OnInit {
 
   findAllProduto() {
     this.produtoService.getAllProduto().subscribe((resp: ProdutoModel[]) => {
-      this.listProduto = resp.slice(20, 28)
+      this.listProduto = resp.slice(23, 31)
     })
   }
 

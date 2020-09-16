@@ -1,6 +1,12 @@
+<div class="d-flex justify-content-center">
+  <img src="https://i.imgur.com/nqzAfjT.gif" alt="">
+  
+</div>
+
 <div class="container-fluid">
 
-  <div class="row mt-5">
+
+  <div class="row ">
     <div class="col-md-12">
       <h1 class="text-center mb-5 mt-5">Lista de Contatos</h1>
     </div>
@@ -19,7 +25,7 @@
             <th scope="col">Email</th>
             <th scope="col">Assunto</th>
             <th scope="col">Mensagem</th>
-            <th scope="col">Ação</th>
+            <th scope="col" class="text-center">Ação</th>
           </tr>
         </thead>
         <tbody>
@@ -32,7 +38,9 @@
             <td>{{item.mensagem}}</td>
 
             <td class="d-flex justify-content-end">
+              <a class="btn btn-outline-success mr-3" [routerLink]="[]">Responder</a>
               <a class="btn btn-outline-danger" [routerLink]="[]">Apagar</a>
+
             </td>
           </tr>
 
