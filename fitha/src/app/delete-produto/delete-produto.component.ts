@@ -45,6 +45,6 @@ export class DeleteProdutoComponent implements OnInit {
     })
   }
   btnNao() {
-    this.router.navigate(['/cadastrar-categoria'])
+    this.router.navigate(['/cadastrar-produto'])
   }
 }

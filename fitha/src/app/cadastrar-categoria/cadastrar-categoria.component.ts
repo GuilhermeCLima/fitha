@@ -16,6 +16,8 @@ export class CadastrarCategoriaComponent implements OnInit {
   listCategoria: CategoriaModel[]
   idCategoria: number
 
+
+
   constructor(
     private categoriaService: CategoriaService,
     private router: Router,
@@ -43,8 +45,10 @@ export class CadastrarCategoriaComponent implements OnInit {
   }
 
   cadastrar() {
+    //this.categoria.categoriaNome = "produto500"
     this.categoriaService.postCategoria(this.categoria).subscribe((resp: CategoriaModel) => {
       this.categoria = resp
+      this.categoria = new CategoriaModel()
       this.findAllCategorias()
       this.alert.showAlerSuccess("Categoria cadastrada com sucesso!")
 

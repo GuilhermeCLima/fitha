@@ -27,10 +27,11 @@ export class ProdutosComponent implements OnInit {
 
   ngOnInit() {
     window.scroll(0, 0)
-    this.findAllProduto()
+    this.findProdutoCategoria("")
     this.findAllCategoria()
 
     this.nomeCategoria = this.route.snapshot.params['categoria']
+    console.log("nomeCategoria" + this.nomeCategoria)
 
     if (this.nomeCategoria == null) {
       this.findAllProduto()
@@ -52,6 +53,7 @@ export class ProdutosComponent implements OnInit {
   findProdutoCategoria(categoria: string) {
     this.produtoService.getByProdutoCategoria(categoria).subscribe((resp: ProdutoModel[]) => {
       this.listProduto = resp
+      console.log(JSON.stringify(resp))
     })
   }
   findByNomeProduto() {
