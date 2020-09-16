@@ -24,6 +24,7 @@ import { CategoriaDelComponent } from './categoria-del/categoria-del.component';
 import { PedidoComponent } from './pedido/pedido.component';
 import { AlertasComponent } from './alertas/alertas.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { ListaContatoComponent } from './lista-contato/lista-contato.component';
 
 
 @NgModule({
@@ -46,6 +47,7 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     CategoriaDelComponent,
     PedidoComponent,
     AlertasComponent,
+    ListaContatoComponent,
   ],
 
   imports: [

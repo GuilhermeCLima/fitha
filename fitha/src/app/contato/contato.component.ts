@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AlertasService } from '../service/alertas.service';
+import { ContatoModel } from '../model/Contato';
+import { ContatoService } from '../service/contato.service';
 
 @Component({
   selector: 'app-contato',
@@ -22,8 +24,9 @@ export class ContatoComponent implements OnInit {
   msgEmail: string;
   msgAssunto: string;
   msgMensagem: String;
+  contato: ContatoModel = new ContatoModel();
 
-  constructor(private alert :AlertasService) { }
+  constructor(private alert: AlertasService, private srv: ContatoService) { }
 
   ngOnInit() {
 
@@ -43,12 +46,32 @@ export class ContatoComponent implements OnInit {
       this.msgAssunto == "" &&
       this.msgEmail == "" &&
       this.msgMensagem == "") {
-      this.alert.showAlerSuccess("Sua mensagem foi enviada com sucesso !!!")
-      this.nome = "";
-      this.email = "";
-      this.telefone = "";
-      this.assunto = "";
-      this.mensagem = "";
+
+        var contato: ContatoModel;
+      contato = new ContatoModel();
+      contato.id = null;
+      contato.nome = this.nome;
+      contato.email = this.email;
+      contato.telefone = this.telefone;
+      contato.assunto = this.assunto;
+      contato.mensagem = this.mensagem;
+
+      this.srv.enviarEmail(contato).subscribe(
+        res => {
+          this.alert.showAlerSuccess("Cadastro realizado com sucesso!!!")
+          this.nome = "";
+          this.email = "";
+          this.telefone = "";
+          this.assunto = "";
+          this.mensagem = "";
+        },
+        err => {
+          this.alert.showAlertDanger("Erro ao realizar o cadastro");
+
+        }
+      )
+
+
     } else {
       this.alert.showAlertWarning("Por favor, preencha os campos destacados")
       this.verificanumero();
